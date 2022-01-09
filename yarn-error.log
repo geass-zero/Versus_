@@ -1,0 +1,63 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ribin\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add sass
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\php;C:\ProgramData\ComposerSetup\bin;C:\ProgramData\chocolatey\bin;C:\HashiCorp\Vagrant\bin;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\ribin\AppData\Local\Microsoft\WindowsApps;C:\Users\ribin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ribin\AppData\Roaming\Composer\vendor\bin;C:\Users\ribin\AppData\Roaming\npm;C:\Users\ribin\.dotnet\tools
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.9.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, lstat 'D:\Fiverr\Razgrizdetroit\VersusNew\work\node_modules\sass'
+
+npm manifest: 
+  {
+      "name": "versus-new",
+      "version": "0.1.0",
+      "private": true,
+      "dependencies": {
+          "@testing-library/jest-dom": "^5.16.1",
+          "@testing-library/react": "^12.1.2",
+          "@testing-library/user-event": "^13.5.0",
+          "react": "^17.0.2",
+          "react-dom": "^17.0.2",
+          "react-scripts": "5.0.0",
+          "web-vitals": "^2.1.2"
+      },
+      "scripts": {
+          "start": "react-scripts start",
+          "build": "react-scripts build",
+          "test": "react-scripts test",
+          "eject": "react-scripts eject"
+      },
+      "eslintConfig": {
+          "extends": [
+              "react-app",
+              "react-app/jest"
+          ]
+      },
+      "browserslist": {
+          "production": [
+              ">0.2%",
+              "not dead",
+              "not op_mini all"
+          ],
+          "development": [
+              "last 1 chrome version",
+              "last 1 firefox version",
+              "last 1 safari version"
+          ]
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
