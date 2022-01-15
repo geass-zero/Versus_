@@ -90,8 +90,9 @@
                 &.image_wrap {
                     align-items: center;
                     .shibachu {
+                        margin-top: 10px;
                         height: max(
-                            min(calc(100vh - 110px - 150px), 700px),
+                            min(calc(100vh - 110px - 200px), 700px),
                             360px
                         );
                         object-fit: contain;
@@ -227,7 +228,7 @@
             // background-color: cyan;
             position: relative;
 
-            img {
+            video {
                 position: absolute;
                 z-index: 0;
                 left: 0;
@@ -259,12 +260,12 @@
                         color: #ffffff;
 
                         .title {
-                            font: normal normal normal 30px/42px MS Gothic;
+                            font: normal normal normal 30px/42px Roboto;
                             letter-spacing: 4.5px;
                         }
 
                         p {
-                            font: normal normal normal 22px/42px MS Gothic;
+                            font: normal normal normal 22px/42px Roboto;
                             letter-spacing: 0px;
                         }
                     }
@@ -410,7 +411,7 @@
                     &.image_wrap {
                         img {
                             width: 100%;
-                            max-width: 190px;
+                            max-width: max(260px, 80%);
                             margin-bottom: 20px;
                         }
                     }
