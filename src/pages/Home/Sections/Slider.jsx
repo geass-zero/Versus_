@@ -1,15 +1,33 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
-import Img1 from '../../../assets/images/Slider/1.jpg';
-import Img2 from '../../../assets/images/Slider/2.jpg';
-import Img3 from '../../../assets/images/Slider/3.jpg';
+import ReactHlsPlayer from 'react-hls-player';
 
 let mintDesc = "Each Cypher can be brought to life through a process called minting. Act fast though, they're limited.";
 let trainDesc = "Increase your Cypher's stats in the Chainlink Gym, powered by the Chainlink price feeds.";
 let battleDesc = "Add your Cyphers to the battle pool to battle other Cyphers and win rewards. Make sure to train first!";
 
 const Slider = () => {
+    const slideDetails = [
+        {
+            title: 'MINT',
+            description:
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+            video: 'https://player.vimeo.com/external/665992462.m3u8?s=fc6c8b495529166a3be408a5d9cd5e8e015a676f',
+        },
+        {
+            title: 'MINT',
+            description:
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+            video: 'https://player.vimeo.com/external/665991357.m3u8?s=00ee7c0c36c5863f6519dbb22c63527998c829d0',
+        },
+        {
+            title: 'MINT',
+            description:
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+            video: 'https://player.vimeo.com/external/665993451.m3u8?s=26a000d0874a3646623b0b8423923345e0cb0c52',
+        },
+    ];
+
     return (
         <div className='slider_section'>
             <Carousel
@@ -19,24 +37,37 @@ const Slider = () => {
                 emulateTouch={false}
                 swipeable={false}
                 showStatus={false}>
-                <SlideItem img={Img1} title={"Mint"} desc={mintDesc} />
-                <SlideItem img={Img2} title={"Train"} desc={trainDesc} />
-                <SlideItem img={Img3} title={"Battle"} desc={battleDesc} />
+
+                {slideDetails.map((item, index) => (
+                    <SlideItem
+                        key={index}
+                        videoSrc={item.video}
+                        title={item.title}
+                        description={item.description}
+                    />
+                ))}
             </Carousel>
         </div>
     );
 };
 
-const SlideItem = ({ img, title, desc }) => {
+const SlideItem = ({ title, description, videoSrc }) => {
+
     return (
         <div className='slide_item'>
-            <img
-                src={img}
-                alt='placehol'
-                data-aos='zoom-in'
-                data-aos-offset='0'
-                data-aos-duration='400'
+            <ReactHlsPlayer
+                src={videoSrc}
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                controls={false}
+                width='100%'
+                height='auto'
             />
+
+            {/* <video autoPlay={true} muted loop={true}>
+                <source src={video} type='video/mp4' />
+            </video> */}
             <div className='content_wrap'>
                 <div className='flex_box'>
                     <div className='x2'></div>
@@ -54,7 +85,8 @@ const SlideItem = ({ img, title, desc }) => {
                                     data-aos='fade-up'
                                     data-aos-offset='0'
                                     data-aos-duration='500'>
-                                    {desc}
+                                      
+                                    {description}
                                 </p>
                             </div>
                         </div>

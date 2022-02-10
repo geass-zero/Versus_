@@ -1,7 +1,7 @@
 import Shibachu from '../../../assets/images/shibachu.gif';
 import GraphicLine from '../../../assets/images/Graphics/Group 51.png';
 import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
-import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
+// import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
 const Main = () => {
     return (

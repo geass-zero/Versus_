@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import MintPopUp from './PopUp';
 import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
+
+import VersusContext from '../../store/Context';
 import {fetchMintData, mintCypher, getBridgedData} from '../../utils/MintingFunctions';
 
 const Mint = () => {
+    const contextData = useContext(VersusContext);
     const [value, setValue] = useState(2);
     const [showPopup, setPopUp] = useState(false);
     const [currentTokenID, setCurrentTokenID] = useState(0);
@@ -17,6 +20,11 @@ const Mint = () => {
         else if (value > 0) setValue(value - 1);
     };
 
+
+    useEffect(() => {
+        contextData.imageLoader([{ type: 'image', src: LoaderImage }]);
+    }, []);
+                              
     async function getMintData() {
         let data = await fetchMintData();
 
@@ -29,18 +37,21 @@ const Mint = () => {
     }
 
     return (
-        <section className=' mint_wrap'>
-            <MintPopUp
-                showPopUp={showPopup}
-                closeModal={() => setPopUp(false)}
-                mintedCyphers
-            />
-            <div className='content_wrap'>
-                <img src={LoaderImage} className='load_loader_image' alt='' />
-                <div className='flex_box'>
-                    <div className='x2'>
-                        <div className='mint_professor'></div>
-                    </div>
+        {!contextData.isLoading && contextData.initialloaderFinished && (
+                <section className=' mint_wrap'>
+                    <MintPopUp
+                        showPopUp={showPopup}
+                        closeModal={() => setPopUp(false)}
+                    />
+                    <div className='content_wrap'>
+                        <img
+                            src={LoaderImage}
+                            className='load_loader_image'
+                            alt=''
+                        />
+                        <div className='flex_box'>
+                            <div className='x2'></div>
+                            <div className='x2'>
                     <div className='x2'>
                         <div
                             className='box_wrap'
@@ -77,12 +88,6 @@ const Mint = () => {
                                     &#43;
                                 </div>
                                 <div className='value'>{value}</div>
-                                <div
-                                    className='button'
-                                    onClick={() => updateValue(false)}>
-                                    &#8722;
-                                </div>
-                            </div>
                             <div
                                 data-aos='fade-up'
                                 data-aos-offset='0'
@@ -95,9 +100,9 @@ const Mint = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+            )}
+        </>
     );
 };
 
