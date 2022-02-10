@@ -4,6 +4,18 @@
     position: relative;
     padding-top: 60px;
 
+    .mint_professor {
+        width: 65%;
+        height: 85vh;
+        position: absolute;
+        bottom: 0;
+        left: -81px;
+        background-image: url('../../assets/images/characters/professor_mint.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+
     &:after {
         @include pseudo-abs();
         background-image: url('../../assets/images/mintbg.jpg');

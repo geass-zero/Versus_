@@ -2,6 +2,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import ReactHlsPlayer from 'react-hls-player';
 
+let mintDesc = "Each Cypher can be brought to life through a process called minting. Act fast though, they're limited.";
+let trainDesc = "Increase your Cypher's stats in the Chainlink Gym, powered by the Chainlink price feeds.";
+let battleDesc = "Add your Cyphers to the battle pool to battle other Cyphers and win rewards. Make sure to train first!";
+
 const Slider = () => {
     const slideDetails = [
         {
@@ -33,6 +37,7 @@ const Slider = () => {
                 emulateTouch={false}
                 swipeable={false}
                 showStatus={false}>
+
                 {slideDetails.map((item, index) => (
                     <SlideItem
                         key={index}
@@ -47,6 +52,7 @@ const Slider = () => {
 };
 
 const SlideItem = ({ title, description, videoSrc }) => {
+
     return (
         <div className='slide_item'>
             <ReactHlsPlayer
@@ -79,6 +85,7 @@ const SlideItem = ({ title, description, videoSrc }) => {
                                     data-aos='fade-up'
                                     data-aos-offset='0'
                                     data-aos-duration='500'>
+                                      
                                     {description}
                                 </p>
                             </div>

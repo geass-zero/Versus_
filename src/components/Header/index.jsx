@@ -1,11 +1,24 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Wallet from './wallet';
 import './styles.scss';
 import logo from "../../assets/images/versus.png";
+import {connectWallet} from "../../utils/UserData.js"
+
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [currentAccount, setCurrentAccount] = useState("");
     const location = useLocation();
+
+    async function connectToWallet() {
+        setIsOpen(false)
+        let accounts = await connectWallet();
+        if (accounts[0]) {
+            setCurrentAccount(accounts[0]);
+            console.log(currentAccount);
+        }
+    }
 
     return (
         <header
@@ -50,8 +63,15 @@ const Header = () => {
                         Docs
                     </Link>
                 </div>
-                <div className='connect_button'>
-                    <button>Connect</button>
+                {/* <div  onClick={() => connectToWallet()} className='connect_button'>
+                    w
+                </div> */}
+                <div  onClick={() => connectToWallet()} className='connect_button'>
+                    {currentAccount != '' ?
+                        <button>...{currentAccount.substring(currentAccount.length - 5)}</button>
+                        :
+                        <button>Connect</button>
+                    }
                 </div>
                 <div
                     id='nav-icon3'
@@ -63,6 +83,7 @@ const Header = () => {
                     <span></span>
                 </div>
             </div>
+            {/* <Wallet/> */}
         </header>
     );
 };

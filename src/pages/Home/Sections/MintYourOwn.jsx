@@ -6,12 +6,12 @@ import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 const MintYourOwn = () => {
     return (
         <div className='mint_your_own'>
-            <img src={Graphic} alt='Graphic' className='graphic' />
-            <img src={GraphicLine} alt='Graphic' className='graphic_line1' />
-            <img src={GraphicLine} alt='Graphic' className='graphic_line2' />
-            <img src={GraphicLine1} alt='Graphic' className='graphic_line3' />
+            {/* <img src={Graphic} alt='Graphic' className='graphic' />
+            <img src={GraphicLine} alt='Graphic' className='graphic_line1' /> */}
+            {/* <img src={GraphicLine} alt='Graphic' className='graphic_line2' /> */}
+            {/* <img src={GraphicLine1} alt='Graphic' className='graphic_line3' />
             <img src={GraphicLine2} alt='Graphic' className='graphic_line4' />
-            <img src={GraphicLine1} alt='Graphic' className='graphic_line5' />
+            <img src={GraphicLine1} alt='Graphic' className='graphic_line5' /> */}
             <div className='content_wrap'>
                 <h1
                     data-aos='fade-up'
@@ -23,8 +23,7 @@ const MintYourOwn = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='500'>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore
+                    Mint your own crosschain NFT monster and join the Versus Metaverse!
                 </p>
                 <button
                     data-aos='fade-up'

@@ -13,8 +13,8 @@ const Train = () => {
     }, []);
 
     return (
-        <>
-            {!contextData.isLoading && contextData.initialloaderFinished && (
+
+        {!contextData.isLoading && contextData.initialloaderFinished && (
                 <section className='train_wrap'>
                     <div className='content_wrap'>
                         <div className='flex_box'>
@@ -30,6 +30,30 @@ const Train = () => {
                                         data-aos-offset='0'
                                         data-aos-duration='400'>
                                         Currently Training
+                            </div>
+                            <div
+                                className='selection_wrap'
+                                data-aos='fade-up'
+                                data-aos-offset='0'
+                                data-aos-duration='450'>
+                                <img src={Arrow} alt='arrow' />
+                                <select>
+                                    <option value='#128 OWAIL'>
+                                        #128 OWAIL
+                                    </option>
+                                </select>
+                            </div>
+                            <div
+                                className='white_box'
+                                data-aos='fade-up'
+                                data-aos-offset='0'
+                                data-aos-duration='500'>
+                                <div className='range_wrap'>
+                                    Wins until next level: 2
+                                    <div className='rangebox'>
+                                        <div
+                                            className='current_range'
+                                            style={{ width: '62%' }}></div>
                                     </div>
                                     <div
                                         className='selection_wrap'
@@ -104,12 +128,16 @@ const Train = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='x2'></div>
-                        </div>
+                            <div className='x2'>
+                        <div className='train_embre'></div>
+
                     </div>
-                </section>
+                </div>
+            </div>
+          </section>
             )}
         </>
+
     );
 };
 

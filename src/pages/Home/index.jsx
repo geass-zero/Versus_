@@ -5,10 +5,15 @@ import Slider from './Sections/Slider';
 import Footer from './Sections/Footer';
 import NFTs from './Sections/NFTs';
 import './styles.scss';
+
 import VersusContext from '../../store/Context';
 
 import Shibachu from '../../assets/images/shibachu.gif';
 import LoaderImage from '../../assets/images/Pattern.png';
+import AboutVersus from './Sections/AboutVersus';
+import AboutCyphers from './Sections/AboutCyphers';
+import Metaverse from './Sections/Metaverse';
+import AboutBridge from './Sections/AboutBridge';
 
 const Home = () => {
     const contextData = useContext(VersusContext);
@@ -26,14 +31,19 @@ const Home = () => {
         <>
             {!contextData.isLoading && contextData.initialloaderFinished && (
                 <section className='home'>
-                    <Main />
-                    <NFTs />
-                    <Slider />
-                    <MintYourOwn />
-                    <Footer />
+                  <Main />
+                  <NFTs />
+                  <Slider />
+                  <AboutVersus/>
+                  <AboutCyphers/>
+                  <AboutBridge/>
+                  <Metaverse/>
+                  <MintYourOwn />
+                  <Footer />
                 </section>
             )}
         </>
+
     );
 };
 

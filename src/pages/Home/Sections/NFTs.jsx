@@ -12,8 +12,8 @@ const NFTs = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='400'>
-                    <span>Versus</span> monsters are passive NFTs that earn
-                    rewards automatically
+                    <span>Versus</span> Cyphers are Chainlink integrated, crosschain NFTs that earn
+                    rewards automatically.
                 </div>
                 <div className='characters_wrapper'>
                     <img
