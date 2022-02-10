@@ -11,36 +11,36 @@ const Main = () => {
                 alt='Graphic'
                 className='graph_line graphic_line1'
             />
-            <img
+            {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line2'
-            />
-            <img
+            /> */}
+            {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line3'
-            />
-            <img
+            /> */}
+            {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line4'
-            />
-            <img
+            /> */}
+            {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line5'
-            />
+            /> */}
             <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line6'
             />
-            <img
+            {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line7'
-            />
+            /> */}
             <img
                 src={GraphicLine1}
                 alt='Graphic'
@@ -59,7 +59,7 @@ const Main = () => {
 
             <div className='content_wrap'>
                 <div className='flex_box'>
-                    <div className='x2 image_wrap'>
+                    <div className='x1 image_wrap'>
                         <img
                             src={Shibachu}
                             alt='shibachu.gif'
@@ -74,20 +74,20 @@ const Main = () => {
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='500'>
-                            Passive Blockchain Battles
+                            Passive Metaverse Battles
                         </h1>
                         <p
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='600'>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt ut
+                            Cyphers have come to life through the power of blockchain. 
+                            Mint your own and help them harness their power for epic rewards!
                         </p>
                         <button
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='700'>
-                            Mint Your Own
+                            Explore Documentation
                         </button>
                     </div>
                 </div>

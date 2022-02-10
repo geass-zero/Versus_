@@ -4,6 +4,7 @@ import Arrow from '../../assets/images/Icon awesome-arrow-left.png';
 const Train = () => {
     return (
         <section className='train_wrap'>
+            
             <div className='content_wrap'>
                 <div className='flex_box'>
                     <div className='x2'>
@@ -84,7 +85,10 @@ const Train = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='x2'></div>
+                    <div className='x2'>
+                        <div className='train_embre'></div>
+
+                    </div>
                 </div>
             </div>
         </section>

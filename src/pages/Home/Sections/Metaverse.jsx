@@ -1,0 +1,30 @@
+import bat from '../../../assets/images/characters/bat.gif';
+import Bull from '../../../assets/images/characters/Bull.gif';
+import moon from '../../../assets/images/characters/moon.gif';
+import snake from '../../../assets/images/characters/snake.gif';
+
+const Metaverse = () => {
+    return (
+        <div className='metaverse_section'>
+            <div className='content_wrap'>
+                <h1>Metaverse</h1>
+                {/* <div className='about_board'></div>
+                <div className='world_wrapper'>
+                    <div className='world_img'></div>
+                    <div className='div_text'>The world of Versus is being translated into a 3D game!</div>
+                </div>
+                <div
+                    className='text'
+                    data-aos='fade-up'
+                    data-aos-offset='0'
+                    data-aos-duration='400'>
+                    Trainers and their cyphers will be able to explore the region
+                    of ***** in an  online world.
+                </div> */}
+               
+            </div>
+        </div>
+    );
+};
+
+export default Metaverse;

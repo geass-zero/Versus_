@@ -5,6 +5,17 @@
     width: 100%;
     position: relative;
 
+    .train_embre {
+        width: 50%;
+        height: 74vh;
+        position: absolute;
+        bottom: 0;
+        background-image: url('../../assets/images/characters/embre_train.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+
     &:after {
         @include pseudo-abs();
         background-image: url('../../assets/images/trainbg.jpg');
@@ -200,11 +211,15 @@
 }
 
 @media screen and (max-width: $breakpoint-xs) {
+    .train_embre {
+        display: none;
+    }
     .train_wrap {
         &:after {
             min-height: calc(100vh - #{$mainnav-height-mob});
         }
         .content_wrap {
+            
             .x2 {
                 &:last-child {
                     min-height: auto;
