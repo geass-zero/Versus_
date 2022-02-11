@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.e5ee7482.chunk.css",
-    "main.js": "/static/js/main.ff1a7412.chunk.js",
-    "main.js.map": "/static/js/main.ff1a7412.chunk.js.map",
+    "main.css": "/static/css/main.321611aa.chunk.css",
+    "main.js": "/static/js/main.32d75342.chunk.js",
+    "main.js.map": "/static/js/main.32d75342.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.526389ea.js",
     "runtime-main.js.map": "/static/js/runtime-main.526389ea.js.map",
     "static/css/2.09b205b8.chunk.css": "/static/css/2.09b205b8.chunk.css",
@@ -12,21 +12,21 @@
     "static/js/3.ae5b1ed3.chunk.js.map": "/static/js/3.ae5b1ed3.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.09b205b8.chunk.css.map": "/static/css/2.09b205b8.chunk.css.map",
-    "static/css/main.e5ee7482.chunk.css.map": "/static/css/main.e5ee7482.chunk.css.map",
+    "static/css/main.321611aa.chunk.css.map": "/static/css/main.321611aa.chunk.css.map",
     "static/js/2.09d3e43b.chunk.js.LICENSE.txt": "/static/js/2.09d3e43b.chunk.js.LICENSE.txt",
+    "static/media/Calfire.40c2e550.gif": "/static/media/Calfire.40c2e550.gif",
     "static/media/Card.eda1f2e5.png": "/static/media/Card.eda1f2e5.png",
     "static/media/Close.f7e797a4.svg": "/static/media/Close.f7e797a4.svg",
     "static/media/styles.scss": "/static/media/versus_world.8d1de260.jpg",
     "static/media/graphic.33325e07.png": "/static/media/graphic.33325e07.png",
     "static/media/loader.6326f1f4.mp4": "/static/media/loader.6326f1f4.mp4",
-    "static/media/shibachu.f696929f.gif": "/static/media/shibachu.f696929f.gif",
     "static/media/versus.20ae8880.png": "/static/media/versus.20ae8880.png"
   },
   "entrypoints": [
     "static/js/runtime-main.526389ea.js",
     "static/css/2.09b205b8.chunk.css",
     "static/js/2.09d3e43b.chunk.js",
-    "static/css/main.e5ee7482.chunk.css",
-    "static/js/main.ff1a7412.chunk.js"
+    "static/css/main.321611aa.chunk.css",
+    "static/js/main.32d75342.chunk.js"
   ]
 }
