@@ -3,7 +3,7 @@ import 'reactjs-popup/dist/index.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import Shibachu from '../../assets/images/shibachu.gif';
+import Shibachu from '../../assets/images/Calfire.gif';
 import LoaderImage from '../../assets/images/Card.png';
 
 import { ReactComponent as Close } from '../../assets/images/Close.svg';

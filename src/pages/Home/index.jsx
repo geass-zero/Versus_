@@ -8,7 +8,6 @@ import './styles.scss';
 
 import VersusContext from '../../store/Context';
 
-import Shibachu from '../../assets/images/shibachu.gif';
 import LoaderImage from '../../assets/images/Pattern.png';
 import AboutVersus from './Sections/AboutVersus';
 import AboutCyphers from './Sections/AboutCyphers';
@@ -19,17 +18,17 @@ const Home = () => {
     const contextData = useContext(VersusContext);
 
     useEffect(() => {
-        contextData.imageLoader([
-            { type: 'image', src: LoaderImage },
-            { type: 'image', src: Shibachu },
-            // { type: 'video', src: Video1 },
-            // { type: 'video', src: Video2 },
-        ]);
+        // contextData.imageLoader([
+        //     { type: 'image', src: LoaderImage },
+        //     { type: 'image', src: Shibachu },
+        //     // { type: 'video', src: Video1 },
+        //     // { type: 'video', src: Video2 },
+        // ]);
     }, []);
 
     return (
         <>
-            {!contextData.isLoading && contextData.initialloaderFinished && (
+            {(
                 <section className='home'>
                   <Main />
                   <NFTs />

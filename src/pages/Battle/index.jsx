@@ -14,12 +14,12 @@ const Battle = () => {
     const [showPopup, setPopUp] = useState(false);
 
     useEffect(() => {
-        contextData.imageLoader([{ type: 'image', src: LoaderImage }]);
+        // contextData.imageLoader([{ type: 'image', src: LoaderImage }]);
     }, []);
 
     return (
         <>
-            {!contextData.isLoading && contextData.initialloaderFinished && (
+            {(
                 <section className='battle_wrap'>
                     <BattlePopUp
                         showPopUp={showPopup}

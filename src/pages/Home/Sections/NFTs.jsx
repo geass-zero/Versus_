@@ -7,7 +7,7 @@ const NFTs = () => {
     return (
         <div className='nfts_section'>
             <div className='content_wrap'>
-                <div
+                {/* <div
                     className='text'
                     data-aos='fade-up'
                     data-aos-offset='0'
@@ -44,7 +44,7 @@ const NFTs = () => {
                         data-aos-offset='0'
                         data-aos-duration='400'
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     );

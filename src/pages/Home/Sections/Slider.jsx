@@ -11,19 +11,19 @@ const Slider = () => {
         {
             title: 'MINT',
             description:
-                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+                "Each Cypher can be brought to life through a process called minting. Act fast though, they're limited.",
             video: 'https://player.vimeo.com/external/665992462.m3u8?s=fc6c8b495529166a3be408a5d9cd5e8e015a676f',
         },
         {
-            title: 'MINT',
+            title: 'TRAIN',
             description:
-                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+                "Increase your Cypher's stats in the Chainlink Gym, powered by the Chainlink price feeds.",
             video: 'https://player.vimeo.com/external/665991357.m3u8?s=00ee7c0c36c5863f6519dbb22c63527998c829d0',
         },
         {
-            title: 'MINT',
+            title: 'BATTLE',
             description:
-                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+                "Add your Cyphers to the battle pool to battle other Cyphers and win rewards. Make sure to train first!",
             video: 'https://player.vimeo.com/external/665993451.m3u8?s=26a000d0874a3646623b0b8423923345e0cb0c52',
         },
     ];
@@ -59,6 +59,7 @@ const SlideItem = ({ title, description, videoSrc }) => {
                 src={videoSrc}
                 autoPlay={true}
                 muted={true}
+                playsinline={true}
                 loop={true}
                 controls={false}
                 width='100%'

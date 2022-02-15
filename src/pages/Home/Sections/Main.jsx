@@ -1,4 +1,4 @@
-import Shibachu from '../../../assets/images/shibachu.gif';
+import Shibachu from '../../../assets/images/Calfire.gif';
 import GraphicLine from '../../../assets/images/Graphics/Group 51.png';
 import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 // import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
@@ -6,11 +6,11 @@ import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 const Main = () => {
     return (
         <div className='main_section'>
-            <img
+            {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line1'
-            />
+            /> */}
             {/* <img
                 src={GraphicLine}
                 alt='Graphic'
@@ -31,17 +31,17 @@ const Main = () => {
                 alt='Graphic'
                 className='graph_line graphic_line5'
             /> */}
-            <img
+            {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line6'
-            />
+            /> */}
             {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line7'
             /> */}
-            <img
+            {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line8'
@@ -55,7 +55,7 @@ const Main = () => {
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line10'
-            />
+            /> */}
 
             <div className='content_wrap'>
                 <div className='flex_box'>
@@ -74,7 +74,7 @@ const Main = () => {
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='500'>
-                            Passive Metaverse Battles
+                            A New World To Explore
                         </h1>
                         <p
                             data-aos='fade-up'
@@ -87,7 +87,7 @@ const Main = () => {
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='700'>
-                            Explore Documentation
+                            Read the Docs
                         </button>
                     </div>
                 </div>

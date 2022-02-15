@@ -23,13 +23,13 @@ const MintYourOwn = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='500'>
-                    Mint your own crosschain NFT monster and join the Versus Metaverse!
+                    Mint your own crosschain NFT monster and join the Versus Metaverse.
                 </p>
                 <button
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='600'>
-                    Mint your Own
+                    Jump In!
                 </button>
             </div>
         </div>

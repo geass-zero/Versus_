@@ -6,12 +6,23 @@ import VersusContext, { Provider } from './store/Context';
 import Loader from './components/Loader';
 import loaderVideo from './assets/videos/loader.mp4';
 
-const Home = lazy(() => import('./pages/Home'));
-const Battle = lazy(() => import('./pages/Battle'));
-const Mint = lazy(() => import('./pages/Mint'));
-const Train = lazy(() => import('./pages/Train'));
+// const Home = lazy(() => import('./pages/Home'));
+// const Battle = lazy(() => import('./pages/Battle'));
+// const Mint = lazy(() => import('./pages/Mint'));
+// const Train = lazy(() => import('./pages/Train'));
 
-const Header = lazy(() => import('./components/Header'));
+
+
+import Header from './components/Header';
+
+import Home from './pages/Home';
+import Battle from './pages/Battle';
+import Mint from './pages/Mint';
+import Train from './pages/Train';
+
+
+
+//const Header = lazy(() => import('./components/Header'));
 
 function App() {
     useEffect(() => {
@@ -19,7 +30,7 @@ function App() {
     }, []);
 
     return (
-<HashRouter basename='/'>
+        <HashRouter basename='/'>
             <Header />
             <main>
                 <Routes>

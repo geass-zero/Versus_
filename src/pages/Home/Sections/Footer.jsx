@@ -14,7 +14,7 @@ const Footer = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='400'>
-                    <div className='logo'>Join the party!</div>
+                    <div className='logo'>Enter the world of Versus today!</div>
                 </div>
                 <div
                     className='links_wrap'

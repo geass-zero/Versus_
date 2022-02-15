@@ -36,7 +36,7 @@ const Header = () => {
                         className={`${
                             location.pathname === '/mint' ? 'active' : ''
                         }`}>
-                        Mint
+                        MINT
                     </Link>
                     <Link
                         to='/train'
@@ -44,7 +44,7 @@ const Header = () => {
                         className={`${
                             location.pathname === '/train' ? 'active' : ''
                         }`}>
-                        Train
+                        TRAIN
                     </Link>
                     <Link
                         to='/battle'
@@ -52,7 +52,7 @@ const Header = () => {
                         className={`${
                             location.pathname === '/battle' ? 'active' : ''
                         }`}>
-                        Battle
+                        BATTLE
                     </Link>
                     <Link
                         to='/docs'
@@ -60,7 +60,7 @@ const Header = () => {
                         className={`${
                             location.pathname === '/docs' ? 'active' : ''
                         }`}>
-                        Docs
+                        DOCS
                     </Link>
                 </div>
                 {/* <div  onClick={() => connectToWallet()} className='connect_button'>
