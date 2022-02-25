@@ -1,7 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
 import './styles.scss';
 import BattlePopUp from './PopUp';
-import { BattleDetailCard, CreatureCard } from './BattleCardItems';
+import {
+    BattleDetailCard,
+    CreatureCard,
+    VersusMobileCard,
+} from './BattleCardItems';
 import UserCard from './UserCard';
 import VersusContext from '../../store/Context';
 
@@ -55,6 +59,10 @@ const Battle = () => {
                                         creatureName={'CREATURE NAME'}
                                         image={User2}
                                         cardImage={CardImage}
+                                    />
+                                    <VersusMobileCard
+                                        cardImage1={CardImage}
+                                        cardImage2={CardImage}
                                     />
                                     <BattleDetailCard data={battleData} />
                                 </div>

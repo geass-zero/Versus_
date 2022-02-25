@@ -44,8 +44,9 @@ button {
                 justify-content: space-between;
                 align-items: flex-start;
                 // height: min(calc(100vh - #{$mainnav-height} - 300px), 100px);
-                margin-bottom: 20px;
+                margin-bottom: 0px;
                 padding-right: 10px;
+                overflow: hidden;
 
                 .wrap_left,
                 .wrap_right {
@@ -53,8 +54,8 @@ button {
                     min-height: 560px;
                     width: 100%;
                     height: min(
-                        620px,
-                        calc(100vh - #{$mainnav-height} - 300px)
+                        640px,
+                        calc(100vh - #{$mainnav-height} - 260px)
                     );
                     @include flex-column();
                     justify-content: space-between;
@@ -155,21 +156,81 @@ button {
         border-radius: 8px;
         @include flex-column();
         justify-content: space-between;
-        bottom: -20px;
+        bottom: 0px;
         max-height: 417px;
+        padding: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        animation: fadeUp 0.2s 1;
 
         .detail_head {
             color: #165159;
             font-size: 26px;
             background-color: #dfd2b9;
             font-family: 'Open Sans';
-            font-weight: 600;
+            font-weight: 800;
             margin-bottom: 15px;
             padding: 0 5px;
         }
 
         .scroll_wrap {
             overflow: auto;
+            width: 100%;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #5c5c5c;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #f8a544;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #f8a444d8;
+            }
+
+            .detail_item {
+                border: 2px solid #a7a194;
+                background-color: #dfd2b9;
+                padding: 5px;
+                @include flex-row();
+                justify-content: space-between;
+                font-size: 20px;
+                color: #165159;
+                margin-bottom: 4px;
+                font-weight: 600;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .icon {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #b6b6b6;
+                    border: 2px solid #fff;
+                    @include flex-row();
+
+                    img {
+                        width: 80%;
+                        height: 80%;
+                    }
+                }
+
+                .right_ {
+                    color: #24a159;
+                    padding-right: 5px;
+                    font-size: 28px;
+                }
+            }
         }
     }
 }
@@ -199,6 +260,7 @@ button {
         background-color: #b6b6b6;
         border: 7px solid #fff;
         min-width: 110px;
+        width: 110px;
         height: 110px;
         @include flex-row();
         position: relative;
@@ -386,6 +448,10 @@ button {
     }
 }
 
+.versus_mobile_card {
+    display: none;
+}
+
 @media screen and (max-width: $breakpoint-md) {
     .battle_pop {
         width: calc(100vw - 100px);
@@ -416,7 +482,8 @@ button {
                     }
 
                     .wrap_left {
-                        height: calc(100vh - #{$mainnav-height-mob} - 180px);
+                        max-width: 100%;
+                        height: calc(100vh - #{$mainnav-height-mob} - 160px);
                     }
 
                     .vs_icon {
@@ -443,6 +510,30 @@ button {
                 .row_data {
                     display: none;
                 }
+            }
+        }
+    }
+
+    .creature_card {
+        .right_ {
+            .card_image {
+                display: none;
+            }
+        }
+    }
+
+    .versus_mobile_card {
+        @include flex-row();
+        justify-content: space-between;
+
+        img {
+            width: auto;
+            width: 42%;
+
+            &.vs_icon_card {
+                width: 30%;
+                margin-left: -8%;
+                margin-right: -8%;
             }
         }
     }
