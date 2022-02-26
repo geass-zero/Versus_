@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Bull from '../../assets/images/characters/Bull.gif';
 import VS from '../../assets/images/VS.png';
 
@@ -16,7 +16,7 @@ const BattleDetailCard = ({ data, isOpponent }) => {
                 </div>
                 <div className='controls_wrap'>
                     <div className='left'>
-                        <button onClick={() => setHistoryOpen(!isHistoryOpen)}>
+                        <button onClick={() => setHistoryOpen(true)}>
                             Battle History
                         </button>
                         <div>
@@ -52,11 +52,23 @@ const BattleDetailCard = ({ data, isOpponent }) => {
 };
 
 const DetailBox = ({ onClose }) => {
+    const detailBoxRef = useRef(null);
+
+    useEffect(() => {
+        window.addEventListener('click', closeOnClickOutside);
+
+        return () => window.removeEventListener('keyup', closeOnClickOutside);
+    }, []);
+
+    const closeOnClickOutside = (e) => {
+        if (detailBoxRef && !detailBoxRef.current.contains(e.target)) {
+            onClose && onClose();
+        }
+    };
+
     return (
-        <div className='detail_box'>
-            <span className='detail_head' onClick={() => onClose()}>
-                Battle History
-            </span>
+        <div className='detail_box' onBlur={() => onClose()} ref={detailBoxRef}>
+            <span className='detail_head'>Battle History</span>
             <div className='scroll_wrap'>
                 <DetailItem />
                 <DetailItem />

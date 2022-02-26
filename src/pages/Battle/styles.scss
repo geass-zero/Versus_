@@ -26,10 +26,11 @@ button {
         margin-bottom: 0;
 
         .box_wrap {
+            padding: 15px 30px;
             max-width: 1145px;
             width: 100%;
             @include flex-column();
-            height: min(780px, calc(100vh - #{$mainnav-height} - 30px));
+            height: min(680px, calc(100vh - #{$mainnav-height} - 30px));
 
             .main_title {
                 text-align: center;
@@ -40,7 +41,7 @@ button {
                 width: 100%;
                 @include flex-row();
                 flex: 1;
-                overflow: auto;
+                overflow: hidden;
                 justify-content: space-between;
                 align-items: flex-start;
                 // height: min(calc(100vh - #{$mainnav-height} - 300px), 100px);
@@ -50,11 +51,12 @@ button {
                 .wrap_left,
                 .wrap_right {
                     max-width: 338px;
-                    min-height: 560px;
+                    min-height: 380px;
                     width: 100%;
-                    height: min(
-                        640px,
-                        calc(100vh - #{$mainnav-height} - 260px)
+                    height: 100%;
+                    max-height: max(
+                        480px,
+                        calc(100vh - #{$mainnav-height} - 170px)
                     );
                     @include flex-column();
                     justify-content: space-between;
@@ -82,7 +84,7 @@ button {
         background-color: #bdad8e;
         padding: 5px 10px;
         font-family: 'Open Sans';
-        font-size: 22px;
+        font-size: 15px;
         font-weight: 600;
         width: 100%;
         // @include flex-column();
@@ -249,7 +251,9 @@ button {
             padding-right: 15px;
 
             img {
-                object-position: -25px;
+                // object-position: -25px;
+                margin-left: -25px;
+                margin-right: 25px;
             }
         }
     }
@@ -258,9 +262,9 @@ button {
         border-radius: 50%;
         background-color: #b6b6b6;
         border: 7px solid #fff;
-        min-width: 110px;
-        width: 110px;
-        height: 110px;
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
         @include flex-row();
         position: relative;
 
@@ -314,7 +318,7 @@ button {
         padding-top: 15px;
         padding-left: 15px;
         color: #165159;
-        font-size: 22px;
+        font-size: 18px;
         font-family: 'Open Sans';
         font-weight: 500;
 
@@ -324,6 +328,7 @@ button {
             img {
                 width: 100%;
                 object-fit: contain;
+                max-height: 31vh; //250px;
             }
         }
     }
@@ -471,8 +476,10 @@ button {
         .content_wrap {
             .box_wrap {
                 min-height: calc(100vh - #{$mainnav-height} - 80px);
+                padding: 15px;
 
                 .content_scroller {
+                    overflow: auto;
                     max-height: calc(100vh - #{$mainnav-height-mob} - 100px);
                     padding-right: 0;
 
