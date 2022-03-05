@@ -1,17 +1,31 @@
 import { useContext, useEffect, useState } from 'react';
 import './styles.scss';
 import BattlePopUp from './PopUp';
+import {
+    BattleDetailCard,
+    CreatureCard,
+    VersusMobileCard,
+} from './BattleCardItems';
 import UserCard from './UserCard';
 import VersusContext from '../../store/Context';
 
 import VS from '../../assets/images/VS.png';
 import User1 from '../../assets/images/characters/moon.gif';
 import User2 from '../../assets/images/characters/Bull.gif';
+import CardImage from '../../assets/images/cardImage.png';
+
 import LoaderImage from '../../assets/images/battlebg.jpg';
 
 const Battle = () => {
     const contextData = useContext(VersusContext);
     const [showPopup, setPopUp] = useState(false);
+
+    const battleData = {
+        wins: 0,
+        win_rate: '100%',
+        versus: '2.8k',
+        fight_remain: 5,
+    };
 
     useEffect(() => {
         // contextData.imageLoader([{ type: 'image', src: LoaderImage }]);
@@ -19,7 +33,7 @@ const Battle = () => {
 
     return (
         <>
-            {(
+            {
                 <section className='battle_wrap'>
                     <BattlePopUp
                         showPopUp={showPopup}
@@ -39,51 +53,39 @@ const Battle = () => {
                                 My Battling Monsters
                             </div>
                             <div className='content_scroller scroll_bar'>
-                                <BattleItem />
-                                <BattleItem />
-                                <BattleItem />
-                                <BattleItem />
-                                <BattleItem />
+                                <div className='wrap_left'>
+                                    <CreatureCard
+                                        code={165}
+                                        creatureName={'CREATURE NAME'}
+                                        image={User2}
+                                        cardImage={CardImage}
+                                    />
+                                    <VersusMobileCard
+                                        cardImage1={CardImage}
+                                        cardImage2={CardImage}
+                                    />
+                                    <BattleDetailCard data={battleData} />
+                                </div>
+                                <img src={VS} alt='VS' className='vs_icon' />
+                                <div className='wrap_right'>
+                                    <CreatureCard
+                                        code={165}
+                                        creatureName={'CREATURE NAME'}
+                                        image={User1}
+                                        isOpponent={true}
+                                        cardImage={CardImage}
+                                    />
+                                    <BattleDetailCard
+                                        data={battleData}
+                                        isOpponent={true}
+                                    />
+                                </div>
                             </div>
-                            <button
-                                data-aos='fade-up'
-                                data-aos-offset='0'
-                                data-aos-duration='600'
-                                onClick={() => setPopUp(true)}>
-                                ADD MONSTER
-                            </button>
                         </div>
                     </div>
                 </section>
-            )}
+            }
         </>
-    );
-};
-
-const BattleItem = () => {
-    return (
-        <div className='battle_item'>
-            <div className='user'>
-                <UserCard
-                    image={User1}
-                    title={'#165: Ohwail'}
-                    wins={7}
-                    winRate={'75%'}
-                    ethWon={0.03}
-                />
-            </div>
-            <img src={VS} alt='VS' />
-            <div className='user'>
-                <UserCard
-                    image={User2}
-                    title={'#165: Ohwail'}
-                    wins={7}
-                    winRate={'75%'}
-                    ethWon={0.03}
-                />
-            </div>
-            <div className='close'>-</div>
-        </div>
     );
 };
 
