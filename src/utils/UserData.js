@@ -13,7 +13,7 @@ async function connectWallet() {
           package: WalletConnectProvider,
           options: {
             rpc: {
-               56: 'https://bsc-dataseed1.defibit.io/'
+               97: 'https://data-seed-prebsc-1-s1.binance.org:8545/'
             },
             network: 'binance',
           }
@@ -44,11 +44,37 @@ async function connectWallet() {
     if (!myWeb3 && window.ethereum && window.ethereum.isMetaMask) {
         window.ethereum.request({ method: 'eth_requestAccounts' });
     }
-    return await myWeb3.eth.getAccounts();
+    return [await myWeb3.eth.getAccounts(), myWeb3];
 }
 
 async function getUserTokenIDs() {
-    //return array of tokenIDs
+    if (myWeb3) {
+        let walletData = await connectWallet();
+        //return array of tokenIDs
+        var web3Provider = new Web3.providers.HttpProvider('https://data-seed-prebsc-2-s2.binance.org:8545/');
+        var web3 = new Web3(web3Provider);
+        let l2Instance = new web3.eth.Contract(
+            Layer2Tracker.abi,
+            '0xC0B5ffF46f32a3B8E692f4e670cfFBaF1B19C8E4'
+        );
+        let IDs = await l2Instance.methods.getAddressTokenIDs(walletData[0][0]).call();
+        let NFTObjects = [];
+        for (let i = 0; i < IDs.length; i++) {
+            let data = await l2Instance.methods.getNFTDetails(IDs[i]).call();
+            NFTObjects.push({
+                0: data[0],
+                1: data[1],
+                2: data[2],
+                3: data[3],
+                4: data[4],
+                5: data[5],
+                6: IDs[i]
+            });
+        }
+        return NFTObjects;
+    } else {
+        return [];
+    }
 }
 
 async function getIDData(tokenID) {
@@ -58,5 +84,7 @@ async function getIDData(tokenID) {
 
 
 export {
-    connectWallet
+    connectWallet,
+    getUserTokenIDs,
+    myWeb3
 }

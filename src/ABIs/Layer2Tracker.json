@@ -2,6 +2,114 @@
     "contractName": "Layer2Tracker",
     "abi": [
         {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "growCypher",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "_addresses",
+                    "type": "address[]"
+                },
+                {
+                    "internalType": "uint256[]",
+                    "name": "_uints",
+                    "type": "uint256[]"
+                },
+                {
+                    "internalType": "string[]",
+                    "name": "_strings",
+                    "type": "string[]"
+                },
+                {
+                    "internalType": "bool[]",
+                    "name": "_bools",
+                    "type": "bool[]"
+                }
+            ],
+            "name": "portMessage",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "requestId",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "randomness",
+                    "type": "uint256"
+                }
+            ],
+            "name": "rawFulfillRandomness",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_cypherList",
+                    "type": "address"
+                }
+            ],
+            "name": "setCypherList",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_contractAddress",
+                    "type": "address"
+                }
+            ],
+            "name": "setWhitelistStatus",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_versusToken",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_link",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_coordinator",
+                    "type": "address"
+                }
+            ],
+            "name": "trackerConstructor",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
             "inputs": [],
             "stateMutability": "nonpayable",
             "type": "constructor"
@@ -9,88 +117,19 @@
         {
             "inputs": [
                 {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
+                    "internalType": "address",
+                    "name": "newCode",
+                    "type": "address"
                 }
             ],
-            "name": "NFTDetails",
-            "outputs": [
-                {
-                    "internalType": "uint32",
-                    "name": "cypherID",
-                    "type": "uint32"
-                },
-                {
-                    "internalType": "uint32",
-                    "name": "NFTLevel",
-                    "type": "uint32"
-                },
-                {
-                    "internalType": "uint32",
-                    "name": "totalWins",
-                    "type": "uint32"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "timeChecked",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "versusHeld",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "versusRewards",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
+            "name": "updateCode",
+            "outputs": [],
+            "stateMutability": "nonpayable",
             "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint32",
-                    "name": "",
-                    "type": "uint32"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "name": "NFTStatsHistory",
-            "outputs": [
-                {
-                    "internalType": "uint32",
-                    "name": "",
-                    "type": "uint32"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "VRFRandom",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
+            "stateMutability": "payable",
+            "type": "receive"
         },
         {
             "inputs": [],
@@ -182,9 +221,9 @@
                     "type": "string"
                 },
                 {
-                    "internalType": "uint256",
+                    "internalType": "uint32",
                     "name": "",
-                    "type": "uint256"
+                    "type": "uint32"
                 },
                 {
                     "internalType": "uint32[]",
@@ -201,19 +240,6 @@
             "type": "function"
         },
         {
-            "inputs": [],
-            "name": "getRandomNumber",
-            "outputs": [
-                {
-                    "internalType": "bytes32",
-                    "name": "requestId",
-                    "type": "bytes32"
-                }
-            ],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
             "inputs": [
                 {
                     "internalType": "uint256",
@@ -221,9 +247,15 @@
                     "type": "uint256"
                 }
             ],
-            "name": "growCypher",
-            "outputs": [],
-            "stateMutability": "nonpayable",
+            "name": "getNFTStats",
+            "outputs": [
+                {
+                    "internalType": "uint32[]",
+                    "name": "",
+                    "type": "uint32[]"
+                }
+            ],
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -242,29 +274,74 @@
         {
             "inputs": [
                 {
-                    "internalType": "uint256[]",
-                    "name": "_uints",
-                    "type": "uint256[]"
-                },
-                {
-                    "internalType": "address[]",
-                    "name": "_addresses",
-                    "type": "address[]"
-                },
-                {
-                    "internalType": "string[]",
-                    "name": "_strings",
-                    "type": "string[]"
-                },
-                {
-                    "internalType": "bool[]",
-                    "name": "_bools",
-                    "type": "bool[]"
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
                 }
             ],
-            "name": "portMessage",
-            "outputs": [],
-            "stateMutability": "nonpayable",
+            "name": "NFTDetails",
+            "outputs": [
+                {
+                    "internalType": "uint32",
+                    "name": "cypherID",
+                    "type": "uint32"
+                },
+                {
+                    "internalType": "uint32",
+                    "name": "NFTLevel",
+                    "type": "uint32"
+                },
+                {
+                    "internalType": "uint32",
+                    "name": "totalXP",
+                    "type": "uint32"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "timeChecked",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "versusHeld",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "versusRewards",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint32",
+                    "name": "",
+                    "type": "uint32"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "NFTStatsHistory",
+            "outputs": [
+                {
+                    "internalType": "uint32",
+                    "name": "",
+                    "type": "uint32"
+                }
+            ],
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -278,37 +355,6 @@
                 }
             ],
             "stateMutability": "pure",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "bytes32",
-                    "name": "requestId",
-                    "type": "bytes32"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "randomness",
-                    "type": "uint256"
-                }
-            ],
-            "name": "rawFulfillRandomness",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "_cypherList",
-                    "type": "address"
-                }
-            ],
-            "name": "setCypherList",
-            "outputs": [],
-            "stateMutability": "nonpayable",
             "type": "function"
         },
         {
@@ -331,42 +377,6 @@
             "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "_versusToken",
-                    "type": "address"
-                },
-                {
-                    "internalType": "address",
-                    "name": "_link",
-                    "type": "address"
-                },
-                {
-                    "internalType": "address",
-                    "name": "_coordinator",
-                    "type": "address"
-                }
-            ],
-            "name": "trackerConstructor",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "newCode",
-                    "type": "address"
-                }
-            ],
-            "name": "updateCode",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
             "inputs": [],
             "name": "versusToken",
             "outputs": [
@@ -382,6 +392,19 @@
         {
             "inputs": [],
             "name": "viewVRFRandom",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "VRFRandom",
             "outputs": [
                 {
                     "internalType": "uint256",
@@ -434,10 +457,6 @@
             ],
             "stateMutability": "view",
             "type": "function"
-        },
-        {
-            "stateMutability": "payable",
-            "type": "receive"
         }
     ]
 }

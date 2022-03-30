@@ -15,8 +15,7 @@ const Header = () => {
         setIsOpen(false)
         let accounts = await connectWallet();
         if (accounts[0]) {
-            setCurrentAccount(accounts[0]);
-            console.log(currentAccount);
+            setCurrentAccount(accounts[0][0]);
         }
     }
 

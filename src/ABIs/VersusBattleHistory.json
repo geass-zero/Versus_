@@ -1,0 +1,209 @@
+{
+    "contractName": "CypherBattleHistory",
+    "abi":[
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_battlePool",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_layer2Tracker",
+					"type": "address"
+				}
+			],
+			"name": "battleConstructor",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint32",
+					"name": "tokenID",
+					"type": "uint32"
+				}
+			],
+			"name": "getTokenHistory",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32[]",
+					"name": "",
+					"type": "uint32[]"
+				},
+				{
+					"internalType": "bool[]",
+					"name": "",
+					"type": "bool[]"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_contract",
+					"type": "address"
+				},
+				{
+					"internalType": "bool",
+					"name": "_direction",
+					"type": "bool"
+				}
+			],
+			"name": "setWhitelistStatus",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "newCode",
+					"type": "address"
+				}
+			],
+			"name": "updateCode",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint32",
+					"name": "tokenID",
+					"type": "uint32"
+				},
+				{
+					"internalType": "uint32",
+					"name": "opponentID",
+					"type": "uint32"
+				},
+				{
+					"internalType": "bool",
+					"name": "isWin",
+					"type": "bool"
+				}
+			],
+			"name": "updateTokenHistory",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"stateMutability": "payable",
+			"type": "receive"
+		},
+		{
+			"inputs": [],
+			"name": "battlePool",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint32",
+					"name": "",
+					"type": "uint32"
+				}
+			],
+			"name": "cypherHistory",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "totalBattles",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "wins",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "initialized",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "layer2Tracker",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "owner",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "proxiableUUID",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "pure",
+			"type": "function"
+		}
+	]
+}

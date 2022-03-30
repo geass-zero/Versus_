@@ -4,11 +4,12 @@ import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
 
 import VersusContext from '../../store/Context';
-import {fetchMintData, mintCypher, getBridgedData} from '../../utils/MintingFunctions';
+import {fetchMintData, mintCypher, getNFTDetails, getIDOwner, getBridgedData} from '../../utils/MintingFunctions';
+import {connectWallet} from '../../utils/UserData';
 
 const Mint = () => {
     const contextData = useContext(VersusContext);
-    const [value, setValue] = useState(2);
+    const [value, setValue] = useState(1);
     const [showPopup, setPopUp] = useState(false);
     const [currentTokenID, setCurrentTokenID] = useState(0);
     const [currentMax, setCurrentMax] = useState(0);
@@ -16,24 +17,49 @@ const Mint = () => {
     const [mintedCyphers, setMintedCyphers] = useState([]);
 
     const updateValue = (isAdd) => {
-        if (isAdd) setValue(value + 1);
-        else if (value > 0) setValue(value - 1);
+        // if (isAdd) setValue(value + 1);
+        // else if (value > 0) setValue(value - 1);
+        setValue(1);
     };
 
 
     useEffect(() => {
+        localStorage.setItem('page', 'Mint');
         // contextData.imageLoader([{ type: 'image', src: LoaderImage }]);
+        getMintData();
     }, []);
                               
     async function getMintData() {
         let data = await fetchMintData();
-
+        console.log(data);
     }
 
     async function mint() {
-        await mintCypher(value);
+        let cyphers = await mintCypher(value);
+        console.log(cyphers);
+        let checkOwner = setInterval(async function() {
+            let userWallet = await connectWallet();
+            
+            let owner = await getIDOwner(cyphers[0].ID);
+            console.log(owner);
+            if (userWallet[0][0] == owner) {
+                clearInterval(checkOwner);
+                for (let i = 0; i < cyphers.length; i++) {
+                    let cypherDetails = await getNFTDetails(cyphers[i].ID);
+                    console.log(cypherDetails);
+                    cyphers[i].image = cypherDetails[5];
+                    cyphers[i].description = cypherDetails[2];
+                    cyphers[i].stats = cypherDetails[4];
+                }
+                setMintedCyphers(cyphers);
+                setPopUp(true);
+            }
+        }, 2000)
+        // for (let i = 0; i < cyphers.length; i++) {
+
+        // }
         //call getBridgedData to get confirmation
-        setPopUp(true);
+        
     }
 
     return (
@@ -44,7 +70,7 @@ const Mint = () => {
                     <MintPopUp
                         showPopUp={showPopup}
                         closeModal={() => setPopUp(false)}
-                        mintedCyphers
+                        mintedCyphers={mintedCyphers}
                     />
                     <div className='content_wrap'>
                         <img src={LoaderImage} className='load_loader_image' alt='' />
@@ -60,7 +86,7 @@ const Mint = () => {
                                     data-aos-duration='300'>
                                     <div className='minted'>
                                         <div className='circle'></div>
-                                        <div>(Minting starts soon)</div>
+                                        <div>(Minting on Rinkeby)</div>
                                     </div>
                                     <div
                                         className='title'

@@ -9,7 +9,7 @@ import LoaderImage from '../../assets/images/Card.png';
 import { ReactComponent as Close } from '../../assets/images/Close.svg';
 import { useEffect, useState } from 'react';
 
-const MintPopUp = ({ showPopUp, closeModal }) => {
+const MintPopUp = ({ showPopUp, closeModal, mintedCyphers }) => {
     const [showPopUpReal, setPopUpReal] = useState(false);
     const [isAnimating, setAnimate] = useState(false);
     const [isRevealed, setReveal] = useState(false);
@@ -22,6 +22,8 @@ const MintPopUp = ({ showPopUp, closeModal }) => {
         }, 200);
     };
 
+    console.log(mintedCyphers);
+    
     useEffect(() => {
         if (showPopUp) {
             setTimeout(() => {
@@ -43,6 +45,22 @@ const MintPopUp = ({ showPopUp, closeModal }) => {
             setReveal(false);
         }
     }, [showPopUp]);
+
+    function loadMintedCards() {
+        let arr = [];
+        for (let i = 0; i < mintedCyphers.length; i++) {
+            arr.push(
+                <MintedCard
+                    isAnimating={isAnimating}
+                    isRevealed={isRevealed}
+                    cypherInfo={mintedCyphers[i]}
+                />
+            );
+        }
+        return arr;
+    }
+
+   
 
     return (
         <Popup
@@ -72,18 +90,8 @@ const MintPopUp = ({ showPopUp, closeModal }) => {
                         emulateTouch={false}
                         swipeable={false}
                         showStatus={true}>
-                        <MintedCard
-                            isAnimating={isAnimating}
-                            isRevealed={isRevealed}
-                        />
-                        <MintedCard
-                            isAnimating={isAnimating}
-                            isRevealed={isRevealed}
-                        />
-                        <MintedCard
-                            isAnimating={isAnimating}
-                            isRevealed={isRevealed}
-                        />
+                        
+                        {loadMintedCards()}
                     </Carousel>
                 </div>
             </>
@@ -91,7 +99,24 @@ const MintPopUp = ({ showPopUp, closeModal }) => {
     );
 };
 
-const MintedCard = ({ isAnimating, isRevealed }) => {
+const MintedCard = ({ isAnimating, isRevealed, cypherInfo }) => {
+    
+
+    const [cypherImage, setCypherImage] = useState("");
+
+    useEffect(() => {
+        async function loadJson(url) {
+            const data = await fetch(url)
+            const json = await data.json()
+            console.log(json)
+            setCypherImage(json['image']);
+            //return json['image'];
+        }
+        loadJson(cypherInfo['image'])
+        // setCypherImage(loadJson(cypherInfo['image']));
+        // console.log(cypherImage);
+    }, []);
+    
     return (
         <div className='mint_card'>
             <div className='flex_box'>
@@ -107,30 +132,28 @@ const MintedCard = ({ isAnimating, isRevealed }) => {
                             alt='LoaderImage'
                             className='LoaderImage'
                         />
-                        <img src={Shibachu} alt='Shibachu' />
+                        <img src={cypherImage} alt='Shibachu' />
                     </div>
                 </div>
                 <div className='x2 details'>
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et
-                        dolore
+                        {cypherInfo['description']}
                     </p>
                     <div className='row_data'>
                         <div className='item'>
-                            ATK: <span>1</span>
+                            ATK: <span>{cypherInfo['stats'][0]}</span>
                         </div>
                         <div className='item'>
-                            DEF: <span>1</span>
+                            DEF: <span>{cypherInfo['stats'][1]}</span>
                         </div>
                         <div className='item'>
-                            SPD: <span>1</span>
+                            SPD: <span>{cypherInfo['stats'][2]}</span>
                         </div>
                         <div className='item'>
-                            SP.ATK: <span>1</span>
+                            SP.ATK: <span>{cypherInfo['stats'][3]}</span>
                         </div>
                         <div className='item'>
-                            SP.DEF: <span>1</span>
+                            SP.DEF: <span>{cypherInfo['stats'][4]}</span>
                         </div>
                     </div>
                 </div>
