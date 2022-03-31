@@ -412,12 +412,13 @@
 @media screen and (max-width: $breakpoint-xs) {
   .mint_wrap {
     &:after {
-      min-height: calc(100vh - #{$mainnav-height-mob});
+      // min-height: calc(100vh - #{$mainnav-height-mob});
     }
 
     .flex_box {
       .x2 {
         @include flex-row();
+        padding-top: 30px;
 
         &:first-child {
           min-height: auto;
@@ -426,14 +427,56 @@
         .box_wrap {
           padding-left: 20px;
           padding-right: 20px;
+          margin-top: 0;
+          max-width: 340px;
+
+          .box_svg_mobile {
+            position: absolute;
+            width: 100%;
+            max-width: 500px;
+            // max-height: max(497px, calc(100vh - 170px));
+          }
+
+          .title {
+            font-size: 25px;
+          }
 
           .minted {
-            top: -17vw;
+            top: -20vh;
             .text {
               font-size: 18px;
 
               span {
                 font-size: 14px;
+              }
+            }
+          }
+
+          .value_box {
+            width: 55%;
+            @include flex-row();
+            margin: 20px 0;
+            margin-bottom: 40px;
+
+            svg {
+              width: 100%;
+              max-width: 160px;
+              margin-left: 50%;
+              transform: translate(-50%);
+            }
+          }
+
+          .button_values {
+            .value {
+              width: 50px;
+              font-size: 23px;
+            }
+
+            button {
+              padding: 0;
+
+              svg {
+                width: 70px;
               }
             }
           }

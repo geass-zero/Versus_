@@ -223,6 +223,10 @@ iframe {
   }
 }
 
+.mobile_only {
+  display: none;
+}
+
 @media screen and (max-width: 1366px) {
   .left_panel_auto_adjuster {
     padding-left: 140px;
@@ -230,6 +234,14 @@ iframe {
   }
 }
 @media screen and (max-width: $breakpoint-xs) {
+  .mobile_hidden {
+    display: none;
+  }
+
+  .mobile_only {
+    display: block;
+  }
+
   .left_panel_auto_adjuster {
     padding-left: 80px;
     padding-right: 0;
@@ -249,9 +261,9 @@ iframe {
     min-width: 110px;
   }
 
-  main {
-    padding-top: $mainnav-height-mob;
-  }
+  // main {
+  //   padding-top: $mainnav-height-mob;
+  // }
 
   .box_wrap {
     padding: 15px;

@@ -7,7 +7,7 @@ import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg
 import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
 import { ReactComponent as Minus } from '../../assets/svg/Mint/minus.svg';
 import { ReactComponent as Plus } from '../../assets/svg/Mint/plus.svg';
-// import { ReactComponent as MintBox } from '../../assets/svg/MintBox.svg';
+import { ReactComponent as MintBoxMobile } from '../../assets/svg/Mint/MintBoxMobile.svg';
 
 import VersusContext from '../../store/Context';
 import {
@@ -88,7 +88,7 @@ const Mint = () => {
             <div className='flex_box'>
               <div className='x2'>
                 <div
-                  className='mint_professor'
+                  className='mint_professor mobile_hidden'
                   data-aos='fade-right'
                   data-aos-offset='0'
                   data-aos-duration='600'></div>
@@ -99,7 +99,8 @@ const Mint = () => {
                   data-aos='zoom-in'
                   data-aos-offset='0'
                   data-aos-duration='300'>
-                  <MintBox className='box_svg' />
+                  <MintBox className='box_svg mobile_hidden' />
+                  <MintBoxMobile className='mobile_only box_svg_mobile' />
                   <div className='minted'>
                     <div className='circle'></div>
                     <div className='text'>
