@@ -2,6 +2,12 @@ import { useEffect, useState, useContext } from 'react';
 import MintPopUp from './PopUp';
 import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
+import { ReactComponent as MintBox } from '../../assets/svg/Mint/MintBox.svg';
+import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg';
+import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
+import { ReactComponent as Minus } from '../../assets/svg/Mint/minus.svg';
+import { ReactComponent as Plus } from '../../assets/svg/Mint/plus.svg';
+// import { ReactComponent as MintBox } from '../../assets/svg/MintBox.svg';
 
 import VersusContext from '../../store/Context';
 import {
@@ -24,9 +30,9 @@ const Mint = () => {
   const [mintedCyphers, setMintedCyphers] = useState([]);
 
   const updateValue = (isAdd) => {
-    // if (isAdd) setValue(value + 1);
-    // else if (value > 0) setValue(value - 1);
-    setValue(1);
+    if (isAdd) setValue(value + 1);
+    else if (value > 0) setValue(value - 1);
+    // setValue(1);
   };
 
   useEffect(() => {
@@ -71,7 +77,7 @@ const Mint = () => {
     <>
       <LeftStickOn />
       {
-        <section className=' mint_wrap'>
+        <section className=' mint_wrap left_panel_auto_adjuster'>
           <MintPopUp
             showPopUp={showPopup}
             closeModal={() => setPopUp(false)}
@@ -83,16 +89,17 @@ const Mint = () => {
               <div className='x2'>
                 <div
                   className='mint_professor'
-                  data-aos='fade-up'
+                  data-aos='fade-right'
                   data-aos-offset='0'
                   data-aos-duration='600'></div>
               </div>
               <div className='x2'>
                 <div
-                  className='box_wrap'
+                  className='box_wrap no_padding'
                   data-aos='zoom-in'
                   data-aos-offset='0'
                   data-aos-duration='300'>
+                  <MintBox className='box_svg' />
                   <div className='minted'>
                     <div className='circle'></div>
                     <div className='text'>
@@ -104,36 +111,43 @@ const Mint = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='400'>
-                    Each <span>Cypher</span> costs 0.099 ETH to create
+                    Each cypher costs 0.09 to materialize.
                   </div>
                   <div
                     className='value_box'
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='500'>
-                    {(0.099 * value).toFixed(3)}
+                    <MintValue />
+                    <span>{(0.099 * value).toFixed(3)}</span>
                   </div>
                   <div
                     className='button_values'
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='600'>
-                    <div className='button' onClick={() => updateValue(true)}>
-                      &#43;
-                    </div>
+                    <button
+                      className='transparent svg_wrap'
+                      onClick={() => updateValue(false)}>
+                      <Minus />
+                    </button>
+
                     <div className='value'>{value}</div>
-                    <div className='button' onClick={() => updateValue(false)}>
-                      &#8722;
-                    </div>
+                    <button
+                      className='transparent svg_wrap'
+                      onClick={() => updateValue(true)}>
+                      <Plus />
+                    </button>
                   </div>
                   <div
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='700'>
                     <button
-                      onClick={() => mint()}
-                      className={showPopup ? 'animate' : ''}>
-                      Mint
+                      className='transparent svg_wrap mint_button_wrap'
+                      onClick={() => mint()}>
+                      <span>Mint</span>
+                      <Button className='mint_button' />
                     </button>
                   </div>
                 </div>

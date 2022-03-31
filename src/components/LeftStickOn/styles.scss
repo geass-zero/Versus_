@@ -8,6 +8,18 @@
   @include flex-column();
   z-index: 999;
   box-sizing: border-box;
+  animation: slideSpecial 0.4s 1;
+
+  @keyframes slideSpecial {
+    from {
+      opacity: 0;
+      transform: translate(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
 
   &:before {
     @include pseudo-abs();
@@ -37,20 +49,8 @@
     .left_stick_on_box {
       max-height: min(580px, calc(100vh - #{$mainnav-height} - 40px));
       width: 155px;
-      animation: slideSpecial 0.4s 1;
       padding: 25px 0px;
       width: 155px;
-
-      @keyframes slideSpecial {
-        from {
-          opacity: 0;
-          transform: translate(-50%, -50%);
-        }
-        to {
-          opacity: 1;
-          transform: translate(0px, -50%);
-        }
-      }
 
       &:hover {
         .item {
@@ -126,6 +126,32 @@
           img {
             width: 80%;
             height: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-xs) {
+  .left_stick_on_wrapper {
+    &:before {
+      width: 70px;
+    }
+    .left_stick_on {
+      width: 90px;
+
+      .left_stick_on_box {
+        width: 70px;
+
+        .item {
+          &:before {
+            display: none;
+          }
+
+          .character_circle {
+            width: 45px;
+            height: 45px;
           }
         }
       }

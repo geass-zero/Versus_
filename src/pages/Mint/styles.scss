@@ -48,10 +48,21 @@
         @include flex-column();
         position: relative;
         margin-top: 100px;
+        position: relative;
+        width: 100%;
+
+        .box_svg {
+          position: absolute;
+          width: 100%;
+          max-width: 500px;
+          max-height: max(497px, calc(100vh - 170px));
+        }
 
         .minted {
+          max-width: 500px;
           position: absolute;
-          left: 0;
+          left: 50%;
+          transform: translateX(-50%);
           background: rgba(243, 237, 225, 0.9);
           border-radius: 60px;
           height: 60px;
@@ -60,7 +71,7 @@
           text-align: left;
           letter-spacing: 0px;
           color: #dc67a7;
-          top: -75px;
+          top: -10vw;
           padding: 15px;
           margin-bottom: 15px;
           padding-left: 50px;
@@ -93,10 +104,15 @@
 
         .title {
           text-align: center;
-
-          letter-spacing: 0px;
-          color: #292929;
-          max-width: 350px;
+          font-family: 'Lexend Deca';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 30px;
+          text-align: center;
+          margin-top: -20px;
+          color: #000000;
+          max-width: 410px;
           margin-bottom: 35px;
 
           span {
@@ -106,14 +122,26 @@
 
         .button_values {
           @include flex-row();
-          margin-bottom: 30px;
+
+          button {
+            min-width: auto;
+            // width: 110px;
+            @include flex-row();
+
+            svg {
+              width: 110px;
+              position: relative;
+            }
+          }
 
           .value {
             text-align: center;
-
-            letter-spacing: 0px;
-            color: #292929;
-            margin: 0 30px;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 32px;
+            text-align: center;
+            color: #000000;
+            width: 90px;
           }
 
           .button {
@@ -143,27 +171,46 @@
           }
         }
 
+        .mint_button_wrap {
+          font-size: 35px;
+          padding-top: 26px;
+
+          .mint_button {
+            height: 80px;
+          }
+        }
+
         .value_box {
-          background: #6f00ff 0% 0% no-repeat padding-box;
-          box-shadow: 2px 4px 20px #6f00ff59;
           border-radius: 20px;
           text-align: center;
-
+          position: relative;
           letter-spacing: 0px;
           color: #ffffff;
-          padding: 40px 24px;
-          margin-bottom: 50px;
+          @include flex-column();
+          margin-bottom: 10px;
+          width: 20%;
+          padding: 25px 0;
+
+          svg {
+            left: 0;
+            top: 0;
+            position: absolute;
+            z-index: 0;
+          }
+
+          span {
+            position: relative;
+            z-index: 1;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            text-align: center;
+            color: #000000;
+          }
         }
 
         button {
-          background-color: #dc67a7;
           text-transform: uppercase;
-
-          &:hover {
-            &:active {
-              transform: scale(0.7);
-            }
-          }
 
           &.animate {
             animation: wiggle 0.4s 1;
@@ -381,7 +428,14 @@
           padding-right: 20px;
 
           .minted {
-            font-size: 22px;
+            top: -17vw;
+            .text {
+              font-size: 18px;
+
+              span {
+                font-size: 14px;
+              }
+            }
           }
         }
       }
