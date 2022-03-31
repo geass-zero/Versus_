@@ -7,13 +7,15 @@
   left: 0;
   @include flex-column();
   z-index: 999;
+  box-sizing: border-box;
 
   &:before {
     @include pseudo-abs();
     max-height: min(580px, calc(100vh - #{$mainnav-height} - 40px));
     background: rgba(234, 232, 223, 0.9);
     border-radius: 0px 40px 40px 0px;
-    top: $mainnav-height + 20px;
+    top: calc(50% + #{$mainnav-height}/ 2);
+    transform: translateY(-50%);
     width: 155px;
   }
 

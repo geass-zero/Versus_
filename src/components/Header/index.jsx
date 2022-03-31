@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Wallet from './wallet';
 import './styles.scss';
 import logo from '../../assets/images/VersusLogo.png';
+import { ReactComponent as WalletIcon } from '../../assets/svg/Wallet.svg';
 import { connectWallet } from '../../utils/UserData.js';
 
 const Header = () => {
@@ -62,7 +63,11 @@ const Header = () => {
               ...{currentAccount.substring(currentAccount.length - 5)}
             </button>
           ) : (
-            <button>Connect Wallet</button>
+            <button>
+              <WalletIcon />
+              <div className='circle'></div>
+              <span>W.A.L.L.E.T</span>
+            </button>
           )}
         </div>
         <div

@@ -60,8 +60,6 @@ button {
   box-sizing: border-box;
 
   &:hover {
-    box-shadow: 2px 4px 10px #6f00ff59;
-
     &:active {
       transform: scale(0.99);
     }
