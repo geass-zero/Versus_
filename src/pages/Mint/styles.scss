@@ -51,26 +51,42 @@
         .minted {
           position: absolute;
           left: 0;
-          background: #ffffff 0% 0% no-repeat padding-box;
-          border-radius: 50px;
-          height: 50px;
-          max-width: 478px;
+          background: rgba(243, 237, 225, 0.9);
+          border-radius: 60px;
+          height: 60px;
           width: 100%;
           @include flex-row();
-          justify-content: flex-start;
           text-align: left;
-
           letter-spacing: 0px;
           color: #dc67a7;
-          top: -60px;
+          top: -75px;
+          padding: 15px;
+          margin-bottom: 15px;
+          padding-left: 50px;
 
           .circle {
             width: 45px;
             height: 45px;
-            border: 5px solid #dc67a7;
+            // border: 5px solid #dc67a7;
+            background-color: #c4c4c4;
             border-radius: 50%;
-            margin-left: 5px;
             margin-right: 15px;
+            position: absolute;
+            left: 15px;
+          }
+
+          .text {
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            text-align: center;
+            color: #000000;
+
+            span {
+              font-size: 18px;
+              line-height: -1;
+            }
           }
         }
 

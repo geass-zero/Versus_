@@ -25,17 +25,21 @@ const LeftStickOn = ({
     onClick && onClick(newSelected);
   };
   return (
-    <div className='left_stick_on'>
-      {data.map((item, index) => (
-        <div
-          key={index}
-          className={`item ${item.id === selected.id ? 'active' : ''}`}
-          onClick={() => onClickHandler(item)}>
-          <div className='character_circle'>
-            <img src={item.image} alt='character' />
-          </div>
+    <div className='left_stick_on_wrapper'>
+      <div className='left_stick_on'>
+        <div className='left_stick_on_box'>
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className={`item ${item.id === selected.id ? 'active' : ''}`}
+              onClick={() => onClickHandler(item)}>
+              <div className='character_circle'>
+                <img src={item.image} alt='character' />
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };

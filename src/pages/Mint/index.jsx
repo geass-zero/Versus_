@@ -95,7 +95,9 @@ const Mint = () => {
                   data-aos-duration='300'>
                   <div className='minted'>
                     <div className='circle'></div>
-                    <div>(Minting on Rinkeby)</div>
+                    <div className='text'>
+                      0/5000<span>(Minting Soon)</span>
+                    </div>
                   </div>
                   <div
                     className='title'

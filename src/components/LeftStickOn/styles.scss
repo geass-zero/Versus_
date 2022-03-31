@@ -1,104 +1,131 @@
 @import './../../variables.scss';
 
-.left_stick_on {
+.left_stick_on_wrapper {
+  padding-top: $mainnav-height;
   position: fixed;
+  height: 100vh;
   left: 0;
-  top: 50%;
-  width: 155px;
-  max-height: 580px;
-  background: rgba(234, 232, 223, 0.9);
-  border-radius: 0px 40px 40px 0px;
-  padding: 25px 0px;
-  transform: translateY(-50%);
   @include flex-column();
   z-index: 999;
-  animation: slideSpecial 0.4s 1;
 
-  @keyframes slideSpecial {
-    from {
-      opacity: 0;
-      transform: translate(-50%, -50%);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0px, -50%);
-    }
+  &:before {
+    @include pseudo-abs();
+    max-height: min(580px, calc(100vh - #{$mainnav-height} - 40px));
+    background: rgba(234, 232, 223, 0.9);
+    border-radius: 0px 40px 40px 0px;
+    top: $mainnav-height + 20px;
+    width: 155px;
   }
 
-  &:hover {
-    .item {
-      &.active {
-        background-color: transparent;
+  .left_stick_on {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    width: 185px;
 
-        &:before {
-          border-left: 0px solid #4b5e74;
-          right: 0px;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    .left_stick_on_box {
+      max-height: min(580px, calc(100vh - #{$mainnav-height} - 40px));
+      width: 155px;
+      animation: slideSpecial 0.4s 1;
+      padding: 25px 0px;
+      width: 155px;
+
+      @keyframes slideSpecial {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -50%);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0px, -50%);
         }
       }
-    }
-  }
 
-  .item {
-    width: 100%;
-    @include flex-column();
-    position: relative;
-    transition: background-color 0.2s ease;
+      &:hover {
+        .item {
+          &.active {
+            background-color: transparent;
 
-    &:before {
-      @include pseudo-abs();
-      width: 0;
-      height: 0;
-      border-top: 49px solid transparent;
-      border-bottom: 38px solid transparent;
-      border-left: 0px solid #4b5e74;
-      right: 0px;
-      left: auto;
-      top: 0;
-      opacity: 0;
-      transition: all 0.2s;
-    }
-
-    &.active {
-      background-color: #4b5e74;
-
-      &:before {
-        opacity: 1;
-        border-left: 28px solid #4b5e74;
-        right: -27px;
+            &:before {
+              border-left: 0px solid #4b5e74;
+              right: 0px;
+            }
+          }
+        }
       }
 
-      .character_circle {
-        transform: scale(0.88);
-      }
-    }
+      .item {
+        width: 100%;
+        @include flex-column();
+        position: relative;
+        transition: background-color 0.2s ease;
 
-    &:hover {
-      cursor: pointer;
-      background-color: #4b5e74 !important;
+        &:before {
+          @include pseudo-abs();
+          width: 0;
+          height: 0;
+          border-top: 49px solid transparent;
+          border-bottom: 38px solid transparent;
+          border-left: 0px solid #4b5e74;
+          right: 0px;
+          left: auto;
+          top: 0;
+          opacity: 0;
+          transition: all 0.2s;
+        }
 
-      &:before {
-        opacity: 1 !important;
-        border-left: 28px solid #4b5e74 !important;
-        right: -27px !important;
-      }
+        &.active {
+          background-color: #4b5e74;
 
-      .character_circle {
-        transform: scale(0.88) !important;
-      }
-    }
+          &:before {
+            opacity: 1;
+            border-left: 28px solid #4b5e74;
+            right: -27px;
+          }
 
-    .character_circle {
-      width: 76px;
-      height: 76px;
-      background-color: #ffe7c2;
-      border-radius: 50%;
-      @include flex-column();
-      margin: 5px 0;
-      transition: transform 0.3s;
+          .character_circle {
+            transform: scale(0.88);
+          }
+        }
 
-      img {
-        width: 80%;
-        height: 80%;
+        &:hover {
+          cursor: pointer;
+          background-color: #4b5e74 !important;
+
+          &:before {
+            opacity: 1 !important;
+            border-left: 28px solid #4b5e74 !important;
+            right: -27px !important;
+          }
+
+          .character_circle {
+            transform: scale(0.88) !important;
+          }
+        }
+
+        .character_circle {
+          width: 76px;
+          height: 76px;
+          background-color: #ffe7c2;
+          border-radius: 50%;
+          @include flex-column();
+          margin: 5px 0;
+          transition: transform 0.3s;
+
+          img {
+            width: 80%;
+            height: 80%;
+          }
+        }
       }
     }
   }
