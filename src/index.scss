@@ -110,7 +110,7 @@ main {
 .main_title {
   color: rgb(22, 81, 89);
   font-size: 29px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 .no_padding {
@@ -227,6 +227,17 @@ iframe {
   display: none;
 }
 
+.box_svg {
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  max-height: max(497px, calc(100vh - 170px));
+}
+
+.box_content {
+  z-index: 5;
+  position: relative;
+}
 @media screen and (max-width: 1366px) {
   .left_panel_auto_adjuster {
     padding-left: 140px;

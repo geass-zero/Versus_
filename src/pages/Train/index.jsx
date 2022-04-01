@@ -3,8 +3,14 @@ import './styles.scss';
 import VersusContext from '../../store/Context';
 
 import Arrow from '../../assets/images/Icon awesome-arrow-left.png';
+import { ReactComponent as TrainBox } from '../../assets/svg/Train/Box.svg';
+import { ReactComponent as InsideBox } from '../../assets/svg/Train/InsideBox.svg';
+import { ReactComponent as Down } from '../../assets/svg/Train/Down.svg';
+import { ReactComponent as Up } from '../../assets/svg/Train/Up.svg';
+
 import LoaderImage from '../../assets/images/trainbg.jpg';
 import { connectWallet, getUserTokenIDs } from '../../utils/UserData';
+
 import {
   fetchCurrentMarketPrice,
   fetchCypherData,
@@ -142,7 +148,7 @@ const Train = () => {
     <>
       <LeftStickOn />
       {
-        <section className='train_wrap'>
+        <section className='train_wrap left_panel_auto_adjuster'>
           <div className='content_wrap'>
             <div className='flex_box'>
               <div className='x2'>
@@ -151,13 +157,6 @@ const Train = () => {
                   data-aos='zoom-in'
                   data-aos-offset='0'
                   data-aos-duration='200'>
-                  <div
-                    className='main_title'
-                    data-aos='fade-up'
-                    data-aos-offset='0'
-                    data-aos-duration='400'>
-                    Currently Training(BSC Testnet)
-                  </div>
                   <div
                     className='selection_wrap'
                     data-aos='fade-up'
@@ -178,14 +177,6 @@ const Train = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='500'>
-                    <div className='range_wrap'>
-                      XP until next level: {getNextLevelXP()}
-                      <div className='rangebox'>
-                        <div
-                          className='current_range'
-                          style={{ width: getXPPercentage() }}></div>
-                      </div>
-                    </div>
                     {NFTObjects[currentIndex] ? (
                       <div>
                         <div className='level'>
@@ -281,7 +272,53 @@ const Train = () => {
                 </div>
               </div>
               <div className='x2'>
-                <div className='train_embre'></div>
+                <div
+                  className='box_wrap no_padding svg_main_wrap'
+                  data-aos='zoom-in'
+                  data-aos-offset='0'
+                  data-aos-duration='300'>
+                  <TrainBox className='box_svg mobile_hidden' />
+                  <TrainBox className='mobile_only box_svg_mobile' />
+                  <div className='top_details box_content'>
+                    <div className='main_title'>#120: Calfire</div>
+                    <div className='range_wrap'>
+                      XP until next level: {getNextLevelXP()}
+                      <div className='rangebox'>
+                        <div
+                          className='current_range'
+                          style={{ width: getXPPercentage() }}></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='middle_wrap box_content'>
+                    <div className='level_details'>
+                      <InsideBox />
+                      <div className='title'>Level 23</div>
+                      <div className='data'>
+                        <div className='item'>ATK:100</div>
+                        <div className='item'>DEF:100</div>
+                        <div className='item'>SPD:100</div>
+                        <div className='item'>SP-ATK:100</div>
+                        <div className='item'>SP-DEF:100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='bottom box_content'>
+                    <p>
+                      Will the price of Bitcoin go up or down in the next 5
+                      minutes?
+                    </p>
+                    <div className='button_wrap'>
+                      <button className='transparent svg_wrap'>
+                        <Up />
+                      </button>
+                      <div className='value'>$39,423</div>
+                      <button className='transparent svg_wrap'>
+                        <Down />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

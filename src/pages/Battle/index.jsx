@@ -82,7 +82,7 @@ const Battle = () => {
     <>
       <LeftStickOn />
       {
-        <section className='battle_wrap'>
+        <section className='battle_wrap left_panel_auto_adjuster'>
           <BattlePopUp
             showPopUp={showPopup}
             closeModal={() => setPopUp(false)}
