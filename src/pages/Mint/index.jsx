@@ -5,6 +5,7 @@ import LoaderImage from '../../assets/images/Card.png';
 import { ReactComponent as MintBox } from '../../assets/svg/Mint/MintBox.svg';
 import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg';
 import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
+import { ReactComponent as Minting } from '../../assets/svg/Mint/Minting.svg';
 import { ReactComponent as Minus } from '../../assets/svg/Mint/minus.svg';
 import { ReactComponent as Plus } from '../../assets/svg/Mint/plus.svg';
 import { ReactComponent as MintBoxMobile } from '../../assets/svg/Mint/MintBoxMobile.svg';
@@ -28,6 +29,7 @@ const Mint = () => {
   const [currentMax, setCurrentMax] = useState(0);
   const [mintFee, setMintFee] = useState(0.099);
   const [mintedCyphers, setMintedCyphers] = useState([]);
+  const [isMinting, setIsMinting] = useState(false);
 
   const updateValue = (isAdd) => {
     if (isAdd) setValue(value + 1);
@@ -144,12 +146,28 @@ const Mint = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='700'>
-                    <button
-                      className='transparent svg_wrap mint_button_wrap'
-                      onClick={() => mint()}>
-                      <span>Mint</span>
-                      <Button className='mint_button' />
-                    </button>
+                    {!isMinting ? (
+                      <button
+                        className='transparent svg_wrap mint_button_wrap'
+                        onClick={() => {
+                          setIsMinting(true);
+                          mint();
+                        }}>
+                        <span>Mint</span>
+                        <Button className='mint_button' />
+                      </button>
+                    ) : (
+                      <button
+                        className='transparent svg_wrap minting_button_wrap'
+                        onClick={() => setPopUp(true)}>
+                        <span>
+                          Minting,
+                          <br />
+                          please wait...
+                        </span>
+                        <Minting className='mint_button' />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

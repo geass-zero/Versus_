@@ -192,24 +192,26 @@ iframe {
 .carousel-root {
   .control-arrow {
     width: 81px !important;
-    height: 81px !important;
-    background: #ffffff 0% 0% no-repeat padding-box !important;
-    box-shadow: 2px 3px 15px #00000029 !important;
+    height: 160px !important;
+    // background: #ffffff 0% 0% no-repeat padding-box !important;
+    // box-shadow: 2px 3px 15px #00000029 !important;
     z-index: 99;
     min-width: auto !important;
-    top: calc(50% - 40px) !important;
+    top: calc(50% - 80px) !important;
     left: 25px !important;
     opacity: 1 !important;
-    background-image: url('./assets/images/Icon\ awesome-arrow-left.png') !important;
+    background-image: url('./assets/svg/Arrow.svg') !important;
     background-position: center !important;
+    background-size: 70% !important;
+    background-repeat: no-repeat !important;
+    border-radius: 0;
 
     &:before {
       display: none !important;
     }
 
     &:hover {
-      background-color: #fff;
-      transform: scale(0.95);
+      background-color: transparent !important;
 
       &:active {
         transform: scale(0.9);
@@ -218,7 +220,15 @@ iframe {
     &.control-next {
       left: auto !important;
       right: 25px !important;
-      background-image: url('./assets/images/Icon\ awesome-arrow-right.png') !important;
+    }
+
+    &.control-prev {
+      background-image: url('./assets/svg/Arrow2.svg') !important;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }
