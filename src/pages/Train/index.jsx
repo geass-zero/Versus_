@@ -7,6 +7,7 @@ import { ReactComponent as TrainBox } from '../../assets/svg/Train/Box.svg';
 import { ReactComponent as InsideBox } from '../../assets/svg/Train/InsideBox.svg';
 import { ReactComponent as Down } from '../../assets/svg/Train/Down.svg';
 import { ReactComponent as Up } from '../../assets/svg/Train/Up.svg';
+import { ReactComponent as Checkbutton } from '../../assets/svg/Train/Checkbutton.svg';
 
 import LoaderImage from '../../assets/images/trainbg.jpg';
 import { connectWallet, getUserTokenIDs } from '../../utils/UserData';
@@ -24,6 +25,9 @@ const Train = () => {
   const [NFTObjects, setNFTObjects] = useState([]);
   const [currentNFTStats, setCurrentNFTStats] = useState({});
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPredicted, setIsPredicted] = useState(false);
+  const [resultButtonVisible, resultsButtonVisible] = useState(false);
+
   const [currentMarketPrice, setCurrentMarketPrice] = useState(0);
   let testData = [];
 
@@ -304,18 +308,74 @@ const Train = () => {
                     </div>
                   </div>
                   <div className='bottom box_content'>
-                    <p>
-                      Will the price of Bitcoin go up or down in the next 5
-                      minutes?
-                    </p>
+                    {resultButtonVisible && (
+                      <button className='check_button transparent svg_wrap'>
+                        <Checkbutton />
+                      </button>
+                    )}
+                    {!resultButtonVisible && isPredicted && (
+                      <p
+                        onClick={() => resultsButtonVisible(true)}
+                        data-aos='zoom-in'
+                        data-aos-offset='0'
+                        data-aos-duration='200'>
+                        Wait 4:29 to see if you were right...
+                      </p>
+                    )}
+                    {!resultButtonVisible && !isPredicted && (
+                      <p>
+                        Will the price of Bitcoin go up or down in the next 5
+                        minutes?
+                      </p>
+                    )}
+
                     <div className='button_wrap'>
-                      <button className='transparent svg_wrap'>
-                        <Up />
-                      </button>
-                      <div className='value'>$39,423</div>
-                      <button className='transparent svg_wrap'>
-                        <Down />
-                      </button>
+                      {!isPredicted ? (
+                        <>
+                          <button className='transparent svg_wrap'>
+                            <Up onClick={() => setIsPredicted(true)} />
+                          </button>
+                          <div className='value'>$39,423</div>
+                          <button className='transparent svg_wrap'>
+                            <Down onClick={() => setIsPredicted(true)} />
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <div className='prediction'>
+                            <div
+                              className='label'
+                              data-aos='zoom-in'
+                              data-aos-offset='0'
+                              data-aos-duration='200'>
+                              Current Price
+                            </div>
+                            <div
+                              className='value'
+                              data-aos='zoom-in'
+                              data-aos-offset='0'
+                              data-aos-duration='200'>
+                              $39,423
+                            </div>
+                          </div>
+                          <div className='prediction'>
+                            <div
+                              className='label'
+                              data-aos='zoom-in'
+                              data-aos-offset='0'
+                              data-aos-duration='200'>
+                              You Predicted up from
+                            </div>
+                            <div
+                              className='value'
+                              data-aos='zoom-in'
+                              data-aos-offset='0'
+                              data-aos-duration='200'>
+                              $39,420
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
