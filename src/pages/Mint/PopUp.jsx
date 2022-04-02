@@ -100,22 +100,7 @@ const MintPopUp = ({ showPopUp, closeModal, mintedCyphers }) => {
             emulateTouch={false}
             swipeable={false}
             showStatus={true}>
-            {/* {loadMintedCards()} */}
-            <MintedCard
-              isAnimating={isAnimating}
-              isRevealed={isRevealed}
-              cypherInfo={{ description: 'test', stats: [10, 11, 15, 45, 78] }}
-            />
-            <MintedCard
-              isAnimating={isAnimating}
-              isRevealed={isRevealed}
-              cypherInfo={{ description: 'test', stats: [10, 11, 15, 45, 78] }}
-            />
-            <MintedCard
-              isAnimating={isAnimating}
-              isRevealed={isRevealed}
-              cypherInfo={{ description: 'test', stats: [10, 11, 15, 45, 78] }}
-            />
+            {loadMintedCards()}
           </Carousel>
         </div>
       </>
@@ -124,7 +109,7 @@ const MintPopUp = ({ showPopUp, closeModal, mintedCyphers }) => {
 };
 
 const MintedCard = ({ isAnimating, isRevealed, cypherInfo }) => {
-  const [cypherImage, setCypherImage] = useState(Shibachu);
+  const [cypherImage, setCypherImage] = useState('');
 
   useEffect(() => {
     async function loadJson(url) {
