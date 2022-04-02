@@ -8,6 +8,8 @@ import { ReactComponent as InsideBox } from '../../assets/svg/Train/InsideBox.sv
 import { ReactComponent as Down } from '../../assets/svg/Train/Down.svg';
 import { ReactComponent as Up } from '../../assets/svg/Train/Up.svg';
 import { ReactComponent as Checkbutton } from '../../assets/svg/Train/Checkbutton.svg';
+import { ReactComponent as Bento } from '../../assets/svg/Train/Bento.svg';
+import Shibachu from '../../assets/images/Calfire.gif';
 
 import LoaderImage from '../../assets/images/trainbg.jpg';
 import { connectWallet, getUserTokenIDs } from '../../utils/UserData';
@@ -156,7 +158,8 @@ const Train = () => {
           <div className='content_wrap'>
             <div className='flex_box'>
               <div className='x2'>
-                <div
+                <img src={Shibachu} alt='Shibachu' />
+                {/* <div
                   className='box_wrap'
                   data-aos='zoom-in'
                   data-aos-offset='0'
@@ -273,7 +276,7 @@ const Train = () => {
                       </div>
                     </div>
                   )}
-                </div>
+                </div> */}
               </div>
               <div className='x2'>
                 <div
@@ -284,7 +287,14 @@ const Train = () => {
                   <TrainBox className='box_svg mobile_hidden' />
                   <TrainBox className='mobile_only box_svg_mobile' />
                   <div className='top_details box_content'>
-                    <div className='main_title'>#120: Calfire</div>
+                    <div className='main_title'>
+                      <div>#120: Calfire</div>
+                      <div className='svg_wrap bento_box'>
+                        <Bento />
+                        <span>Energy remaining</span>
+                        <span className='number'>4</span>
+                      </div>
+                    </div>
                     <div className='range_wrap'>
                       XP until next level: {getNextLevelXP()}
                       <div className='rangebox'>

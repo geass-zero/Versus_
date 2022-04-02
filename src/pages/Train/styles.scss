@@ -40,6 +40,8 @@
       max-width: 558px;
       width: 100%;
       @include flex-column();
+      margin-top: $mainnav-height !important;
+      height: calc(100vh - #{$mainnav-height} - 20px);
 
       &.svg_main_wrap {
         max-width: 500px;
@@ -49,7 +51,7 @@
         margin: 0;
 
         .box_svg {
-          max-height: max(497px, calc(100vh - 170px));
+          max-height: max(497px, calc(100vh - 120px));
         }
 
         .top_details {
@@ -58,6 +60,31 @@
           .main_title {
             color: #000000;
             font-size: 32px;
+            margin-bottom: 45px;
+            @include flex-row();
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .bento_box {
+              width: 150px;
+              margin-top: -10px;
+              position: relative;
+
+              span {
+                font-size: 10px;
+                padding-left: 50px;
+                padding-bottom: 5px;
+
+                &.number {
+                  position: absolute;
+                  font-size: 40px;
+                  font-weight: 600;
+                  right: 10px;
+                  top: 30px;
+                  text-shadow: 0px 0px 10px #ecddb6;
+                }
+              }
+            }
           }
 
           .range_wrap {
