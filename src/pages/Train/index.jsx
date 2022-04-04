@@ -3,8 +3,11 @@ import './styles.scss';
 import VersusContext from '../../store/Context';
 
 import Arrow from '../../assets/images/Icon awesome-arrow-left.png';
+
 import { ReactComponent as TrainBox } from '../../assets/svg/Train/Box.svg';
+import { ReactComponent as BoxMobile } from '../../assets/svg/Train/BoxMobile.svg';
 import { ReactComponent as InsideBox } from '../../assets/svg/Train/InsideBox.svg';
+import { ReactComponent as InsideBoxMobile } from '../../assets/svg/Train/InsideBoxMobile.svg';
 import { ReactComponent as Down } from '../../assets/svg/Train/Down.svg';
 import { ReactComponent as Up } from '../../assets/svg/Train/Up.svg';
 import { ReactComponent as Checkbutton } from '../../assets/svg/Train/Checkbutton.svg';
@@ -157,7 +160,7 @@ const Train = () => {
         <section className='train_wrap left_panel_auto_adjuster'>
           <div className='content_wrap'>
             <div className='flex_box'>
-              <div className='x2'>
+              <div className='x2 mobile_hidden'>
                 <img src={Shibachu} alt='Shibachu' />
                 {/* <div
                   className='box_wrap'
@@ -285,7 +288,7 @@ const Train = () => {
                   data-aos-offset='0'
                   data-aos-duration='300'>
                   <TrainBox className='box_svg mobile_hidden' />
-                  <TrainBox className='mobile_only box_svg_mobile' />
+                  <BoxMobile className='mobile_only box_svg_mobile' />
                   <div className='top_details box_content'>
                     <div className='main_title'>
                       <div>#120: Calfire</div>
@@ -305,8 +308,14 @@ const Train = () => {
                     </div>
                   </div>
                   <div className='middle_wrap box_content'>
+                    <img
+                      src={Shibachu}
+                      alt='Shibachu'
+                      className='mobile_only card_image'
+                    />
                     <div className='level_details'>
-                      <InsideBox />
+                      <InsideBox className='mobile_hidden' />
+                      <InsideBoxMobile className='mobile_only' />
                       <div className='title'>Level 23</div>
                       <div className='data'>
                         <div className='item'>ATK:100</div>

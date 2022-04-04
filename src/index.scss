@@ -244,6 +244,13 @@ iframe {
   max-height: max(497px, calc(100vh - 170px));
 }
 
+.box_svg_mobile {
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  // max-height: max(497px, calc(100vh - 170px));
+}
+
 .box_content {
   z-index: 5;
   position: relative;
@@ -256,7 +263,7 @@ iframe {
 }
 @media screen and (max-width: $breakpoint-xs) {
   .mobile_hidden {
-    display: none;
+    display: none !important;
   }
 
   .mobile_only {

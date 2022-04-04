@@ -584,6 +584,7 @@
       .x2 {
         @include flex-row();
         padding-top: 30px;
+        min-height: calc(100vh - 90px);
 
         &:first-child {
           min-height: auto;
@@ -609,13 +610,6 @@
             span {
               font-size: 20px;
             }
-          }
-
-          .box_svg_mobile {
-            position: absolute;
-            width: 100%;
-            max-width: 500px;
-            // max-height: max(497px, calc(100vh - 170px));
           }
 
           .title {

@@ -54,6 +54,9 @@
           max-height: max(497px, calc(100vh - 120px));
         }
 
+        .box_svg_mobile {
+        }
+
         .top_details {
           width: 100%;
 
@@ -356,6 +359,7 @@
   .train_embre {
     display: none;
   }
+
   .train_wrap {
     &:after {
       min-height: calc(100vh - #{$mainnav-height-mob});
@@ -364,6 +368,149 @@
       .x2 {
         &:last-child {
           min-height: auto;
+        }
+
+        .box_wrap {
+          .top_details {
+            .main_title {
+              font-size: 20px;
+              position: relative;
+              margin-bottom: 0;
+
+              .bento_box {
+                width: 47.02px;
+                height: 33.23px;
+                position: absolute;
+                right: 0;
+                margin-top: 0;
+                top: -11vh;
+                background: #ecdcb6;
+                border-radius: 20px;
+
+                &::before {
+                  @include pseudo-abs();
+                  width: 15.02px;
+                  height: 15.02px;
+                  border-radius: 50%;
+                  background: #e1e1e1;
+                  top: 9px;
+                  left: 5px;
+                }
+
+                svg {
+                  display: none;
+                }
+
+                span {
+                  display: block;
+                  float: left;
+
+                  &.number {
+                    font-size: 23px;
+                    padding: 0;
+                    position: absolute;
+                    top: 3px;
+                    right: 8px;
+                  }
+
+                  &:not(.number) {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .range_wrap {
+              font-size: 14px;
+              margin-bottom: 5px;
+
+              .rangebox {
+                margin-top: 2px;
+                height: 8px;
+              }
+            }
+          }
+
+          .middle_wrap {
+            @include flex-row();
+            align-items: flex-start;
+            margin-top: 20px;
+
+            .card_image {
+              width: 80px;
+              img {
+              }
+            }
+
+            .level_details {
+              padding: 15px;
+              padding-left: 20px;
+
+              svg {
+                width: calc(100% - 90px);
+                right: 0;
+                left: auto;
+              }
+
+              .title {
+                font-size: 15px;
+                margin-bottom: 2px;
+              }
+
+              .data {
+                .item {
+                  margin-bottom: 0;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+          .bottom {
+            p {
+              margin: 0;
+              font-size: 15px;
+            }
+
+            .button_wrap {
+              padding: 0;
+              flex-wrap: wrap;
+
+              .value {
+                font-size: 5vmin;
+                margin-top: 20px;
+              }
+
+              .prediction {
+                min-height: 100%;
+                width: 100%;
+
+                .label {
+                  margin-top: 5px;
+                }
+
+                .value {
+                  margin-top: 10px;
+                }
+              }
+
+              button {
+                width: 11vw;
+
+                &:last-child {
+                  @include flex-row();
+                  justify-content: flex-end;
+
+                  svg {
+                    float: right;
+                    margin-left: 0vw;
+                  }
+                }
+                svg {
+                  width: 20vw;
+                }
+              }
+            }
+          }
         }
       }
     }
