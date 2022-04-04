@@ -161,7 +161,13 @@ const Train = () => {
           <div className='content_wrap'>
             <div className='flex_box'>
               <div className='x2 mobile_hidden'>
-                <img src={Shibachu} alt='Shibachu' />
+                <img
+                  src={Shibachu}
+                  alt='Shibachu'
+                  data-aos='zoom-in'
+                  data-aos-offset='0'
+                  data-aos-duration='200'
+                />
                 {/* <div
                   className='box_wrap'
                   data-aos='zoom-in'
@@ -290,7 +296,11 @@ const Train = () => {
                   <TrainBox className='box_svg mobile_hidden' />
                   <BoxMobile className='mobile_only box_svg_mobile' />
                   <div className='top_details box_content'>
-                    <div className='main_title'>
+                    <div
+                      className='main_title'
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='400'>
                       <div>#120: Calfire</div>
                       <div className='svg_wrap bento_box'>
                         <Bento />
@@ -298,7 +308,11 @@ const Train = () => {
                         <span className='number'>4</span>
                       </div>
                     </div>
-                    <div className='range_wrap'>
+                    <div
+                      className='range_wrap'
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='500'>
                       XP until next level: {getNextLevelXP()}
                       <div className='rangebox'>
                         <div
@@ -309,11 +323,18 @@ const Train = () => {
                   </div>
                   <div className='middle_wrap box_content'>
                     <img
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='600'
                       src={Shibachu}
                       alt='Shibachu'
                       className='mobile_only card_image'
                     />
-                    <div className='level_details'>
+                    <div
+                      className='level_details'
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='650'>
                       <InsideBox className='mobile_hidden' />
                       <InsideBoxMobile className='mobile_only' />
                       <div className='title'>Level 23</div>
@@ -328,7 +349,11 @@ const Train = () => {
                   </div>
                   <div className='bottom box_content'>
                     {resultButtonVisible && (
-                      <button className='check_button transparent svg_wrap'>
+                      <button
+                        className='check_button transparent svg_wrap'
+                        data-aos='fade-up'
+                        data-aos-offset='0'
+                        data-aos-duration='400'>
                         <Checkbutton />
                       </button>
                     )}
@@ -342,7 +367,10 @@ const Train = () => {
                       </p>
                     )}
                     {!resultButtonVisible && !isPredicted && (
-                      <p>
+                      <p
+                        data-aos='fade-up'
+                        data-aos-offset='0'
+                        data-aos-duration='700'>
                         Will the price of Bitcoin go up or down in the next 5
                         minutes?
                       </p>
@@ -351,11 +379,25 @@ const Train = () => {
                     <div className='button_wrap'>
                       {!isPredicted ? (
                         <>
-                          <button className='transparent svg_wrap'>
+                          <button
+                            className='transparent svg_wrap'
+                            data-aos='fade-up'
+                            data-aos-offset='0'
+                            data-aos-duration='800'>
                             <Up onClick={() => setIsPredicted(true)} />
                           </button>
-                          <div className='value'>$39,423</div>
-                          <button className='transparent svg_wrap'>
+                          <div
+                            className='value'
+                            data-aos='fade-up'
+                            data-aos-offset='0'
+                            data-aos-duration='800'>
+                            $39,423
+                          </div>
+                          <button
+                            className='transparent svg_wrap'
+                            data-aos='fade-up'
+                            data-aos-offset='0'
+                            data-aos-duration='800'>
                             <Down onClick={() => setIsPredicted(true)} />
                           </button>
                         </>
