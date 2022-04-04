@@ -9,6 +9,7 @@ import {
 import UserCard from './UserCard';
 import VersusContext from '../../store/Context';
 import LeftStickOn from '../../components/LeftStickOn';
+import BattleHistory from './BattleHistory';
 
 import VS from '../../assets/images/VS.png';
 import User1 from '../../assets/images/characters/moon.gif';
@@ -16,6 +17,17 @@ import User2 from '../../assets/images/characters/Bull.gif';
 import CardImage from '../../assets/images/cardImage.png';
 
 import LoaderImage from '../../assets/images/battlebg.jpg';
+import Shibachu from '../../assets/images/Calfire.gif';
+
+import { ReactComponent as BattleBox } from '../../assets/svg/Battle/Box.svg';
+import { ReactComponent as BoxMobile } from '../../assets/svg/Battle/BoxMobile.svg';
+import { ReactComponent as EnterButton } from '../../assets/svg/Battle/EnterButton.svg';
+import { ReactComponent as FightNowButton } from '../../assets/svg/Battle/FightNowButton.svg';
+import { ReactComponent as HistoryButton } from '../../assets/svg/Battle/HistoryButton.svg';
+import { ReactComponent as KButton } from '../../assets/svg/Battle/KButton.svg';
+import { ReactComponent as RecentWrap } from '../../assets/svg/Battle/RecentWrap.svg';
+import { ReactComponent as RemainingBox } from '../../assets/svg/Battle/RemainingBox.svg';
+import { ReactComponent as GreyButton } from '../../assets/svg/Battle/GreyButton.svg';
 
 import { connectWallet, getUserTokenIDs } from '../../utils/UserData';
 import {
@@ -33,6 +45,9 @@ const Battle = () => {
   const [selectedNFTData, setSelectedNFTData] = useState(null);
   const [selectedNFTBattleData, setSelectedNFTBattleData] = useState(null);
   const [selectedNFTHistory, setSelectedNFTHistory] = useState(null);
+  const [isEnteredBattlePool, setBattlePool] = useState(false);
+  const [isRefilledEnergy, setRefillEnergy] = useState(false);
+  const [isBattleHistoryVisible, setBattleHistory] = useState(false);
   const [dailyVersus, setDailyVersus] = useState(0);
 
   const battleData = {
@@ -81,6 +96,9 @@ const Battle = () => {
   return (
     <>
       <LeftStickOn />
+      {isBattleHistoryVisible && (
+        <BattleHistory onClose={() => setBattleHistory(false)} />
+      )}
       {
         <section className='battle_wrap left_panel_auto_adjuster'>
           <BattlePopUp
@@ -88,7 +106,7 @@ const Battle = () => {
             closeModal={() => setPopUp(false)}
           />
           <div className='content_wrap'>
-            <div
+            {/* <div
               className='box_wrap'
               data-aos='zoom-in'
               data-aos-offset='0'
@@ -150,10 +168,6 @@ const Battle = () => {
                       cardImage={CardImage}
                       NFTObjects={NFTObjects}
                     />
-                    {/* <BattleDetailCard
-                                            data={battleData}
-                                            isOpponent={true}
-                                        /> */}
                   </div>
                 </div>
               ) : (
@@ -167,6 +181,108 @@ const Battle = () => {
                   </div>
                 </div>
               )}
+            </div> */}
+            <div className='flex_box full_width'>
+              <div className='x2 mobile_hidden'>
+                <img
+                  src={Shibachu}
+                  alt='Shibachu'
+                  data-aos='zoom-in'
+                  data-aos-offset='0'
+                  data-aos-duration='200'
+                />
+              </div>
+              <div className='x2'>
+                <div
+                  className='box_wrap no_padding svg_main_wrap'
+                  data-aos='zoom-in'
+                  data-aos-offset='0'
+                  data-aos-duration='300'>
+                  <div className='boxer daily_wrapper svg_main_wrap'>
+                    <RemainingBox className='box_svg' />
+                    <div className='padder'>
+                      <div className='item'>
+                        <div className='circle'></div>
+                        Daily Versus Remaining :{' '}
+                        {dailyVersus ? Number(dailyVersus).toFixed(2) : 0}
+                      </div>
+                      <div className='item'>
+                        <div className='circle'></div>Day Ends in: **:**:**
+                      </div>
+                    </div>
+                  </div>
+                  <div className='boxer main_content_wrapper svg_main_wrap'>
+                    <BattleBox className='box_svg mobile_hidden' />
+                    <BoxMobile className='mobile_only box_svg_mobile' />
+                    <div className='padder'>
+                      <div className='topper'>
+                        <div
+                          className='main_title'
+                          data-aos='fade-up'
+                          data-aos-offset='0'
+                          data-aos-duration='400'>
+                          #120: Calfire
+                        </div>
+                        <div className='data'>
+                          <div className='item'>ATK:100</div>
+                          <div className='item'>DEF:100</div>
+                          <div className='item'>SPD:100</div>
+                          <div className='item'>SP-ATK:100</div>
+                          <div className='item'>SP-DEF:100</div>
+                        </div>
+                      </div>
+                      <div className='buttons_box'>
+                        <div className='top'>
+                          {!isEnteredBattlePool ? (
+                            <button
+                              className='enter_button transparent svg_wrap'
+                              onClick={() => setBattlePool(true)}>
+                              <EnterButton />
+                              <span>ENTER BATTLE POOL</span>
+                            </button>
+                          ) : (
+                            <>
+                              <button className='grey_button transparent svg_wrap'>
+                                <GreyButton />
+                              </button>
+                              <button
+                                className='fight_button transparent svg_wrap'
+                                onClick={() => setRefillEnergy(true)}>
+                                <FightNowButton />
+                                {isRefilledEnergy ? (
+                                  <>
+                                    <div className='circle'></div>
+                                    <span>
+                                      Refill Energy{' '}
+                                      <div className='sub'>
+                                        (Cypher is out of energy)
+                                      </div>
+                                    </span>
+                                  </>
+                                ) : (
+                                  <span>FIGHT NOW</span>
+                                )}
+                              </button>
+                            </>
+                          )}
+                        </div>
+                        <div className='bottom'>
+                          <button className='k_button transparent svg_wrap'>
+                            <KButton />
+                            <span>271K</span>
+                          </button>
+                          <button
+                            className='history_button transparent svg_wrap'
+                            onClick={() => setBattleHistory(true)}>
+                            <HistoryButton />
+                            <span>BATTLE HISTORY</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

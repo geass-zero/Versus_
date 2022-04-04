@@ -255,6 +255,11 @@ iframe {
   z-index: 5;
   position: relative;
 }
+
+.full_width {
+  width: 100% !important;
+}
+
 @media screen and (max-width: 1366px) {
   .left_panel_auto_adjuster {
     padding-left: 140px;
