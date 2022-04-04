@@ -247,7 +247,9 @@ const Battle = () => {
                               </button>
                               <button
                                 className='fight_button transparent svg_wrap'
-                                onClick={() => setRefillEnergy(true)}>
+                                onClick={() =>
+                                  setRefillEnergy(!isRefilledEnergy)
+                                }>
                                 <FightNowButton />
                                 {isRefilledEnergy ? (
                                   <>

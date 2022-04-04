@@ -63,14 +63,17 @@
       padding: 15px 30px;
       max-width: 1145px;
       width: 100%;
-      // @include flex-column();
+      @include flex-column();
       // height: min(680px, calc(100vh - #{$mainnav-height} - 30px));
+
+      .box_svg {
+        max-width: 600px;
+      }
 
       .boxer {
         width: 100%;
         position: relative;
         float: left;
-        max-width: 500px;
         @include flex-column();
 
         &.daily_wrapper {
@@ -82,6 +85,7 @@
             justify-content: flex-start;
             width: 100%;
             padding-top: 30px;
+            max-width: 500px;
           }
 
           .item {
@@ -104,9 +108,10 @@
         }
 
         &.main_content_wrapper {
-          margin-top: 50px;
+          margin-top: 40px;
           .padder {
-            padding: 25px;
+            max-width: 500px;
+            padding: 25px 0;
             // min-height: max(100vh - #{$mainnav-height} - 520px, 380px);
             @include flex-column();
             justify-content: space-between;
@@ -136,13 +141,14 @@
             }
 
             .buttons_box {
-              padding-bottom: 80px;
+              padding-bottom: 20px;
               width: 100%;
               margin-top: 35px;
               @include flex-column();
-              height: calc(
-                max(100vh - #{$mainnav-height} - 520px, 380px) / 2.5
-              );
+              margin-top: 80px;
+              // height: calc(
+              //   max(100vh - #{$mainnav-height} - 520px, 380px) / 2.5
+              // );
 
               .top {
                 width: 100%;
@@ -156,19 +162,21 @@
                   span {
                     display: block;
                     padding: 10px;
-                    font-size: 2.7vmin;
+                    font-size: 22px;
                   }
                 }
 
                 .grey_button {
                   margin-left: 10%;
                   min-width: 25%;
-                  margin-bottom: 2vh;
+                  margin-bottom: 20px;
                   animation: none;
                   transition: none;
+                  height: 100px;
+                  max-height: 60px;
 
                   svg {
-                    height: 80px;
+                    height: 90px;
                   }
                 }
 
@@ -177,10 +185,11 @@
                   transition: none;
                   min-width: 70%;
                   height: 30%;
-                  margin-bottom: 2vh;
+                  margin-bottom: 20px;
                   color: #145b24;
                   font-weight: 700;
                   position: relative;
+                  max-height: 60px;
 
                   .circle {
                     width: 25px;
@@ -188,14 +197,15 @@
                     border-radius: 50%;
                     background: #cffac0;
                     position: absolute;
-                    left: 20%;
+                    left: 18%;
                     top: 25px;
                   }
 
                   span {
                     display: block;
-                    padding: 16px;
+                    padding: 18px;
                     padding-left: 0;
+                    font-size: 22px;
 
                     .sub {
                       font-size: 12px;
@@ -205,7 +215,7 @@
                   }
 
                   svg {
-                    height: 80px;
+                    height: 90px;
                   }
                 }
               }
@@ -217,14 +227,15 @@
 
                 .k_button {
                   min-width: 40%;
+                  margin-bottom: 5px;
                   svg {
-                    height: 80px;
+                    height: 90px;
                   }
 
                   span {
                     display: block;
                     padding: 16px;
-                    font-size: 2.7vmin;
+                    font-size: 22px;
                     color: #7c230f;
                     transform: rotate(9deg);
                     margin-right: 35px;
@@ -246,16 +257,16 @@
                   }
 
                   svg {
-                    width: 260px;
+                    width: 290px;
                   }
 
                   span {
                     display: block;
                     padding: 16px;
-                    font-size: 2.2vmin;
+                    font-size: 21px;
                     color: #000000;
                     transform: rotate(-2deg);
-                    margin-left: 0px;
+                    margin-left: -40px;
                     padding-left: 0px;
                     margin-top: 3px;
                   }
