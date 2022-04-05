@@ -10,6 +10,7 @@ import UserCard from './UserCard';
 import VersusContext from '../../store/Context';
 import LeftStickOn from '../../components/LeftStickOn';
 import BattleHistory from './BattleHistory';
+import RecentBattles from './RecentBattles';
 
 import VS from '../../assets/images/VS.png';
 import User1 from '../../assets/images/characters/moon.gif';
@@ -25,7 +26,6 @@ import { ReactComponent as EnterButton } from '../../assets/svg/Battle/EnterButt
 import { ReactComponent as FightNowButton } from '../../assets/svg/Battle/FightNowButton.svg';
 import { ReactComponent as HistoryButton } from '../../assets/svg/Battle/HistoryButton.svg';
 import { ReactComponent as KButton } from '../../assets/svg/Battle/KButton.svg';
-import { ReactComponent as RecentWrap } from '../../assets/svg/Battle/RecentWrap.svg';
 import { ReactComponent as RemainingBox } from '../../assets/svg/Battle/RemainingBox.svg';
 import { ReactComponent as GreyButton } from '../../assets/svg/Battle/GreyButton.svg';
 
@@ -182,7 +182,7 @@ const Battle = () => {
                 </div>
               )}
             </div> */}
-            <div className='flex_box full_width'>
+            <div className='flex_box full_width top_contents'>
               <div className='x2 mobile_hidden'>
                 <img
                   src={Shibachu}
@@ -223,12 +223,23 @@ const Battle = () => {
                           data-aos-duration='400'>
                           #120: Calfire
                         </div>
-                        <div className='data'>
-                          <div className='item'>ATK:100</div>
-                          <div className='item'>DEF:100</div>
-                          <div className='item'>SPD:100</div>
-                          <div className='item'>SP-ATK:100</div>
-                          <div className='item'>SP-DEF:100</div>
+                        <div className='flex_box mobile_visible_wraper'>
+                          <div className='card_main_wrap mobile_only'>
+                            <img
+                              src={Shibachu}
+                              alt='Shibachu'
+                              data-aos='zoom-in'
+                              data-aos-offset='0'
+                              data-aos-duration='200'
+                            />
+                          </div>
+                          <div className='data'>
+                            <div className='item'>ATK:100</div>
+                            <div className='item'>DEF:100</div>
+                            <div className='item'>SPD:100</div>
+                            <div className='item'>SP-ATK:100</div>
+                            <div className='item'>SP-DEF:100</div>
+                          </div>
                         </div>
                       </div>
                       <div className='buttons_box'>
@@ -286,6 +297,7 @@ const Battle = () => {
                 </div>
               </div>
             </div>
+            <RecentBattles />
           </div>
         </section>
       }
