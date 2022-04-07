@@ -1,4 +1,5 @@
 import { ReactComponent as BattleHistoryWrap } from '../../assets/svg/Battle/BattleHistoryWrap.svg';
+import { ReactComponent as BattleHistoryWrapMobile } from '../../assets/svg/Battle/BattleHistoryWrapMobile.svg';
 
 const BattleHistory = ({ onClose }) => {
   return (
@@ -9,7 +10,8 @@ const BattleHistory = ({ onClose }) => {
         data-aos='fade-up'
         data-aos-offset='0'
         data-aos-duration='400'>
-        <BattleHistoryWrap className='box_svg' />
+        <BattleHistoryWrap className='box_svg mobile_hidden' />
+        <BattleHistoryWrapMobile className='box_svg mobile_only' />
       </div>
     </div>
   );
