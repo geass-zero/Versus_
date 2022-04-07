@@ -230,10 +230,14 @@ const Battle = () => {
                               alt='Shibachu'
                               data-aos='zoom-in'
                               data-aos-offset='0'
-                              data-aos-duration='200'
+                              data-aos-duration='400'
                             />
                           </div>
-                          <div className='data'>
+                          <div
+                            className='data'
+                            data-aos='fade-up'
+                            data-aos-offset='0'
+                            data-aos-duration='450'>
                             <div className='item'>ATK:100</div>
                             <div className='item'>DEF:100</div>
                             <div className='item'>SPD:100</div>
@@ -246,6 +250,9 @@ const Battle = () => {
                         <div className='top'>
                           {!isEnteredBattlePool ? (
                             <button
+                              data-aos='fade-up'
+                              data-aos-offset='0'
+                              data-aos-duration='500'
                               className='enter_button transparent svg_wrap'
                               onClick={() => setBattlePool(true)}>
                               <EnterButton />
@@ -279,7 +286,11 @@ const Battle = () => {
                             </>
                           )}
                         </div>
-                        <div className='bottom'>
+                        <div
+                          className='bottom'
+                          data-aos='fade-up'
+                          data-aos-offset='0'
+                          data-aos-duration='600'>
                           <button className='k_button transparent svg_wrap'>
                             <KButton />
                             <span>271K</span>
