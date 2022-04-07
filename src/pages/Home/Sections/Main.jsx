@@ -3,45 +3,49 @@ import GraphicLine from '../../../assets/images/Graphics/Group 51.png';
 import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 // import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
+import { ReactComponent as MainBG } from '../../../assets/svg/Home/Main/MainBG.svg';
+import { ReactComponent as MainBigButton } from '../../../assets/svg/Home/Main/MainBigButton.svg';
+import { ReactComponent as MainSmallButton } from '../../../assets/svg/Home/Main/MainSmallButton.svg';
+
 const Main = () => {
-    return (
-        <div className='main_section'>
-            {/* <img
+  return (
+    <div className='main_section'>
+      {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line1'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line2'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line3'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine}
                 alt='Graphic'
                 className='graph_line graphic_line4'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line5'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line6'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line7'
             /> */}
-            {/* <img
+      {/* <img
                 src={GraphicLine1}
                 alt='Graphic'
                 className='graph_line graphic_line8'
@@ -57,20 +61,20 @@ const Main = () => {
                 className='graph_line graphic_line10'
             /> */}
 
-            <div className='content_wrap'>
-                <div className='flex_box'>
-                    <div className='x1 image_wrap'>
-                        <img
-                            src={Shibachu}
-                            alt='shibachu.gif'
-                            className='shibachu'
-                            data-aos='fade-up'
-                            data-aos-offset='0'
-                            data-aos-duration='400'
-                        />
-                    </div>
-                    <div className='x2'>
-                        <h1
+      <div className='content_wrap'>
+        <div className='flex_box'>
+          <div className='x1 image_wrap'>
+            <img
+              src={Shibachu}
+              alt='shibachu.gif'
+              className='shibachu'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+          </div>
+          <div className='x2'>
+            {/* <h1
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='500'>
@@ -88,12 +92,25 @@ const Main = () => {
                             data-aos-offset='0'
                             data-aos-duration='700'>
                             Read the Docs
-                        </button>
-                    </div>
-                </div>
+                        </button> */}
+            <div className='box_svg main_box'>
+              <MainBG className='box_svg' />
             </div>
+            <div className='buttons_wrap'>
+              <button className='transparent svg_wrap blue_button'>
+                <span></span>
+                <MainSmallButton />
+              </button>
+              <button className='transparent svg_wrap green_button'>
+                <span></span>
+                <MainBigButton />
+              </button>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Main;
