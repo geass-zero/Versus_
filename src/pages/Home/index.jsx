@@ -12,38 +12,37 @@ import LoaderImage from '../../assets/images/Pattern.png';
 import AboutVersus from './Sections/AboutVersus';
 import AboutCyphers from './Sections/AboutCyphers';
 import Metaverse from './Sections/Metaverse';
-import AboutBridge from './Sections/AboutBridge';
+import BlockChain from './Sections/BlockChain';
 
 const Home = () => {
-    const contextData = useContext(VersusContext);
+  const contextData = useContext(VersusContext);
 
-    useEffect(() => {
-        // contextData.imageLoader([
-        //     { type: 'image', src: LoaderImage },
-        //     { type: 'image', src: Shibachu },
-        //     // { type: 'video', src: Video1 },
-        //     // { type: 'video', src: Video2 },
-        // ]);
-    }, []);
+  useEffect(() => {
+    // contextData.imageLoader([
+    //     { type: 'image', src: LoaderImage },
+    //     { type: 'image', src: Shibachu },
+    //     // { type: 'video', src: Video1 },
+    //     // { type: 'video', src: Video2 },
+    // ]);
+  }, []);
 
-    return (
-        <>
-            {(
-                <section className='home'>
-                  <Main />
-                  <NFTs />
-                  <Slider />
-                  <AboutVersus/>
-                  <AboutCyphers/>
-                  <AboutBridge/>
-                  <Metaverse/>
-                  <MintYourOwn />
-                  <Footer />
-                </section>
-            )}
-        </>
-
-    );
+  return (
+    <>
+      {
+        <section className='home'>
+          <Main />
+          <NFTs />
+          <Slider />
+          <AboutVersus />
+          <AboutCyphers />
+          <BlockChain />
+          <Metaverse />
+          <MintYourOwn />
+          {/* <Footer /> */}
+        </section>
+      }
+    </>
+  );
 };
 
 export default Home;

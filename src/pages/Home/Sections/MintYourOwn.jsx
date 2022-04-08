@@ -3,17 +3,22 @@ import GraphicLine from '../../../assets/images/Graphics/Group 51.png';
 import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
+import { ReactComponent as Pinks } from '../../../assets/svg/Home/MintYourOwn/Pinks.svg';
+import { ReactComponent as Wrapbig } from '../../../assets/svg/Home/MintYourOwn/Wrapbig.svg';
+import { ReactComponent as Wrapsmall } from '../../../assets/svg/Home/MintYourOwn/Wrapsmall.svg';
+
 const MintYourOwn = () => {
-    return (
-        <div className='mint_your_own'>
-            {/* <img src={Graphic} alt='Graphic' className='graphic' />
+  return (
+    <div className='mint_your_own'>
+      {/* <img src={Graphic} alt='Graphic' className='graphic' />
             <img src={GraphicLine} alt='Graphic' className='graphic_line1' /> */}
-            {/* <img src={GraphicLine} alt='Graphic' className='graphic_line2' /> */}
-            {/* <img src={GraphicLine1} alt='Graphic' className='graphic_line3' />
+      {/* <img src={GraphicLine} alt='Graphic' className='graphic_line2' /> */}
+      {/* <img src={GraphicLine1} alt='Graphic' className='graphic_line3' />
             <img src={GraphicLine2} alt='Graphic' className='graphic_line4' />
             <img src={GraphicLine1} alt='Graphic' className='graphic_line5' /> */}
-            <div className='content_wrap'>
-                <h1
+      <div className='image_bg'>
+        <div className='content_wrap'>
+          {/* <h1
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='400'>
@@ -30,10 +35,15 @@ const MintYourOwn = () => {
                     data-aos-offset='0'
                     data-aos-duration='600'>
                     Jump In!
-                </button>
-            </div>
+                </button> */}
+
+          <Pinks className='pink_dots' />
+          <Wrapbig className='big_wrap' />
+          <Wrapsmall className='small_wrap' />
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default MintYourOwn;

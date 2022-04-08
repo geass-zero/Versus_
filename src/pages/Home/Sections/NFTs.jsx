@@ -3,11 +3,14 @@ import Bull from '../../../assets/images/characters/Bull.gif';
 import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
 
+import { ReactComponent as Box } from '../../../assets/svg/Home/NFT/Box.svg';
+import { ReactComponent as Top } from '../../../assets/svg/Home/NFT/nftTop.svg';
+
 const NFTs = () => {
-    return (
-        <div className='nfts_section'>
-            <div className='content_wrap'>
-                {/* <div
+  return (
+    <div className='nfts_section'>
+      <div className='content_wrap'>
+        {/* <div
                     className='text'
                     data-aos='fade-up'
                     data-aos-offset='0'
@@ -45,9 +48,19 @@ const NFTs = () => {
                         data-aos-duration='400'
                     />
                 </div> */}
+        <div className='box_wrap'>
+          <Top className='top_svg' />
+          <div className='box_svg main_box'>
+            <Box className='box_svg' />
+            <div className='text'>
+              Versus Cyphers are Chainlink integrated, crosshchain NFTs that
+              earn rewards automatically.
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default NFTs;
