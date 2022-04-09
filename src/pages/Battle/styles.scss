@@ -767,6 +767,12 @@
   display: none;
 }
 
+@media screen and (max-width: $breakpoint-xs) and (min-width: $breakpoint-sm-special) {
+  .battle_wrap .content_wrap {
+    // max-width: 310px;
+  }
+}
+
 @media screen and (max-width: $breakpoint-md) {
   .battle_pop {
     width: calc(100vw - 100px);
@@ -795,6 +801,7 @@
       min-height: calc(100vh - #{$mainnav-height-mob} - 120px);
     }
     .content_wrap {
+      max-width: 310px;
       .box_wrap {
         min-height: calc(100vh - #{$mainnav-height} - 120px);
         padding: 15px;
@@ -938,7 +945,7 @@
                       margin-top: 15px;
                       padding: 0 20px;
                       padding-right: 0;
-                      font-size: 2.9vmin;
+                      font-size: 13px;
                       padding-left: 35px;
                     }
                   }
