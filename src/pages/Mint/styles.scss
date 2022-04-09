@@ -574,6 +574,20 @@
   }
 }
 
+@media screen and (max-width: $breakpoint-md) and (min-width: $breakpoint-sm-special) {
+  .mint_wrap {
+    .flex_box {
+      .x2 {
+        .box_wrap {
+          .minted {
+            top: -25vh !important;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $breakpoint-xs) {
   .mint_wrap {
     &:after {

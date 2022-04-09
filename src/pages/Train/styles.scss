@@ -41,7 +41,7 @@
       width: 100%;
       @include flex-column();
       margin-top: $mainnav-height !important;
-      height: calc(100vh - #{$mainnav-height} - 20px);
+      height: calc(100vh - #{$mainnav-height});
 
       &.svg_main_wrap {
         max-width: 500px;
@@ -350,6 +350,18 @@
             color: inherit;
             background: transparent;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) and (min-width: $breakpoint-sm-special) {
+  .train_wrap {
+    .content_wrap {
+      .box_wrap {
+        .box_svg_mobile {
+          max-width: 400px;
         }
       }
     }
