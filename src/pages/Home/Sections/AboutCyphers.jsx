@@ -40,8 +40,8 @@ const AboutCyphers = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'>
-              <Diamond className='box_svg mobile_hidden' />
-              <DiamondMobile className='box_svg mobile_only' />
+              <Diamond className='box_svg mobile_hidden diamond_svg' />
+              <DiamondMobile className='box_svg mobile_only diamond_svg' />
             </div>
             <div className='wrap_box_2 box_wrapper x2'>
               <div

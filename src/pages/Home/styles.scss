@@ -908,13 +908,87 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-md) {
-  .home {
-    .mint_your_own {
-      img.graphic {
-        max-height: 220px !important;
-        top: 50% !important;
-        right: -2% !important;
+@media screen and (max-width: $breakpoint-md) and (min-width: $breakpoint-sm-special) {
+  html {
+    body {
+      .home {
+        .header_title {
+          height: 150px !important;
+
+          span {
+            padding-top: 85px !important;
+          }
+        }
+        .main_section {
+          .flex_box .shibachu {
+            height: 40vh !important;
+          }
+
+          .main_box {
+            margin-top: 80px !important;
+
+            svg {
+              max-width: 600px;
+            }
+          }
+
+          .buttons_wrap {
+            max-width: 600px;
+            margin-top: 40px !important;
+          }
+        }
+
+        .about_versus {
+          .image_bg {
+            .content_wrap {
+              .box_wrappers {
+                .box_wrapper {
+                  margin-left: 40% !important;
+                  width: 60% !important;
+
+                  &.wrap_box_2 {
+                    margin-left: 0 !important;
+                    margin-right: 40% !important;
+                  }
+                }
+
+                .box_content {
+                  min-height: 19vh !important;
+                }
+              }
+            }
+          }
+        }
+
+        .cyphers_section .image_bg .content_wrap .box_wrappers {
+          .box_wrapper {
+            &.wrap_box_2 {
+              .item_box {
+                max-width: 600px;
+              }
+            }
+            .diamond_svg {
+              min-height: 310px;
+            }
+          }
+        }
+
+        .bridge_section {
+          .image_bg {
+            .content_wrap {
+              .box_wrapper {
+                min-height: 60vh;
+
+                .box_content {
+                  max-width: 500px;
+                }
+              }
+            }
+          }
+        }
+
+        .mint_your_own {
+        }
       }
     }
   }
