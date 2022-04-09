@@ -4,6 +4,7 @@ import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
 import { ReactComponent as Pinks } from '../../../assets/svg/Home/MintYourOwn/Pinks.svg';
+import { ReactComponent as PinksMobile } from '../../../assets/svg/Home/MintYourOwn/PinksMobile.svg';
 import { ReactComponent as Wrapbig } from '../../../assets/svg/Home/MintYourOwn/Wrapbig.svg';
 import { ReactComponent as Wrapsmall } from '../../../assets/svg/Home/MintYourOwn/Wrapsmall.svg';
 
@@ -37,7 +38,8 @@ const MintYourOwn = () => {
                     Jump In!
                 </button> */}
 
-          <Pinks className='pink_dots' />
+          <Pinks className='pink_dots mobile_hidden' />
+          <PinksMobile className='pink_dots mobile_only' />
           <Wrapbig className='big_wrap' />
           <Wrapsmall className='small_wrap' />
         </div>

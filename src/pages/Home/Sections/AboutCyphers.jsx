@@ -6,6 +6,8 @@ import snake from '../../../assets/images/characters/snake.gif';
 import { ReactComponent as Wrap } from '../../../assets/svg/Home/AboutChyphers/Wrap.svg';
 import { ReactComponent as Diamond } from '../../../assets/svg/Home/AboutChyphers/Diamond.svg';
 import { ReactComponent as AboutCyphersHead } from '../../../assets/svg/Home/AboutChyphers/AboutCyphers.svg';
+import { ReactComponent as DiamondMobile } from '../../../assets/svg/Home/AboutChyphers/DiamondMobile.svg';
+import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/AboutChyphers/WrapMobile.svg';
 
 const AboutCyphers = () => {
   return (
@@ -34,14 +36,16 @@ const AboutCyphers = () => {
 
           <div className='box_wrappers flex_box'>
             <div className='wrap_box box_wrapper x2'>
-              <Diamond className='box_svg' />
+              <Diamond className='box_svg mobile_hidden' />
+              <DiamondMobile className='box_svg mobile_only' />
             </div>
             <div className='wrap_box_2 box_wrapper x2'>
               <div className='header_title'>
                 <AboutCyphersHead className='' />
               </div>
               <div className='item_box'>
-                <Wrap className='box_svg' />
+                <Wrap className='box_svg mobile_hidden' />
+                <WrapMobile className='box_svg mobile_only' />
                 <div className='box_content'>
                   Cyphers are the names of the various types of creatures
                   spawned from the blockchain.

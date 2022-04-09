@@ -4,7 +4,9 @@ import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
 
 import { ReactComponent as Wrap } from '../../../assets/svg/Home/AboutBridge/Wrap.svg';
+import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/AboutBridge/WrapMobile.svg';
 import { ReactComponent as Top } from '../../../assets/svg/Home/AboutBridge/top.svg';
+import { ReactComponent as TopMobile } from '../../../assets/svg/Home/AboutBridge/topmobile.svg';
 
 const BlockChain = () => {
   return (
@@ -12,11 +14,13 @@ const BlockChain = () => {
       <div className='image_bg'>
         <div className='content_wrap'>
           <div className='header_title'>
-            <Top className='' />
+            <Top className='mobile_hidden' />
+            <TopMobile className='mobile_only' />
             <span>What blockchain does versus live on?</span>
           </div>
           <div className='wrap_box box_wrapper'>
-            <Wrap className='box_svg' />
+            <Wrap className='box_svg mobile_hidden' />
+            <WrapMobile className='box_svg mobile_only' />
             <div className='box_content'>
               <p>
                 The Versus ecosystem exists on both the Ethereum mainnet as well
