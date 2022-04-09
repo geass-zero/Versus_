@@ -919,8 +919,10 @@
 @media screen and (max-width: $breakpoint-xs) {
   .home {
     overflow: hidden;
+
     .main_section {
       padding-top: 80px;
+      min-height: max(100vh, 810px) !important;
       //padding-bottom: 90px;
 
       .main_box {
@@ -1051,6 +1053,7 @@
     .cyphers_section {
       .image_bg {
         .content_wrap {
+          padding-top: 15%;
           .box_wrappers {
             flex-direction: column;
 
