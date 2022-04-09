@@ -35,15 +35,27 @@ const AboutCyphers = () => {
                 </div> */}
 
           <div className='box_wrappers flex_box'>
-            <div className='wrap_box box_wrapper x2'>
+            <div
+              className='wrap_box box_wrapper x2'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'>
               <Diamond className='box_svg mobile_hidden' />
               <DiamondMobile className='box_svg mobile_only' />
             </div>
             <div className='wrap_box_2 box_wrapper x2'>
-              <div className='header_title'>
+              <div
+                className='header_title'
+                data-aos='fade-up'
+                data-aos-offset='0'
+                data-aos-duration='350'>
                 <AboutCyphersHead className='' />
               </div>
-              <div className='item_box'>
+              <div
+                className='item_box'
+                data-aos='fade-up'
+                data-aos-offset='0'
+                data-aos-duration='400'>
                 <Wrap className='box_svg mobile_hidden' />
                 <WrapMobile className='box_svg mobile_only' />
                 <div className='box_content'>

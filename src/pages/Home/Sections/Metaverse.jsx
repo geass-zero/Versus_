@@ -15,16 +15,34 @@ const Metaverse = () => {
     <div className='metaverse_section'>
       <div className='image_bg'>
         <div className='content_wrap'>
-          <div className='header_title'>
+          <div
+            className='header_title'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='350'>
             <Top className='mobile_hidden' />
             <TopMobile className='mobile_only' />
             <span>An Animal Crossing inspired Metaverse</span>
           </div>
           <div className='wrap_box box_wrapper'>
-            <Wrap className='box_svg mobile_hidden' />
-            <WrapMobile className='box_svg mobile_only' />
+            <Wrap
+              className='box_svg mobile_hidden'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <WrapMobile
+              className='box_svg mobile_only'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
           </div>
-          <div className='header_title bottom'>
+          <div
+            className='header_title bottom'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='500'>
             <Bottom className='mobile_hidden' />
             <BottomMobile className='mobile_only' />
             <span>Track our progress</span>

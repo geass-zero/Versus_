@@ -93,10 +93,18 @@ const Main = () => {
                             data-aos-duration='700'>
                             Read the Docs
                         </button> */}
-            <div className='box_svg main_box'>
+            <div
+              className='box_svg main_box'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'>
               <MainBG className='box_svg' />
             </div>
-            <div className='buttons_wrap'>
+            <div
+              className='buttons_wrap'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='500'>
               <button className='transparent svg_wrap blue_button'>
                 <span></span>
                 <MainSmallButton />

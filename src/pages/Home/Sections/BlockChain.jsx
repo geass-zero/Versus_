@@ -13,12 +13,20 @@ const BlockChain = () => {
     <div className='bridge_section'>
       <div className='image_bg'>
         <div className='content_wrap'>
-          <div className='header_title'>
+          <div
+            className='header_title'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='350'>
             <Top className='mobile_hidden' />
             <TopMobile className='mobile_only' />
             <span>What blockchain does versus live on?</span>
           </div>
-          <div className='wrap_box box_wrapper'>
+          <div
+            className='wrap_box box_wrapper'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'>
             <Wrap className='box_svg mobile_hidden' />
             <WrapMobile className='box_svg mobile_only' />
             <div className='box_content'>

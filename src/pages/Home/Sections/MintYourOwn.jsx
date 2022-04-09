@@ -38,10 +38,16 @@ const MintYourOwn = () => {
                     Jump In!
                 </button> */}
 
-          <Pinks className='pink_dots mobile_hidden' />
-          <PinksMobile className='pink_dots mobile_only' />
-          <Wrapbig className='big_wrap' />
-          <Wrapsmall className='small_wrap' />
+          <div data-aos='fade-up' data-aos-offset='0' data-aos-duration='350'>
+            <Pinks className='pink_dots mobile_hidden' />
+            <PinksMobile className='pink_dots mobile_only' />
+          </div>
+          <div data-aos='fade-up' data-aos-offset='0' data-aos-duration='400'>
+            <Wrapbig className='big_wrap' />
+          </div>
+          <div data-aos='fade-up' data-aos-offset='0' data-aos-duration='500'>
+            <Wrapsmall className='small_wrap' />
+          </div>
         </div>
       </div>
     </div>

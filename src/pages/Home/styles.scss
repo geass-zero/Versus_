@@ -387,10 +387,13 @@
         .box_wrapper {
           @include flex-row();
           min-height: 50vh;
-          max-width: 850px;
+          max-width: 840px;
+          width: 100%;
 
           .box_content {
             max-width: 700px;
+            padding: 20px;
+
             p {
               font-size: 22px;
               color: #000;

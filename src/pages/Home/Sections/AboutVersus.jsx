@@ -14,7 +14,11 @@ const AboutVersus = () => {
     <div className='about_versus'>
       <div className='image_bg'>
         <div className='content_wrap'>
-          <div className='header_title'>
+          <div
+            className='header_title'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='350'>
             <Head className='' />
           </div>
           {/* <div className='detail_box'>
@@ -48,7 +52,11 @@ const AboutVersus = () => {
                     </div>
                 </div> */}
           <div className='box_wrappers'>
-            <div className='wrap_box box_wrapper'>
+            <div
+              className='wrap_box box_wrapper'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'>
               <Wrap className='box_svg mobile_hidden' />
               <WrapMobile className='box_svg mobile_only' />
               <div className='box_content'>
@@ -57,7 +65,11 @@ const AboutVersus = () => {
                 cultures, and technologies.
               </div>
             </div>
-            <div className='wrap_box_2 box_wrapper'>
+            <div
+              className='wrap_box_2 box_wrapper'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='500'>
               <Wrap2 className='box_svg mobile_hidden' />
               <Wrap2Mobile className='box_svg mobile_only' />
               <div className='box_content'>

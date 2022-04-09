@@ -50,8 +50,17 @@ const NFTs = () => {
                     />
                 </div> */}
         <div className='box_wrap'>
-          <Top className='top_svg' />
-          <div className='box_svg main_box'>
+          <Top
+            className='top_svg'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='350'
+          />
+          <div
+            className='box_svg main_box'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'>
             <Box className='box_svg mobile_hidden' />
             <BoxMobile className='box_svg mobile_only' />
             <div className='text'>
