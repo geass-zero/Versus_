@@ -266,6 +266,7 @@ iframe {
     padding-right: 20px;
   }
 }
+
 @media screen and (max-width: $breakpoint-xs) {
   .mobile_hidden {
     display: none !important;
@@ -305,8 +306,8 @@ iframe {
   .carousel-root {
     .control-arrow {
       // display: none;
-      width: 50px !important;
-      height: 50px !important;
+      // width: 50px !important;
+      // height: 50px !important;
       background-size: 50% !important;
       left: 10px !important;
 
@@ -332,5 +333,12 @@ iframe {
         transform: scale(0.6);
       }
     }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm-special) {
+  .carousel-root .control-arrow {
+    width: 50px !important;
+    height: 50px !important;
   }
 }
