@@ -4,8 +4,8 @@ import VersusContext from '../../store/Context';
 
 import Arrow from '../../assets/images/Icon awesome-arrow-left.png';
 
-import { ReactComponent as TrainBox } from '../../assets/svg/Train/Box.svg';
-import { ReactComponent as BoxMobile } from '../../assets/svg/Train/BoxMobile.svg';
+import TrainBox from '../../assets/svg/Train/Box.png';
+import BoxMobile from '../../assets/svg/Train/BoxMobile.png';
 import { ReactComponent as InsideBox } from '../../assets/svg/Train/InsideBox.svg';
 import { ReactComponent as InsideBoxMobile } from '../../assets/svg/Train/InsideBoxMobile.svg';
 import { ReactComponent as Down } from '../../assets/svg/Train/Down.svg';
@@ -293,8 +293,10 @@ const Train = () => {
                   data-aos='zoom-in'
                   data-aos-offset='0'
                   data-aos-duration='300'>
-                  <TrainBox className='box_svg mobile_hidden' />
-                  <BoxMobile className='mobile_only box_svg_mobile' />
+                  <img src={BoxMobile} className='mobile_only box_svg_mobile' />
+                  <img src={TrainBox} className='box_svg mobile_hidden' />
+                  {/* <TrainBox className='box_svg mobile_hidden' />
+                  <BoxMobile className='mobile_only box_svg_mobile' /> */}
                   <div className='top_details box_content'>
                     <div
                       className='main_title'

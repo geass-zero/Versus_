@@ -52,6 +52,7 @@
 
         .box_svg {
           max-height: max(497px, calc(100vh - 120px));
+          min-height: 560px;
         }
 
         .box_svg_mobile {
