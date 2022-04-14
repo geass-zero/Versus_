@@ -48,9 +48,9 @@ const Header = () => {
             Battle
           </Link>
           <Link
-            to='/docs'
+            to='/shop'
             onClick={() => setIsOpen(false)}
-            className={`${location.pathname === '/docs' ? 'active' : ''}`}>
+            className={`${location.pathname === '/shop' ? 'active' : ''}`}>
             Item Shop
           </Link>
         </div>
