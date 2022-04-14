@@ -189,6 +189,7 @@ const Battle = () => {
                 <img
                   src={Shibachu}
                   alt='Shibachu'
+                  className='card_main'
                   data-aos='zoom-in'
                   data-aos-offset='0'
                   data-aos-duration='200'

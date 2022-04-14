@@ -1,5 +1,5 @@
-import { ReactComponent as RecentWrap } from '../../assets/svg/Battle/RecentWrap.svg';
-import { ReactComponent as RecentWrapMobile } from '../../assets/svg/Battle/RecentWrapMobile.svg';
+import RecentWrap from '../../assets/svg/Battle/RecentWrap.png';
+import RecentWrapMobile from '../../assets/svg/Battle/RecentWrapMobile.png';
 import VSImage from '../../assets/images/VS.png';
 import crown from '../../assets/images/crown.png';
 
@@ -24,8 +24,18 @@ const RecentBattles = () => {
           <VSCard image1={Bat} image2={Moon} isFirstUserWinner={false} />
         </div>
       </div>
-      <RecentWrap className='box_svg mobile_hidden' />
-      <RecentWrapMobile className='box_svg mobile_only' />
+      <img
+        src={RecentWrap}
+        className='wrap_image box_svg mobile_hidden'
+        alt=''
+      />
+      <img
+        src={RecentWrapMobile}
+        className='wrap_image box_svg mobile_only'
+        alt=''
+      />
+      {/* <RecentWrap className='box_svg mobile_hidden' />
+      <RecentWrapMobile className='box_svg mobile_only' /> */}
     </div>
   );
 };

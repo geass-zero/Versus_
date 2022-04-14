@@ -45,6 +45,13 @@
   min-height: 100px;
   overflow: hidden;
 
+  .wrap_image {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    top: 0;
+  }
+
   svg {
     width: 100%;
     left: 0;
@@ -67,6 +74,7 @@
     .cards_wrapper {
       @include flex-row();
       justify-content: space-between;
+      flex-wrap: wrap;
 
       .vs_card {
         background-color: #c4c4c4;
@@ -75,6 +83,7 @@
         max-width: 210px;
         @include flex-row();
         justify-content: space-between;
+        margin-bottom: 8px;
 
         .vs_image {
           width: 50px;
@@ -123,6 +132,11 @@
 
   .top_contents {
     padding-bottom: 160px;
+
+    .card_main {
+      max-height: 440px;
+      margin-top: -50px;
+    }
   }
 
   .x2 {
@@ -185,7 +199,7 @@
         }
 
         &.main_content_wrapper {
-          margin-top: 40px;
+          margin-top: 20px;
 
           .box_svg {
             height: 100%;
@@ -229,7 +243,7 @@
               width: 100%;
               margin-top: 35px;
               @include flex-column();
-              margin-top: 80px;
+              margin-top: 10px;
               // height: calc(
               //   max(100vh - #{$mainnav-height} - 520px, 380px) / 2.5
               // );
@@ -327,7 +341,7 @@
                 }
 
                 .history_button {
-                  min-width: 70%;
+                  min-width: 67%;
 
                   &:before {
                     @include pseudo-abs();
@@ -341,7 +355,8 @@
                   }
 
                   svg {
-                    width: 290px;
+                    max-width: 290px;
+                    width: 89%;
                   }
 
                   span {
@@ -774,9 +789,18 @@
   display: none;
 }
 
-@media screen and (max-width: $breakpoint-xs) and (min-width: $breakpoint-sm-special) {
-  .battle_wrap .content_wrap {
-    // max-width: 310px;
+@media screen and (max-width: $breakpoint-sm-special-x1) and (min-width: $breakpoint-sm) {
+  .recent_battles_wrap {
+    .padder {
+      .cards_wrapper {
+        .vs_card {
+          .profile {
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
   }
 }
 
