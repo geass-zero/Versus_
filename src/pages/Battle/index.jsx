@@ -20,8 +20,10 @@ import CardImage from '../../assets/images/cardImage.png';
 import LoaderImage from '../../assets/images/battlebg.jpg';
 import Shibachu from '../../assets/images/Calfire.gif';
 
-import { ReactComponent as BattleBox } from '../../assets/svg/Battle/Box.svg';
-import { ReactComponent as BoxMobile } from '../../assets/svg/Battle/BoxMobile.svg';
+// import { ReactComponent as BattleBox } from '../../assets/svg/Battle/Box.svg';
+// import { ReactComponent as BoxMobile } from '../../assets/svg/Battle/BoxMobile.svg';
+import BattleBox from '../../assets/svg/Battle/Box.png';
+import BoxMobile from '../../assets/svg/Battle/BoxMobile.png';
 import { ReactComponent as EnterButton } from '../../assets/svg/Battle/EnterButton.svg';
 import { ReactComponent as FightNowButton } from '../../assets/svg/Battle/FightNowButton.svg';
 import { ReactComponent as HistoryButton } from '../../assets/svg/Battle/HistoryButton.svg';
@@ -212,8 +214,18 @@ const Battle = () => {
                     </div>
                   </div>
                   <div className='boxer main_content_wrapper svg_main_wrap'>
-                    <BattleBox className='box_svg mobile_hidden' />
-                    <BoxMobile className='mobile_only box_svg_mobile' />
+                    <img
+                      src={BattleBox}
+                      alt=''
+                      className='box_svg mobile_hidden'
+                    />
+                    <img
+                      src={BoxMobile}
+                      alt=''
+                      className='mobile_only box_svg_mobile'
+                    />
+                    {/* <BattleBox className='box_svg mobile_hidden' />
+                    <BoxMobile className='mobile_only box_svg_mobile' /> */}
                     <div className='padder'>
                       <div className='topper'>
                         <div

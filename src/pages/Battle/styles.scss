@@ -186,9 +186,16 @@
 
         &.main_content_wrapper {
           margin-top: 40px;
+
+          .box_svg {
+            height: 100%;
+            width: 100%;
+            // max-width: 100%;
+          }
+
           .padder {
             max-width: 500px;
-            padding: 25px 0;
+            padding: 25px 10px;
             // min-height: max(100vh - #{$mainnav-height} - 520px, 380px);
             @include flex-column();
             justify-content: space-between;

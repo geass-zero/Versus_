@@ -3,6 +3,7 @@ import GraphicLine from '../../../assets/images/Graphics/Group 51.png';
 import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 // import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
+import MainBGImage from '../../../assets/svg/Home/Main/MainBG.png';
 import { ReactComponent as MainBG } from '../../../assets/svg/Home/Main/MainBG.svg';
 import { ReactComponent as MainBigButton } from '../../../assets/svg/Home/Main/MainBigButton.svg';
 import { ReactComponent as MainSmallButton } from '../../../assets/svg/Home/Main/MainSmallButton.svg';
@@ -98,7 +99,8 @@ const Main = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'>
-              <MainBG className='box_svg' />
+              <img src={MainBGImage} className='box_svg mobile_hidden' />
+              <MainBG className='box_svg mobile_only' />
             </div>
             <div
               className='buttons_wrap'

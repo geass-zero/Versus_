@@ -4,10 +4,10 @@ import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
 
 import { ReactComponent as Head } from '../../../assets/svg/Home/AboutVersus/Head.svg';
-import { ReactComponent as Wrap } from '../../../assets/svg/Home/AboutVersus/Wrap.svg';
-import { ReactComponent as Wrap2 } from '../../../assets/svg/Home/AboutVersus/Wrap2.svg';
-import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/AboutVersus/WrapMobile.svg';
-import { ReactComponent as Wrap2Mobile } from '../../../assets/svg/Home/AboutVersus/Wrap2Mobile.svg';
+import Wrap from '../../../assets/svg/Home/AboutVersus/Wrap.png';
+import Wrap2 from '../../../assets/svg/Home/AboutVersus/Wrap2.png';
+import WrapMobile from '../../../assets/svg/Home/AboutVersus/WrapMobile.png';
+import Wrap2Mobile from '../../../assets/svg/Home/AboutVersus/Wrap2Mobile.png';
 
 const AboutVersus = () => {
   return (
@@ -57,8 +57,10 @@ const AboutVersus = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'>
-              <Wrap className='box_svg mobile_hidden' />
-              <WrapMobile className='box_svg mobile_only' />
+              {/* <Wrap className='box_svg mobile_hidden' /> */}
+              <img src={Wrap} className='box_svg mobile_hidden' />
+              <img src={WrapMobile} className='box_svg mobile_only' />
+              {/* <WrapMobile className='box_svg mobile_only' /> */}
               <div className='box_content'>
                 Versus is a world that exists in a parallel dimension, apart
                 from Earth. Versus is vast and wonderful with unique biomes,
@@ -70,8 +72,10 @@ const AboutVersus = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='500'>
-              <Wrap2 className='box_svg mobile_hidden' />
-              <Wrap2Mobile className='box_svg mobile_only' />
+              {/* <Wrap2 className='box_svg mobile_hidden' /> */}
+              <img src={Wrap2} className='box_svg mobile_hidden' />
+              <img src={Wrap2Mobile} className='box_svg mobile_only' />
+              {/* <Wrap2Mobile className='box_svg mobile_only' /> */}
               <div className='box_content'>
                 Like our reality, the forward-thinking scientists of Versus
                 developed blockchain technology. However, unlike our reality,

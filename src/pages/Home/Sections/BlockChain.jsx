@@ -3,8 +3,8 @@ import Bull from '../../../assets/images/characters/Bull.gif';
 import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
 
-import { ReactComponent as Wrap } from '../../../assets/svg/Home/AboutBridge/Wrap.svg';
-import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/AboutBridge/WrapMobile.svg';
+import Wrap from '../../../assets/svg/Home/AboutBridge/Wrap.png';
+import WrapMobile from '../../../assets/svg/Home/AboutBridge/WrapMobile.png';
 import { ReactComponent as Top } from '../../../assets/svg/Home/AboutBridge/top.svg';
 import { ReactComponent as TopMobile } from '../../../assets/svg/Home/AboutBridge/topmobile.svg';
 
@@ -27,8 +27,10 @@ const BlockChain = () => {
             data-aos='fade-up'
             data-aos-offset='0'
             data-aos-duration='400'>
-            <Wrap className='box_svg mobile_hidden' />
-            <WrapMobile className='box_svg mobile_only' />
+            <img src={Wrap} alt='' className='box_svg mobile_hidden' />
+            <img src={WrapMobile} alt='' className='box_svg mobile_only' />
+            {/* <Wrap className='box_svg mobile_hidden' />
+            <WrapMobile className='box_svg mobile_only' /> */}
             <div className='box_content'>
               <p>
                 The Versus ecosystem exists on both the Ethereum mainnet as well
