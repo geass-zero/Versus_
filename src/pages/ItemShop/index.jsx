@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './styles.scss';
 import { ReactComponent as Consumables } from '../../assets/svg/ItemShop/Consumables.svg';
+import { ReactComponent as ConsumablesMobile } from '../../assets/svg/ItemShop/ConsumablesMobile.svg';
 import Price from '../../assets/svg/ItemShop/Price.png';
 
 const ItemShop = () => {
@@ -12,7 +13,8 @@ const ItemShop = () => {
     <section className='item_shop_wrap'>
       <div className='content_wrap main_wrapper'>
         <div className='consumables_wrap'>
-          <Consumables />
+          <Consumables className='mobile_hidden' />
+          <ConsumablesMobile className='mobile_only' />
         </div>
         <div className='items_wrapper'>
           <div className='scroll_box scroll_bar'>
@@ -59,4 +61,5 @@ const Card = ({ data, onClick, isSelected, id }) => {
     </div>
   );
 };
+
 export default ItemShop;
