@@ -12,11 +12,19 @@ const ItemShop = () => {
   return (
     <section className='item_shop_wrap'>
       <div className='content_wrap main_wrapper'>
-        <div className='consumables_wrap'>
+        <div
+          className='consumables_wrap'
+          data-aos='zoom-in'
+          data-aos-offset='0'
+          data-aos-duration='400'>
           <Consumables className='mobile_hidden' />
           <ConsumablesMobile className='mobile_only' />
         </div>
-        <div className='items_wrapper'>
+        <div
+          className='items_wrapper'
+          data-aos='zoom-in'
+          data-aos-offset='0'
+          data-aos-duration='500'>
           <div className='scroll_box scroll_bar'>
             {shopItemsArray.map((item, index) => (
               <Card
@@ -29,7 +37,11 @@ const ItemShop = () => {
             ))}
           </div>
         </div>
-        <div className='item_description_wrap'>
+        <div
+          className='item_description_wrap'
+          data-aos='zoom-in'
+          data-aos-offset='0'
+          data-aos-duration='600'>
           <div className='top_section'>
             <div className='image_box'></div>
             <div className='title'>Item Name</div>

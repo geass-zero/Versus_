@@ -1,0 +1,41 @@
+@import './../../variables.scss';
+
+.wallet_pop_up_main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  padding-top: $mainnav-height + 20px;
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s 1;
+  }
+
+  .content_wrap {
+    position: relative;
+
+    .close_icon {
+      position: absolute;
+      right: -10px;
+      top: -20px;
+      z-index: 99;
+      height: 90px;
+      cursor: pointer;
+    }
+
+    .second_box_wrap {
+      width: 100%;
+      height: calc(100vh - #{$mainnav-height} - 50px);
+      background: rgba(208, 177, 148, 1);
+      border-radius: 50px;
+    }
+  }
+}
