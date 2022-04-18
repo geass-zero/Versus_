@@ -22,6 +22,12 @@
   .content_wrap {
     position: relative;
 
+    .flex_box > .x2 {
+      width: calc(50% - 15px);
+      height: 100%;
+      height: calc(100vh - #{$mainnav-height} - 20px);
+    }
+
     .close_icon {
       position: absolute;
       right: -10px;
@@ -31,11 +37,118 @@
       cursor: pointer;
     }
 
+    .special_box {
+      max-height: 730px;
+      @include flex-row();
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
+      // min-height: calc(100vh - 120px);
+      padding: 25px;
+
+      .background {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        max-height: 100%;
+      }
+
+      .left_boxer {
+        max-width: 180px;
+        width: 17vh;
+        margin-right: 15px;
+        height: 100%;
+        z-index: 2;
+        position: relative;
+        @include flex-column();
+        justify-content: flex-end;
+        // max-height: 650px;
+
+        .controller_wrap {
+          position: relative;
+          max-height: 120px;
+          width: 100%;
+          height: 100%;
+          @include flex-row();
+          flex-wrap: wrap;
+          // padding: 30px;
+          // transform: rotate(45deg);
+
+          div {
+            position: relative;
+            z-index: 5;
+            min-width: 50%;
+            min-height: 50%;
+            // max-height: 15px;
+            @include flex-row();
+            justify-content: space-between;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            transform: translate(-50%, -50%);
+            // margin-left: 50%;
+            // margin-right: 50%;
+
+            svg {
+              cursor: pointer;
+              transition: transform 0.3s;
+
+              &:hover {
+                transform: scale(1.23);
+              }
+            }
+
+            &.column {
+              width: 20px;
+              flex-direction: column;
+              // jus
+            }
+
+            &.row {
+              height: 20px;
+            }
+          }
+
+          .base {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            max-height: 100%;
+          }
+        }
+
+        .screen_svg {
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+
+      .right_boxer {
+        width: 100%;
+        height: 100%;
+        // height: calc(100vh - #{$mainnav-height} - 150px);
+        background-color: #2a2a2b;
+        padding: 10px;
+        z-index: 2;
+        position: relative;
+      }
+    }
+
     .second_box_wrap {
       width: 100%;
       height: calc(100vh - #{$mainnav-height} - 50px);
       background: rgba(208, 177, 148, 1);
       border-radius: 50px;
+      max-height: 850px;
     }
   }
 }

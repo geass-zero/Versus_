@@ -132,6 +132,7 @@
         height: 100%;
         padding: 15px;
         padding-top: 60px;
+        overflow: auto;
 
         .title {
           font-size: 22px;
@@ -143,6 +144,8 @@
 
 @media screen and (max-width: $breakpoint-xs) {
   .item_shop_wrap {
+    overflow: hidden;
+
     .main_wrapper {
       flex-direction: column;
       align-items: center;

@@ -14,7 +14,7 @@ const ItemShop = () => {
       <div className='content_wrap main_wrapper'>
         <div
           className='consumables_wrap'
-          data-aos='zoom-in'
+          data-aos='fade-left'
           data-aos-offset='0'
           data-aos-duration='400'>
           <Consumables className='mobile_hidden' />
@@ -22,7 +22,7 @@ const ItemShop = () => {
         </div>
         <div
           className='items_wrapper'
-          data-aos='zoom-in'
+          data-aos='fade-left'
           data-aos-offset='0'
           data-aos-duration='500'>
           <div className='scroll_box scroll_bar'>
@@ -38,15 +38,15 @@ const ItemShop = () => {
           </div>
         </div>
         <div
-          className='item_description_wrap'
-          data-aos='zoom-in'
+          className='item_description_wrap '
+          data-aos='fade-left'
           data-aos-offset='0'
           data-aos-duration='600'>
           <div className='top_section'>
             <div className='image_box'></div>
             <div className='title'>Item Name</div>
           </div>
-          <div className='description_wrap'>
+          <div className='description_wrap scroll_bar'>
             <div className='title'>Item Description</div>
             <p>
               Allows a trainer to re-roll the stats for their cypher, at its

@@ -36,6 +36,10 @@ body {
 .flex_box {
   @include flex-row();
 
+  &.space_between {
+    justify-content: space-between;
+  }
+
   .x2 {
     width: 50%;
     @include flex-row();
