@@ -69,7 +69,7 @@
 
         .controller_wrap {
           position: relative;
-          max-height: 120px;
+          // max-height: 120px;
           width: 100%;
           height: 100%;
           @include flex-row();
@@ -140,6 +140,62 @@
         padding: 10px;
         z-index: 2;
         position: relative;
+
+        select {
+          width: 100%;
+          background-color: #ead3ab;
+          border: 0;
+          font-size: 21px;
+          padding: 2px 8px;
+          color: #ef6c50;
+          font-family: 'Lexend Deca';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 21px;
+          line-height: 30px;
+          margin-bottom: 8px;
+        }
+
+        .list_wrapper {
+          border: 1px solid #ead3ab;
+          border-right: 0px;
+          border-bottom: 0px;
+          height: calc(100% - 40px);
+          overflow: auto;
+          // @include flex-row();
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: space-evenly;
+          padding: 10px;
+
+          .card_wrap {
+            float: left;
+            width: 33.33%;
+            min-width: 115px;
+            @include flex-row();
+          }
+
+          .cypher_card {
+            min-width: 115px;
+            min-height: 115px;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: #aba59b;
+            border: 6px solid #aba59b;
+            transition: border 0.3s;
+            @include flex-row();
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+              border-color: #f46444;
+            }
+
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
 

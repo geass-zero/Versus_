@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import './styles.scss';
 import { ReactComponent as CloseIcon } from '../../assets/svg/Wallet/Close.svg';
 import { ReactComponent as Screen } from '../../assets/svg/Wallet/screen.svg';
@@ -7,9 +8,10 @@ import { ReactComponent as Down } from '../../assets/svg/Wallet/Down.svg';
 import { ReactComponent as Left } from '../../assets/svg/Wallet/Left.svg';
 import { ReactComponent as Right } from '../../assets/svg/Wallet/Right.svg';
 import GreyBG from '../../assets/svg/Wallet/BG.png';
-import { useEffect, useRef } from 'react';
+import Bull from '../../assets/images/characters/Bull.gif';
 
 const WalletPop = ({ onClose }) => {
+  const [selectedCypher, setSelectedCypher] = useState(false);
   const controllerElement = useRef(null);
   const greyBoxElement = useRef(null);
 
@@ -77,7 +79,19 @@ const WalletPop = ({ onClose }) => {
                   <option value='My Cyphers'>My Cyphers</option>
                   <option value='My Cyphers'>My Cyphers</option>
                 </select>
-                <div className='list_wrapper'></div>
+                <div className='list_wrapper'>
+                  {[...Array(9).keys()].map((item, index) => (
+                    <div className='card_wrap'>
+                      <CypherCard
+                        image={Bull}
+                        key={index}
+                        id={item}
+                        isSelected={selectedCypher === item}
+                        onSelect={(item) => setSelectedCypher(item)}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -90,6 +104,18 @@ const WalletPop = ({ onClose }) => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const CypherCard = ({ image, onSelect, id, isSelected }) => {
+  return (
+    <div
+      className={`cypher_card ${isSelected ? 'active' : ''}`}
+      onClick={() => {
+        onSelect && onSelect(id);
+      }}>
+      <img src={image} alt='character' />
     </div>
   );
 };
