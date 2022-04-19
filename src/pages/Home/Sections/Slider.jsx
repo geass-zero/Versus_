@@ -65,7 +65,7 @@ const SlideItem = ({ title, description, videoSrc }) => {
         src={videoSrc}
         autoPlay={true}
         muted={true}
-        playsinline={true}
+        playsInline={true}
         loop={true}
         controls={false}
         width='100%'

@@ -25,21 +25,28 @@ const WalletPop = ({ onClose }) => {
   useEffect(() => {
     onWindowResize();
     window.addEventListener('resize', onWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', onWindowResize);
+    };
   }, []);
 
   const onWindowResize = (e) => {
     //controller resizer
-    const width = controllerElement.current.parentElement.clientWidth;
-    controllerElement.current.style.height = width + 'px';
+    if (controllerElement.current) {
+      const width = controllerElement.current.parentElement.clientWidth;
+      controllerElement.current.style.height = width + 'px';
+    }
 
     //box resizer
-    const height = greyBoxElement.current.clientHeight;
-    controllerElement.current.parentElement.parentElement.style.height =
-      height + 'px';
+    if (greyBoxElement.current) {
+      const height = greyBoxElement.current.clientHeight;
+      controllerElement.current.parentElement.parentElement.style.height =
+        height + 'px';
+    }
 
     //buttons resizer
     if (rollButtonElement.current) {
-      debugger;
       const buttonHeight = rollButtonElement.current.clientHeight;
       rollButtonElement.current.parentElement.previousSibling.style.maxHeight =
         buttonHeight + 'px';
@@ -93,10 +100,9 @@ const WalletPop = ({ onClose }) => {
                 </select>
                 <div className='list_wrapper'>
                   {[...Array(9).keys()].map((item, index) => (
-                    <div className='card_wrap'>
+                    <div className='card_wrap' key={index}>
                       <CypherCard
                         image={Bull}
-                        key={index}
                         id={item}
                         isSelected={selectedCypher === item}
                         onSelect={(item) => setSelectedCypher(item)}
