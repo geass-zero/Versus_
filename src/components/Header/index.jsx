@@ -9,7 +9,7 @@ import { connectWallet } from '../../utils/UserData.js';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isWalletOpen, setWalletOpen] = useState(true);
+  const [isWalletOpen, setWalletOpen] = useState(false);
   const [currentAccount, setCurrentAccount] = useState('');
   const location = useLocation();
 
