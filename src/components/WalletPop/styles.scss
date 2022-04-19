@@ -209,6 +209,7 @@
       padding: 20px;
       padding-top: 50px;
       color: #000;
+      position: relative;
 
       .top_section {
         width: 100%;
@@ -222,7 +223,7 @@
         .information_wrap {
           float: right;
           width: 60%;
-          min-height: 25vh;
+          min-height: min(25vh, 230px);
 
           .title {
             font-size: 30px;
@@ -343,6 +344,105 @@
           //   width: 100%;
           //   margin-top: 10px;
           // }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-xs) {
+  .wallet_pop_up_main {
+    .content_wrap {
+      .flex_box > .x2 {
+        width: 100%;
+        height: calc(50vh - 60px);
+        z-index: 3;
+        position: relative;
+
+        &:last-child {
+          z-index: 2;
+        }
+      }
+
+      .special_box {
+        padding: 10px;
+
+        .close_icon {
+          right: -50px;
+          top: -19px;
+          height: 50px;
+        }
+
+        .left_boxer {
+          width: 90px;
+          margin-right: 10px;
+
+          .controller_wrap {
+            div {
+              width: calc(100% - 20px);
+              height: calc(100% - 20px);
+            }
+          }
+        }
+
+        .right_boxer {
+          .list_wrapper {
+            @include flex-row();
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+            .card_wrap {
+              min-width: 90px;
+            }
+
+            .cypher_card {
+              min-width: 95px;
+              min-height: 95px;
+            }
+          }
+        }
+      }
+
+      .second_box_wrap {
+        z-index: 5;
+        height: calc(50vh - 30px);
+        padding-top: 20px;
+
+        .top_section {
+          .character_image {
+            max-height: 120px;
+            object-fit: contain;
+            max-width: calc(30% - 20px);
+          }
+
+          .information_wrap {
+            min-height: auto;
+            width: 70%;
+
+            .title {
+              font-size: 22px;
+            }
+          }
+
+          .level_details {
+            width: 100%;
+            margin-top: 10px;
+
+            .level {
+              margin-bottom: 5px;
+            }
+
+            .data {
+              .item {
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+
+        .buttons_wrap {
+          z-index: 5;
+          position: relative;
         }
       }
     }

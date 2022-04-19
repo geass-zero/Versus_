@@ -50,14 +50,6 @@ const WalletPop = ({ onClose }) => {
     <div className='wallet_pop_up_main'>
       <div className='overlay' onClick={onClose}></div>
       <div className='content_wrap'>
-        <CloseIcon
-          onClick={onClose}
-          className='close_icon'
-          data-aos='zoom-in'
-          data-aos-offset='0'
-          data-aos-delay='600'
-          data-aos-duration='500'
-        />
         <div className='flex_box space_between'>
           <div
             className='x2'
@@ -65,6 +57,14 @@ const WalletPop = ({ onClose }) => {
             data-aos-offset='0'
             data-aos-duration='400'>
             <div className='special_box'>
+              <CloseIcon
+                onClick={onClose}
+                className='close_icon mobile_only'
+                data-aos='zoom-in'
+                data-aos-offset='0'
+                data-aos-delay='600'
+                data-aos-duration='500'
+              />
               <img
                 src={GreyBG}
                 alt=''
@@ -113,6 +113,14 @@ const WalletPop = ({ onClose }) => {
             data-aos-offset='0'
             data-aos-duration='500'>
             <div className='second_box_wrap'>
+              <CloseIcon
+                onClick={onClose}
+                className='close_icon mobile_hidden'
+                data-aos='zoom-in'
+                data-aos-offset='0'
+                data-aos-delay='600'
+                data-aos-duration='500'
+              />
               <div className='top_section'>
                 <img
                   src={Shibachu}
