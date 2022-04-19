@@ -1,0 +1,6 @@
+<svg  viewBox="0 0 516 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M475.409 156.461C401.462 158.467 329.215 158.499 255.98 158.428C251.985 158.424 247.987 158.42 243.986 158.416C174.648 158.343 104.298 158.269 30.7345 159.777C15.8033 160.083 3.49902 148.097 3.49902 133.193L3.49903 31.3874C3.49903 17.3231 14.4072 5.80621 28.3785 5.27871C70.4792 3.68923 153.119 1.72177 231.229 6.54472C321.294 12.1059 430.494 47.4189 467.997 60.3683C475.428 62.9342 481.203 68.8256 483.797 76.3194L499.442 121.523C505.268 138.355 493.163 155.98 475.409 156.461Z" fill="#8BF167" stroke="#43B85C" stroke-width="7"/>
+<text transform="matrix(0.999963 0.00866059 -0.0163352 0.999866 100.344 39)" fill="#145B24" xml:space="preserve" style="white-space: pre" font-family="Lexend Deca" font-size="45" font-weight="bold" letter-spacing="0em"><tspan x="0" y="44.875">Re-Roll Stats</tspan></text>
+<text transform="matrix(0.999963 0.00866059 -0.0163352 0.999866 100.344 39)" fill="#145B24" xml:space="preserve" style="white-space: pre" font-family="Lexend Deca" font-size="20" font-weight="bold" letter-spacing="0em"><tspan x="0" y="69.875">(For current level)</tspan></text>
+<circle cx="53" cy="82" r="33" fill="#43B85C"/>
+</svg>

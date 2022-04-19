@@ -8,12 +8,19 @@ import { ReactComponent as Down } from '../../assets/svg/Wallet/Down.svg';
 import { ReactComponent as Left } from '../../assets/svg/Wallet/Left.svg';
 import { ReactComponent as Right } from '../../assets/svg/Wallet/Right.svg';
 import GreyBG from '../../assets/svg/Wallet/BG.png';
+import LevelBG from '../../assets/svg/Wallet/LevelBG.png';
+// import ReleaseButton from '../../assets/svg/Wallet/ReleaseButton.png';
+import { ReactComponent as ReleaseButton } from '../../assets/svg/Wallet/ReleaseButton.svg';
+// import RollButton from '../../assets/svg/Wallet/RollButton.png';
+import { ReactComponent as RollButton } from '../../assets/svg/Wallet/RollButton.svg';
 import Bull from '../../assets/images/characters/Bull.gif';
+import Shibachu from '../../assets/images/Calfire.gif';
 
 const WalletPop = ({ onClose }) => {
   const [selectedCypher, setSelectedCypher] = useState(false);
   const controllerElement = useRef(null);
   const greyBoxElement = useRef(null);
+  const rollButtonElement = useRef(null);
 
   useEffect(() => {
     onWindowResize();
@@ -23,15 +30,20 @@ const WalletPop = ({ onClose }) => {
   const onWindowResize = (e) => {
     //controller resizer
     const width = controllerElement.current.parentElement.clientWidth;
-    console.log(width);
     controllerElement.current.style.height = width + 'px';
 
     //box resizer
     const height = greyBoxElement.current.clientHeight;
     controllerElement.current.parentElement.parentElement.style.height =
       height + 'px';
-    // controllerElement.current.parentElement.nextSibling.style.height =
-    //   height + 'px';
+
+    //buttons resizer
+    if (rollButtonElement.current) {
+      debugger;
+      const buttonHeight = rollButtonElement.current.clientHeight;
+      rollButtonElement.current.parentElement.previousSibling.style.maxHeight =
+        buttonHeight + 'px';
+    }
   };
 
   return (
@@ -100,7 +112,44 @@ const WalletPop = ({ onClose }) => {
             data-aos='fade-down'
             data-aos-offset='0'
             data-aos-duration='500'>
-            <div className='second_box_wrap'></div>
+            <div className='second_box_wrap'>
+              <div className='top_section'>
+                <img
+                  src={Shibachu}
+                  alt='Character'
+                  className='character_image'
+                />
+                <div className='information_wrap'>
+                  <div className='title'>#120: Calfire</div>
+                  <p>Cypher description here...</p>
+                </div>
+                <div className='level_details'>
+                  <img src={LevelBG} alt='BG' className='bg' />
+                  <div className='level'>Level 23</div>
+                  <div className='data'>
+                    <div className='item'>ATK: 100</div>
+                    <div className='item'>DEF: 100</div>
+                    <div className='item'>SPD: 100</div>
+                    <div className='item'>SP-ATK: 100</div>
+                    <div className='item'>SP-DEF: 100</div>
+                  </div>
+                </div>
+              </div>
+              <div className='buttons_wrap'>
+                <button className='transparent svg_wrap release_button'>
+                  {/* <img src={ReleaseButton} alt='button' /> */}
+                  <ReleaseButton />
+                  {/* <span>Release Cypher</span>
+                  <div className='small'>(You will lose the Cypher)</div> */}
+                </button>
+                <button className='transparent svg_wrap reroll_stat'>
+                  <RollButton ref={rollButtonElement} />
+                  {/* <img src={RollButton} alt='button' />
+                  <span>Re-Roll Stats</span>
+                  <div className='small'>(For current level)</div> */}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
