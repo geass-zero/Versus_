@@ -83,8 +83,9 @@ header {
         color: #6f00ff !important;
 
         img {
-          height: 35px;
-          object-fit: contain;
+          height: 85px;
+          position: absolute;
+          top: 5px
         }
       }
     }
@@ -232,7 +233,9 @@ header {
       .logo_wrap {
         a {
           img {
-            height: 40px !important;
+            top: 5px;
+            position: absolute;
+            height: 80px !important;
           }
         }
       }
