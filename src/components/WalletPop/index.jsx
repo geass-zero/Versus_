@@ -11,8 +11,10 @@ import GreyBG from '../../assets/svg/Wallet/BG.png';
 import LevelBG from '../../assets/svg/Wallet/LevelBG.png';
 // import ReleaseButton from '../../assets/svg/Wallet/ReleaseButton.png';
 import { ReactComponent as ReleaseButton } from '../../assets/svg/Wallet/ReleaseButton.svg';
+import { ReactComponent as ReleaseButtonMobile } from '../../assets/svg/Wallet/ReleaseButtonMobile.svg';
 // import RollButton from '../../assets/svg/Wallet/RollButton.png';
 import { ReactComponent as RollButton } from '../../assets/svg/Wallet/RollButton.svg';
+import { ReactComponent as RollButtonMobile } from '../../assets/svg/Wallet/RollButtonMobile.svg';
 import Bull from '../../assets/images/characters/Bull.gif';
 import Shibachu from '../../assets/images/Calfire.gif';
 
@@ -152,12 +154,17 @@ const WalletPop = ({ onClose }) => {
               <div className='buttons_wrap'>
                 <button className='transparent svg_wrap release_button'>
                   {/* <img src={ReleaseButton} alt='button' /> */}
-                  <ReleaseButton />
+                  <ReleaseButton className='mobile_hidden' />
+                  <ReleaseButtonMobile className='mobile_only' />
                   {/* <span>Release Cypher</span>
                   <div className='small'>(You will lose the Cypher)</div> */}
                 </button>
                 <button className='transparent svg_wrap reroll_stat'>
-                  <RollButton ref={rollButtonElement} />
+                  <RollButton
+                    ref={rollButtonElement}
+                    className='mobile_hidden'
+                  />
+                  <RollButtonMobile className='mobile_only' />
                   {/* <img src={RollButton} alt='button' />
                   <span>Re-Roll Stats</span>
                   <div className='small'>(For current level)</div> */}

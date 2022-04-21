@@ -383,6 +383,10 @@
               height: calc(100% - 20px);
             }
           }
+
+          .screen_svg {
+            margin-top: 5px;
+          }
         }
 
         .right_boxer {
@@ -410,14 +414,14 @@
 
         .top_section {
           .character_image {
-            max-height: 120px;
+            max-height: 220px;
             object-fit: contain;
-            max-width: calc(30% - 20px);
+            max-width: calc(35% - 20px);
           }
 
           .information_wrap {
-            min-height: auto;
-            width: 70%;
+            min-height: calc(40vh - 190px);
+            width: 65%;
 
             .title {
               font-size: 22px;
@@ -443,6 +447,30 @@
         .buttons_wrap {
           z-index: 5;
           position: relative;
+          align-items: flex-start;
+          margin-top: -10px;
+          height: auto;
+
+          button {
+            @include flex-row();
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 50px;
+            max-height: initial !important;
+
+            &.reroll_stat {
+              svg {
+                left: auto;
+                right: 0;
+              }
+            }
+
+            svg {
+              height: 50px;
+              width: auto;
+              max-height: initial !important;
+            }
+          }
         }
       }
     }
