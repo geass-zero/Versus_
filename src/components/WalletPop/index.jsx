@@ -58,7 +58,7 @@ const WalletPop = ({ onClose }) => {
   return (
     <div className='wallet_pop_up_main'>
       <div className='overlay' onClick={onClose}></div>
-      <div className='content_wrap'>
+      <div className='content_wrap scroll_bar'>
         <div className='flex_box space_between'>
           <div
             className='x2'

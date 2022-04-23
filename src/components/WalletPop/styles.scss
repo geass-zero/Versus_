@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   z-index: 9999;
-  padding-top: $mainnav-height + 20px;
+  padding-top: $mainnav-height + 5px;
 
   .overlay {
     position: absolute;
@@ -20,7 +20,13 @@
   }
 
   .content_wrap {
+    padding-top: 15px;
     position: relative;
+    margin-bottom: 0;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
 
     .flex_box > .x2 {
       width: calc(50% - 15px);
@@ -353,19 +359,33 @@
 @media screen and (max-width: $breakpoint-xs) {
   .wallet_pop_up_main {
     .content_wrap {
-      .flex_box > .x2 {
-        width: 100%;
-        height: calc(50vh - 60px);
-        z-index: 3;
-        position: relative;
+      overflow: auto;
+      max-height: calc(100vh - 20px);
+      overflow-x: hidden;
+      height: 100%;
 
-        &:last-child {
-          z-index: 2;
+      .flex_box {
+        min-height: 600px;
+
+        // &::-webkit-scrollbar {
+        //   // width: 2px;
+        // }
+
+        & > .x2 {
+          width: 100%;
+          height: calc(50vh - 60px);
+          z-index: 3;
+          position: relative;
+          min-height: 300px;
+
+          &:last-child {
+            z-index: 2;
+          }
         }
       }
-
       .special_box {
         padding: 10px;
+        min-height: 300px;
 
         .close_icon {
           right: -50px;
@@ -411,10 +431,13 @@
         z-index: 5;
         height: calc(50vh - 30px);
         padding-top: 20px;
+        min-height: 320px;
 
         .top_section {
+          height: calc(100% - 60px);
+
           .character_image {
-            max-height: 220px;
+            max-height: max(100px, calc(50vh - 240px));
             object-fit: contain;
             max-width: calc(35% - 20px);
           }
@@ -431,6 +454,7 @@
           .level_details {
             width: 100%;
             margin-top: 10px;
+            font-size: 14px;
 
             .level {
               margin-bottom: 5px;
