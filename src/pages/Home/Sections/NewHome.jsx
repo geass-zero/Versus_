@@ -10,6 +10,7 @@ const NewHome = () => {
         alt='Logo'
         className='logo'
         data-aos='zoom-in'
+        data-aos-delay='200'
         data-aos-offset='0'
         data-aos-duration='400'
       />
