@@ -3,6 +3,7 @@ import Main from './Sections/Main';
 import MintYourOwn from './Sections/MintYourOwn';
 import Slider from './Sections/Slider';
 import Footer from './Sections/Footer';
+import NewHome from './Sections/NewHome';
 import NFTs from './Sections/NFTs';
 import './styles.scss';
 
@@ -30,6 +31,7 @@ const Home = () => {
     <>
       {
         <section className='home'>
+          <NewHome />
           <Main />
           <NFTs />
           <Slider />

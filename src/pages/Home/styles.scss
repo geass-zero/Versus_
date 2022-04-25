@@ -34,6 +34,35 @@
     }
   }
 
+  .new_home {
+    width: 100%;
+    height: 100vh;
+    @include flex-column();
+
+    img {
+      &.bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        filter: brightness(0.7);
+        animation: fadeIn 0.8s 1;
+      }
+
+      &.logo {
+        max-width: min(645px, 80%);
+        max-height: min(567px, 80%);
+        object-fit: contain;
+        z-index: 1;
+        position: relative;
+        animation: gentleZoom 2s infinite alternate ease-in-out;
+      }
+    }
+  }
+
   .main_section {
     position: relative;
     background-image: url('../../assets/images/landing.jpg');
@@ -1016,6 +1045,15 @@
 @media screen and (max-width: $breakpoint-xs) {
   .home {
     overflow: hidden;
+
+    .new_home {
+      img {
+        &.logo {
+          // max-width: 80%;
+          // max-height: 80%;
+        }
+      }
+    }
 
     .main_section {
       padding-top: 80px;

@@ -10,6 +10,15 @@
   }
 }
 
+@keyframes gentleZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
 @keyframes heightExpand {
   from {
     height: 0%;
