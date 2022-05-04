@@ -1,11 +1,22 @@
 @import './../../variables.scss';
 
 .item_shop_wrap {
-  background: #ebe4d7;
   min-height: 100vh;
   top: 0;
   border: 1px solid #ebe4d7;
   padding-top: $mainnav-height + 20px;
+
+  &:after {
+    @include pseudo-abs();
+    background-image: url('../../assets/images/itemshop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    z-index: -1;
+    animation: fadeIn 0.5s 1;
+    filter: brightness(0.8);
+  }
 
   .main_wrapper {
     @include flex-row();
@@ -27,7 +38,7 @@
       border-radius: 50px;
       width: 100%;
       margin: 0 15px;
-      background-color: #d0b194;
+      // background-color: #d0b194;
       height: 100%;
       padding: 15px 10px;
       padding-left: 25px;
