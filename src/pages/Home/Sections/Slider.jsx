@@ -38,7 +38,15 @@ const Slider = () => {
 
   return (
     <div className='slider_section'>
-      <Carousel
+      {slideDetails.map((item, index) => (
+        <SlideItem
+          key={index}
+          videoSrc={item.video}
+          title={item.title}
+          description={item.description}
+        />
+      ))}
+      {/* <Carousel
         showArrows={true}
         showIndicators={false}
         showThumbs={false}
@@ -53,7 +61,7 @@ const Slider = () => {
             description={item.description}
           />
         ))}
-      </Carousel>
+      </Carousel> */}
     </div>
   );
 };
