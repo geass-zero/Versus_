@@ -114,7 +114,7 @@ const Mint = () => {
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='400'>
-                    Each cypher costs 0.09 to materialize.
+                    Each cypher costs *.*** to materialize.
                   </div>
                   <div
                     className='value_box'
@@ -122,7 +122,7 @@ const Mint = () => {
                     data-aos-offset='0'
                     data-aos-duration='500'>
                     <MintValue />
-                    <span>{(0.099 * value).toFixed(3)}</span>
+                    <span>{(0.0 * value).toFixed(3)}</span>
                   </div>
                   <div
                     className='button_values'
