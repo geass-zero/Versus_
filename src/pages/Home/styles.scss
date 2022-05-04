@@ -319,10 +319,20 @@
           .box_wrapper {
             width: 50%;
             @include flex-column();
-            margin-top: -130px;
+            // margin-top: -130px;
+
+            &.wrap_box_2 {
+              margin-bottom: 10%;
+            }
 
             &.wrap_box {
               padding-top: 300px;
+
+              .character_image {
+                width: 100%;
+                object-fit: contain;
+                object-position: bottom;
+              }
             }
 
             .header_title {
@@ -402,7 +412,9 @@
   }
 
   .bridge_section {
-    margin-top: -35px;
+    margin-top: -30px;
+    z-index: 3;
+    position: relative;
 
     .image_bg {
       background-image: url('../../assets/images/ancient_hall.png');
@@ -1212,19 +1224,25 @@
       .image_bg {
         .content_wrap {
           padding-top: 15%;
+          margin-bottom: 23px;
+
           .box_wrappers {
             flex-direction: column;
 
             .box_wrapper {
               width: 100%;
-              min-height: 45vh;
+              min-height: 35vh;
+
+              .item_box {
+                min-height: 120px;
+              }
 
               .box_svg {
                 max-width: 100%;
               }
 
               .box_content {
-                min-height: 45vh;
+                min-height: 25vh;
                 font-size: 18px !important;
                 padding: 10px 20px !important;
                 padding-top: 35px !important;

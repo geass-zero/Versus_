@@ -4,7 +4,7 @@ import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
 
 import { ReactComponent as Wrap } from '../../../assets/svg/Home/AboutChyphers/Wrap.svg';
-import { ReactComponent as Diamond } from '../../../assets/svg/Home/AboutChyphers/Diamond.svg';
+import Character from '../../../assets/svg/Home/AboutChyphers/Character.png';
 import { ReactComponent as AboutCyphersHead } from '../../../assets/svg/Home/AboutChyphers/AboutCyphers.svg';
 import { ReactComponent as DiamondMobile } from '../../../assets/svg/Home/AboutChyphers/DiamondMobile.svg';
 import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/AboutChyphers/WrapMobile.svg';
@@ -40,8 +40,15 @@ const AboutCyphers = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'>
-              <Diamond className='box_svg mobile_hidden diamond_svg' />
-              <DiamondMobile className='box_svg mobile_only diamond_svg' />
+              <img
+                data-aos='fade-right'
+                data-aos-offset='0'
+                data-aos-delay='300'
+                data-aos-duration='400'
+                src={Character}
+                alt='Character'
+                className='character_image'
+              />
             </div>
             <div className='wrap_box_2 box_wrapper x2'>
               <div
