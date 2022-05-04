@@ -520,6 +520,9 @@
   }
 
   .metaverse_section {
+    z-index: 3;
+    position: relative;
+
     .image_bg {
       background-image: url('../../assets/images/stars.jpg');
       background-repeat: no-repeat;
@@ -533,10 +536,11 @@
       .content_wrap {
         @include flex-column();
         min-height: 100vh;
-        justify-content: space-around;
+        // justify-content: space-evenly;
 
         .header_title {
           height: 120px;
+          margin-bottom: 150px;
 
           &.bottom {
             height: 80px;
@@ -640,18 +644,102 @@
     }
   }
 
-  .mint_your_own {
+  .track_our_progress {
     padding: 100px 0;
     padding-bottom: 60px;
     position: relative;
     overflow: hidden;
-    background-image: url('../../assets/images/versus_world.jpg');
+    background-image: url('../../assets/images/sharedBg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     min-height: 100vh;
     min-width: 100%;
     margin-top: -35px;
+
+    .header_title {
+      height: 120px;
+      margin-bottom: 150px;
+
+      &.bottom {
+        height: 80px;
+
+        span {
+          padding-top: 45px;
+        }
+      }
+
+      span {
+        padding-top: 55px;
+      }
+
+      svg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .timeline_wrap {
+      width: 100%;
+      position: relative;
+      @include flex-column();
+
+      &:before {
+        @include pseudo-abs();
+        background-color: #7e8ede;
+        height: 9px;
+        top: 36px;
+      }
+
+      .content_wrap {
+        margin-bottom: 0;
+        @include flex-row();
+        justify-content: space-around;
+        height: auto;
+        transform: none;
+        margin-left: 0;
+
+        .dot {
+          width: 80px;
+          height: 80px;
+          position: relative;
+          @include flex-row();
+          font-size: 30px;
+          color: #fff;
+          transition: all 0.3s;
+          cursor: pointer;
+          transform: scale(1);
+
+          &.active {
+            transform: scale(1.1);
+          }
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          &:before {
+            @include pseudo-abs();
+            background: #f588dd;
+            border: 7px solid #b659a1;
+            box-sizing: border-box;
+            border-radius: 20px;
+            transform: rotate(45deg);
+            z-index: -1;
+          }
+        }
+      }
+
+      .timeline_content {
+        background: rgba(189, 168, 184, 0.8);
+        border-radius: 20px;
+        padding: 39px 35px;
+        max-width: 534px;
+        margin-top: 60px;
+        font-size: 18px;
+        color: #fff;
+      }
+    }
 
     .pink_dots {
       width: 100%;
@@ -728,6 +816,27 @@
         // background-color: #6f00ff;
         // border-radius: 10px;
       }
+    }
+  }
+
+  .mint_your_own {
+    padding: 100px 0;
+    padding-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../../assets/images/versus_world.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    min-height: 100vh;
+    min-width: 100%;
+    margin-top: -35px;
+
+    .content_wrap {
+      text-align: center;
+      @include flex-column();
+      justify-content: center;
+      height: 100vh;
     }
   }
 
@@ -1053,7 +1162,7 @@
           }
         }
 
-        .mint_your_own {
+        .track_our_progress {
         }
       }
     }
@@ -1292,11 +1401,6 @@
         .content_wrap {
           margin-bottom: 0;
 
-          .header_title {
-            span {
-              font-size: 20px;
-            }
-          }
           .box_wrapper {
             width: 100%;
 
@@ -1324,11 +1428,41 @@
       }
     }
 
-    .mint_your_own {
-      margin-top: -10px;
-      padding-top: 10px;
+    .track_our_progress {
+      margin-top: 10px;
+      padding-top: 30px;
       padding-bottom: 30px;
       position: relative;
+
+      .header_title {
+        span {
+          font-size: 20px;
+        }
+      }
+
+      .timeline_wrap {
+        &:before {
+          top: 25px;
+        }
+
+        .content_wrap {
+          .dot {
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+
+            &:before {
+              border-radius: 15px;
+            }
+          }
+        }
+
+        .timeline_content {
+          width: calc(100% - 20px);
+          padding: 15px 20px;
+          font-size: 16px;
+        }
+      }
 
       img.graphic_line1 {
         display: none;

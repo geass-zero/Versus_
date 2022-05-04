@@ -7,8 +7,6 @@ import { ReactComponent as Wrap } from '../../../assets/svg/Home/Metaverse/Wrap.
 import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/Metaverse/WrapMobile.svg';
 import { ReactComponent as Top } from '../../../assets/svg/Home/Metaverse/Top.svg';
 import { ReactComponent as TopMobile } from '../../../assets/svg/Home/Metaverse/TopMobile.svg';
-import { ReactComponent as Bottom } from '../../../assets/svg/Home/Metaverse/Bottom.svg';
-import { ReactComponent as BottomMobile } from '../../../assets/svg/Home/Metaverse/BottomMobile.svg';
 
 const Metaverse = () => {
   return (
@@ -37,15 +35,6 @@ const Metaverse = () => {
               data-aos-offset='0'
               data-aos-duration='400'
             />
-          </div>
-          <div
-            className='header_title bottom'
-            data-aos='fade-up'
-            data-aos-offset='0'
-            data-aos-duration='500'>
-            <Bottom className='mobile_hidden' />
-            <BottomMobile className='mobile_only' />
-            <span>Track our progress</span>
           </div>
           {/* <div className='about_board'></div>
                 <div className='world_wrapper'>

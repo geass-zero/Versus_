@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, Suspense } from 'react';
 // import Main from './Sections/Main';
-// import MintYourOwn from './Sections/MintYourOwn';
+// import TrackOurProgress from './Sections/TrackOurProgress';
 // import Slider from './Sections/Slider';
 import Footer from './Sections/Footer';
 import NewHome from './Sections/NewHome';
@@ -21,6 +21,9 @@ const AboutCyphers = React.lazy(() => import('./Sections/AboutCyphers'));
 const AboutVersus = React.lazy(() => import('./Sections/AboutVersus'));
 const NFTs = React.lazy(() => import('./Sections/NFTs'));
 const Slider = React.lazy(() => import('./Sections/Slider'));
+const TrackOurProgress = React.lazy(() =>
+  import('./Sections/TrackOurProgress')
+);
 const MintYourOwn = React.lazy(() => import('./Sections/MintYourOwn'));
 const Main = React.lazy(() => import('./Sections/Main'));
 
@@ -50,6 +53,7 @@ const Home = () => {
               <AboutCyphers />
               <BlockChain />
               <Metaverse />
+              <TrackOurProgress />
               <MintYourOwn />
             </>
           </Suspense>
