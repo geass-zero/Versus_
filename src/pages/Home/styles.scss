@@ -837,6 +837,10 @@
       }
     }
 
+    .cypher_researchers_wrap {
+      margin-top: 70px;
+    }
+
     .content_wrap {
       text-align: center;
       @include flex-column();
@@ -865,6 +869,37 @@
       button {
         // background-color: #6f00ff;
         // border-radius: 10px;
+      }
+    }
+
+    .scroll_box {
+      // @include flex-row();
+      // justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      max-height: calc(100vh - 80px);
+      overflow: auto;
+
+      .member_card {
+        background: rgba(189, 168, 184, 0.8);
+        border-radius: 30px;
+        min-width: 250px;
+        height: 220px;
+        float: left;
+        margin: 0 20px 20px 20px;
+        position: relative;
+        overflow: hidden;
+
+        .info {
+          width: 100%;
+          background: rgba(48, 21, 65, 0.8);
+          color: #fff;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 10px 15px;
+          text-align: left;
+        }
       }
     }
   }
@@ -1242,7 +1277,7 @@
             // max-height: 80%;
 
             &.always_up {
-              opacity: 0.3;
+              opacity: 0;
               right: calc(50% - 80px);
               bottom: 30px;
             }
@@ -1524,6 +1559,22 @@
         }
       }
 
+      .scroll_box {
+        .member_card {
+          width: 100%;
+          margin: 0;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .info {
+            text-align: center;
+          }
+        }
+      }
+
       img.graphic_line1 {
         display: none;
       }
@@ -1556,6 +1607,7 @@
         .content_wrap {
           svg {
             width: 100%;
+            min-height: 90px;
           }
 
           h1 {

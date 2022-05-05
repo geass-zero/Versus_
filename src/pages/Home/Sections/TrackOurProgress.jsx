@@ -7,12 +7,13 @@ import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
 import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
 import { ReactComponent as OurTeam } from '../../../assets/svg/Home/MintYourOwn/OurTeam.svg';
+import { ReactComponent as OurTeamMobile } from '../../../assets/svg/Home/MintYourOwn/OurTeamMobile.svg';
 import { ReactComponent as PinksMobile } from '../../../assets/svg/Home/MintYourOwn/PinksMobile.svg';
 import { ReactComponent as Wrapbig } from '../../../assets/svg/Home/MintYourOwn/Wrapbig.svg';
 import { ReactComponent as Wrapsmall } from '../../../assets/svg/Home/MintYourOwn/Wrapsmall.svg';
 
 const TrackOurProgress = () => {
-  const [selectedTimeline, setTimeline] = useState(0);
+  const [selectedTimeline, setTimeline] = useState(1);
 
   return (
     <div className='track_our_progress'>
@@ -78,9 +79,52 @@ const TrackOurProgress = () => {
             </div>
           )}
         </div>
-        <div className='content_wrap'>
-          <OurTeam />
+        <div className='content_wrap cypher_researchers_wrap'>
+          <OurTeam
+            className='mobile_hidden'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'
+          />
+          <OurTeamMobile
+            className='mobile_only'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'
+          />
+          <div
+            className='scroll_box scroll_bar'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='500'>
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+            <MemberCard />
+          </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const MemberCard = ({ name = 'Team member #1', role = 'Designer' }) => {
+  return (
+    <div className='member_card'>
+      <div className='info'>
+        <div className='name'>{name}</div>
+        <div className='role'>{role}</div>
       </div>
     </div>
   );
