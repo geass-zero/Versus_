@@ -13,16 +13,16 @@ const NewHome = () => {
   return (
     <div className='new_home'>
       <img src={BG} alt='background' className='bg' onLoad={onBGLoaded} />
-      <img
+      <div
         ref={logoElement}
-        src={Logo}
-        alt='Logo'
-        className='logo'
+        className='logo_wrap'
         data-aos='zoom-in'
         data-aos-delay='200'
         data-aos-offset='0'
-        data-aos-duration='400'
-      />
+        data-aos-duration='400'>
+        <img src={Logo} alt='Logo' className='logo to_be_hidden' />
+        <img src={Logo} alt='Logo' className='logo always_up' />
+      </div>
     </div>
   );
 };
