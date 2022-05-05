@@ -1,21 +1,34 @@
 import { useState } from 'react';
-import Graphic from '../../../assets/images/Graphics/graphic.png';
-import GraphicLine from '../../../assets/images/Graphics/Group 51.png';
-import GraphicLine1 from '../../../assets/images/Graphics/Group 48.png';
-import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
-import { ReactComponent as OurTeam } from '../../../assets/svg/Home/MintYourOwn/OurTeam.svg';
-import { ReactComponent as PinksMobile } from '../../../assets/svg/Home/MintYourOwn/PinksMobile.svg';
-import { ReactComponent as Wrapbig } from '../../../assets/svg/Home/MintYourOwn/Wrapbig.svg';
-import { ReactComponent as Wrapsmall } from '../../../assets/svg/Home/MintYourOwn/Wrapsmall.svg';
+import { ReactComponent as Spot } from '../../../assets/svg/Home/MintYourOwn/Spot.svg';
 
 const MintYourOwn = () => {
-  const [selectedTimeline, setTimeline] = useState(0);
-
   return (
     <div className='mint_your_own'>
       <div className='image_bg'>
-        <div className='content_wrap'></div>
+        <div className='content_wrap'>
+          <div
+            className='main_text'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='350'>
+            YOU CAN HELP CHANGE THE WORLD OF VERSUS!
+          </div>
+          <div
+            className='spot'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'>
+            Get a whitelist spot.
+          </div>
+          <Spot
+            className='spot_svg'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='450'
+          />
+        </div>
+        <footer>© 2022 Versus Metaverse. All rights reserved.</footer>
       </div>
     </div>
   );

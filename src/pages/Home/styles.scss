@@ -906,7 +906,7 @@
 
   .mint_your_own {
     padding: 100px 0;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     position: relative;
     overflow: hidden;
     background-image: url('../../assets/images/versus_world.jpg');
@@ -922,6 +922,43 @@
       @include flex-column();
       justify-content: center;
       height: 100vh;
+
+      .main_text {
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 46px;
+        text-align: center;
+        color: #ffffff;
+        max-width: 593px;
+        margin-bottom: 25%;
+      }
+
+      .spot {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .spot_svg {
+        width: 150px;
+        height: 150px;
+        margin-top: 40px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      color: #fff;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 10px;
+      text-align: center;
     }
   }
 
@@ -1109,7 +1146,7 @@
     }
   }
 
-  footer {
+  footer.main {
     background-color: #1e2331;
     color: #fff;
     padding-top: 40px;

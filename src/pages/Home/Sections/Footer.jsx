@@ -1,16 +1,15 @@
-import Discord from '../../../assets/images/SocialIcons/Discord.png';
-import Twitter from '../../../assets/images/SocialIcons/Twitter.png';
-import Telegram from '../../../assets/images/SocialIcons/Telegram.png';
+// import Discord from '../../../assets/images/SocialIcons/Discord.png';
+// import Twitter from '../../../assets/images/SocialIcons/Twitter.png';
+// import Telegram from '../../../assets/images/SocialIcons/Telegram.png';
 
 const Footer = () => {
-    function openLink(url) {
-        window.open(url, '_blank');
-    }
-
-    return (
-        <footer>
-            <div className='content_wrap'>
-                <div
+  return (
+    <footer>
+      <div className='content_wrap'>
+        <div className='text_center'>
+          © 2022 Versus Metaverse. All rights reserved.
+        </div>
+        {/* <div
                     data-aos='fade-up'
                     data-aos-offset='0'
                     data-aos-duration='400'>
@@ -38,10 +37,10 @@ const Footer = () => {
                     data-aos-offset='0'
                     data-aos-duration='600'>
                     <div className='reserved'>All Rights Reserved</div>
-                </div>
-            </div>
-        </footer>
-    );
+                </div> */}
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
