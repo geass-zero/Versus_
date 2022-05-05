@@ -1424,6 +1424,34 @@
       }
     }
 
+    .mint_your_own {
+      .image_bg {
+        .content_wrap {
+          .main_text {
+            font-size: 26px;
+            line-height: 26px;
+            margin-bottom: 50%;
+          }
+
+          .spot {
+            font-size: 19px;
+            line-height: 19px;
+          }
+
+          .spot_svg {
+            width: 80px;
+            height: 80px;
+            margin-top: 20px;
+          }
+        }
+
+        footer {
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+    }
+
     .about_versus {
       .image_bg {
         .content_wrap {
