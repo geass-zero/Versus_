@@ -1626,10 +1626,12 @@
       }
 
       .scroll_box {
+        justify-content: space-evenly;
         .member_card {
-          width: 100%;
+          width: calc(50% - 20px);
           margin: 0;
           margin-bottom: 10px;
+          max-width: 250px;
 
           &:last-child {
             margin-bottom: 0;
