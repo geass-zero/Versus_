@@ -873,12 +873,13 @@
     }
 
     .scroll_box {
-      // @include flex-row();
-      // justify-content: space-between;
+      @include flex-row();
+      justify-content: space-between;
       flex-wrap: wrap;
       margin-top: 50px;
       max-height: calc(100vh - 80px);
       overflow: auto;
+      max-width: 880px;
 
       .member_card {
         background: rgba(189, 168, 184, 0.8);
