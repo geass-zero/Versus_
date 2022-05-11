@@ -7,7 +7,7 @@ import Price from '../../assets/svg/ItemShop/Price.png';
 const ItemShop = () => {
   const [selectedCard, setSelectedCard] = useState(null);
 
-  const shopItemsArray = [...Array(18).keys()];
+  const shopItemsArray = [...Array(3).keys()];
 
   return (
     <section className='item_shop_wrap'>
