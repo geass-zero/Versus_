@@ -75,6 +75,7 @@ const Main = () => {
             />
           </div>
           <div className='x2'>
+            
             {/* <h1
                             data-aos='fade-up'
                             data-aos-offset='0'
@@ -100,6 +101,7 @@ const Main = () => {
               data-aos-offset='0'
               data-aos-duration='400'>
               <img src={MainBGImage} className='box_svg mobile_hidden' />
+              
               <MainBG className='box_svg mobile_only' />
             </div>
             <div

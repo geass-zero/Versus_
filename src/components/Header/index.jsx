@@ -76,7 +76,7 @@ const Header = () => {
               <button>
                 <WalletIcon />
                 <div className='circle'></div>
-                <span>W.A.L.L.E.T</span>
+                <span>W.A.L.L.E.T.</span>
               </button>
             )}
           </div>
