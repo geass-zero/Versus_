@@ -3,11 +3,11 @@ import Bull from '../../../assets/images/characters/Bull.gif';
 import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
 
-import { ReactComponent as Wrap } from '../../../assets/svg/Home/AboutChyphers/Wrap.svg';
+import Wrap from '../../../assets/svg/Home/AboutChyphers/Wrap.png';
 import Character from '../../../assets/svg/Home/AboutChyphers/Character.png';
 import { ReactComponent as AboutCyphersHead } from '../../../assets/svg/Home/AboutChyphers/AboutCyphers.svg';
 import { ReactComponent as DiamondMobile } from '../../../assets/svg/Home/AboutChyphers/DiamondMobile.svg';
-import { ReactComponent as WrapMobile } from '../../../assets/svg/Home/AboutChyphers/WrapMobile.svg';
+import WrapMobile from '../../../assets/svg/Home/AboutChyphers/WrapMobile.png';
 
 const AboutCyphers = () => {
   return (
@@ -63,11 +63,27 @@ const AboutCyphers = () => {
                 data-aos='fade-up'
                 data-aos-offset='0'
                 data-aos-duration='400'>
-                <Wrap className='box_svg mobile_hidden' />
-                <WrapMobile className='box_svg mobile_only' />
+                <img src={Wrap} className='box_svg mobile_hidden' />
                 <div className='box_content'>
-                  Cyphers are the names of the various types of creatures
-                  spawned from the blockchain.
+                  <span>
+                    Cyphers are the names of the various types of creatures
+                    spawned from the blockchain.
+                  </span>
+                  <img src={WrapMobile} className='box_svg mobile_only' />
+                </div>
+              </div>
+              <div
+                className='item_box'
+                data-aos='fade-up'
+                data-aos-offset='0'
+                data-aos-duration='400'>
+                <img src={Wrap} className='box_svg mobile_hidden' />
+                <div className='box_content'>
+                  <span>
+                    Currently, 30 Cyphers are known to exist with evidence of
+                    even more hiding within the Metaverse!
+                  </span>
+                  <img src={WrapMobile} className='box_svg mobile_only' />
                 </div>
               </div>
             </div>

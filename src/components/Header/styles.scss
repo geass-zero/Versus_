@@ -75,6 +75,7 @@ header {
       @include flex-row();
       justify-content: flex-start;
       flex: 0.2;
+      z-index: 1;
 
       a {
         @include flex-row();
@@ -85,7 +86,7 @@ header {
         img {
           height: 85px;
           position: absolute;
-          top: 5px
+          top: 5px;
         }
       }
     }

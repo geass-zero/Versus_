@@ -401,7 +401,7 @@
             }
 
             .item_box {
-              min-height: 350px;
+              min-height: 280px;
               position: relative;
               @include flex-row();
               align-items: flex-start;
@@ -414,6 +414,9 @@
                 padding-right: 35px;
                 padding-top: 35px;
                 color: #000;
+                min-height: 100%;
+                min-height: 200px;
+                @include flex-row();
               }
             }
           }
@@ -1524,19 +1527,31 @@
               width: 100%;
               min-height: 35vh;
 
+              .header_title {
+                margin-bottom: 30px;
+              }
+
               .item_box {
                 min-height: 120px;
+                margin-bottom: 10px;
               }
 
               .box_svg {
                 max-width: 100%;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
               }
 
               .box_content {
                 min-height: 25vh;
                 font-size: 18px !important;
                 padding: 10px 20px !important;
-                padding-top: 35px !important;
+                padding-top: 0px !important;
+                span {
+                  z-index: 1;
+                  position: relative;
+                }
               }
 
               &.wrap_box {

@@ -58,6 +58,12 @@ const Header = () => {
               className={`${location.pathname === '/shop' ? 'active' : ''}`}>
               Item Shop
             </Link>
+            <Link
+              to='/docs'
+              onClick={() => setIsOpen(false)}
+              className={`${location.pathname === '/docs' ? 'active' : ''}`}>
+              Docs
+            </Link>
           </div>
           {/* <div  onClick={() => connectToWallet()} className='connect_button'>
                     w
