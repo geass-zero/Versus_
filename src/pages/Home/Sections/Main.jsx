@@ -101,7 +101,7 @@ const Main = () => {
               data-aos-offset='0'
               data-aos-duration='400'>
               <img src={MainBGImage} className='box_svg mobile_hidden' />
-              
+              <div className="box_content">An Animal Crossing inspired open world multiplayer Metaverse game home to Cyphers, Trainers, and new cultures.</div>
               <MainBG className='box_svg mobile_only' />
             </div>
             <div

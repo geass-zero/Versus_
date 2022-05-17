@@ -139,6 +139,17 @@
         max-width: 100%;
       }
 
+      .box_content {
+        @include flex-row();
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 45px;
+        text-align: center;
+        color: #000000;
+        min-height: calc(min(400px, 54vh) - 40px);
+      }
+
       svg {
         max-width: 100%;
       }
@@ -1334,6 +1345,14 @@
         margin-top: 30px;
         @include flex-column();
         min-height: 260px;
+
+        .box_content {
+          min-height: 200px;
+          font-size: 18px;
+          line-height: 22px;
+          margin-top: -20px;
+          max-width: min(550px, 85vw);
+        }
       }
 
       .buttons_wrap {
