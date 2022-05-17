@@ -3,7 +3,9 @@ import Bull from '../../assets/images/characters/Bull.gif';
 import Snake from '../../assets/images/characters/snake.gif';
 import Bat from '../../assets/images/characters/bat.gif';
 import Moon from '../../assets/images/characters/moon.gif';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import { ReactComponent as HideArrow } from '../../assets/svg/HideArrow.svg';
 
 const defaultData = [
   { id: 1, image: Bull },
@@ -20,12 +22,28 @@ const LeftStickOn = ({
   onClick,
 }) => {
   const [selected, setSelected] = useState(defaultSelected);
+  const [isHidden, setHidden] = useState(false);
   const onClickHandler = (newSelected) => {
     setSelected(newSelected);
     onClick && onClick(newSelected);
   };
+
+  useEffect(() => {
+    if (isHidden)
+      document
+        .getElementsByTagName('main')[0]
+        .classList.add('left_panel_hidden');
+    else
+      document
+        .getElementsByTagName('main')[0]
+        .classList.remove('left_panel_hidden');
+  }, [isHidden]);
+
   return (
-    <div className='left_stick_on_wrapper'>
+    <div className={`left_stick_on_wrapper ${isHidden ? 'is_hidden' : ''}`}>
+      <div className='hide_icon'>
+        <HideArrow onClick={() => setHidden(!isHidden)} />
+      </div>
       <div className='left_stick_on'>
         <div className='left_stick_on_box'>
           {data.map((item, index) => (

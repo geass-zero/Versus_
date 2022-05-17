@@ -29,6 +29,44 @@
     top: calc(50% + #{$mainnav-height}/ 2);
     transform: translateY(-50%);
     width: 155px;
+    transition: transform 0.3s;
+  }
+
+  &.is_hidden {
+    &:before {
+      transform: translate(-85%, -50%);
+    }
+    .hide_icon {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .left_stick_on {
+      transform: translateX(-75%);
+      pointer-events: none;
+    }
+  }
+
+  .hide_icon {
+    z-index: 9;
+    position: absolute;
+    left: 10px;
+    top: calc(50% - min(580px, calc(100vh - #{$mainnav-height} - 40px)) / 2);
+    cursor: pointer;
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    svg {
+      transition: transform 0.3s;
+    }
   }
 
   .left_stick_on {
@@ -36,6 +74,7 @@
     overflow-y: auto;
     position: relative;
     width: 185px;
+    transition: transform 0.3s;
 
     &::-webkit-scrollbar {
       width: 0px;

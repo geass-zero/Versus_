@@ -10,6 +10,10 @@ html {
   }
 }
 
+.left_panel_auto_adjuster {
+  transition: padding 0.3s;
+}
+
 body {
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
@@ -265,9 +269,11 @@ iframe {
 }
 
 @media screen and (max-width: 1366px) {
-  .left_panel_auto_adjuster {
-    padding-left: 140px;
-    padding-right: 20px;
+  main:not(.left_panel_hidden) {
+    .left_panel_auto_adjuster {
+      padding-left: 140px;
+      padding-right: 20px;
+    }
   }
 }
 
@@ -280,9 +286,11 @@ iframe {
     display: block;
   }
 
-  .left_panel_auto_adjuster {
-    padding-left: 80px;
-    padding-right: 0;
+  main:not(.left_panel_hidden) {
+    .left_panel_auto_adjuster {
+      padding-left: 80px;
+      padding-right: 0;
+    }
   }
 
   .flex_box {
