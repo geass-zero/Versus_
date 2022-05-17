@@ -49,9 +49,9 @@ const Home = () => {
               <Main />
               <AboutVersus />
               {/* <NFTs /> */}
-              <Slider />
               <AboutCyphers />
               <BlockChain />
+              <Slider />
               <Metaverse />
               <TrackOurProgress />
               <MintYourOwn />

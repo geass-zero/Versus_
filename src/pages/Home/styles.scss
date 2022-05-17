@@ -144,7 +144,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 30px;
-        line-height: 45px;
+        line-height: 40px;
         text-align: center;
         color: #000000;
         min-height: calc(min(400px, 54vh) - 40px);
@@ -987,6 +987,7 @@
         min-height: 100vh;
         padding-left: 5%;
         padding-right: 5%;
+        margin-bottom: 0;
 
         .box_wrappers {
           @include flex-column();
