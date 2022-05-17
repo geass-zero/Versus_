@@ -853,14 +853,17 @@
     }
 
     .cypher_researchers_wrap {
-      margin-top: 70px;
+      margin-top: 120px;
+
+      .cypher_researchers_wrap_section {
+        margin-bottom: 50px;
+      }
     }
 
     .content_wrap {
       text-align: center;
       @include flex-column();
       justify-content: center;
-      height: 100vh;
 
       .big_wrap {
         max-height: 230px;
@@ -894,7 +897,7 @@
       margin-top: 50px;
       max-height: calc(100vh - 80px);
       overflow: auto;
-      max-width: 880px;
+      max-width: 1160px;
 
       .member_card {
         background: rgba(189, 168, 184, 0.8);

@@ -8,6 +8,10 @@ import GraphicLine2 from '../../../assets/images/Graphics/Group 49.png';
 
 import { ReactComponent as OurTeam } from '../../../assets/svg/Home/MintYourOwn/OurTeam.svg';
 import { ReactComponent as OurTeamMobile } from '../../../assets/svg/Home/MintYourOwn/OurTeamMobile.svg';
+import { ReactComponent as MetTeam } from '../../../assets/svg/Home/MintYourOwn/MetTeam.svg';
+import { ReactComponent as MetTeamMobile } from '../../../assets/svg/Home/MintYourOwn/MetTeamMobile.svg';
+import { ReactComponent as ConceptArtists } from '../../../assets/svg/Home/MintYourOwn/ConceptArtists.svg';
+import { ReactComponent as ConceptArtistsMobile } from '../../../assets/svg/Home/MintYourOwn/ConceptArtistsMobile.svg';
 import { ReactComponent as PinksMobile } from '../../../assets/svg/Home/MintYourOwn/PinksMobile.svg';
 import { ReactComponent as Wrapbig } from '../../../assets/svg/Home/MintYourOwn/Wrapbig.svg';
 import { ReactComponent as Wrapsmall } from '../../../assets/svg/Home/MintYourOwn/Wrapsmall.svg';
@@ -80,38 +84,77 @@ const TrackOurProgress = () => {
           )}
         </div>
         <div className='content_wrap cypher_researchers_wrap'>
-          <OurTeam
-            className='mobile_hidden'
-            data-aos='fade-up'
-            data-aos-offset='0'
-            data-aos-duration='400'
-          />
-          <OurTeamMobile
-            className='mobile_only'
-            data-aos='fade-up'
-            data-aos-offset='0'
-            data-aos-duration='400'
-          />
-          <div
-            className='scroll_box scroll_bar'
-            data-aos='fade-up'
-            data-aos-offset='0'
-            data-aos-duration='500'>
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
-            <MemberCard />
+          <div className='cypher_researchers_wrap_section'>
+            <OurTeam
+              className='mobile_hidden'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <OurTeamMobile
+              className='mobile_only'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <div
+              className='scroll_box scroll_bar'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='500'>
+              <MemberCard />
+              <MemberCard />
+              <MemberCard />
+              <MemberCard />
+            </div>
+          </div>
+          <div className='cypher_researchers_wrap_section'>
+            <MetTeam
+              className='mobile_hidden'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <MetTeamMobile
+              className='mobile_only'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <div
+              className='scroll_box scroll_bar'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='500'>
+              <MemberCard />
+              <MemberCard />
+              <MemberCard />
+              <MemberCard />
+            </div>
+          </div>
+          <div className='cypher_researchers_wrap_section'>
+            <ConceptArtists
+              className='mobile_hidden'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <ConceptArtistsMobile
+              className='mobile_only'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='400'
+            />
+            <div
+              className='scroll_box scroll_bar'
+              data-aos='fade-up'
+              data-aos-offset='0'
+              data-aos-duration='500'>
+              <MemberCard />
+              <MemberCard />
+              <MemberCard />
+              <MemberCard />
+            </div>
           </div>
         </div>
       </div>
