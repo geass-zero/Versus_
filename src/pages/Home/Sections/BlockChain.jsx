@@ -29,22 +29,24 @@ const BlockChain = () => {
             data-aos-duration='400'>
             <img src={Wrap} alt='' className='box_svg mobile_hidden' />
             <img src={WrapMobile} alt='' className='box_svg mobile_only' />
-            {/* <Wrap className='box_svg mobile_hidden' />
-            <WrapMobile className='box_svg mobile_only' /> */}
             <div className='box_content'>
               <p>
-                The Versus ecosystem exists on both the Ethereum mainnet as well
-                as the Binance Smart Chain (BSC) mainnet and is thus inherently
-                Multichain.
+                Versus scientists have developed a bridge allowing Cyphers to
+                currently exist on both Ethereum and the Binance Smart Chain.
               </p>
+            </div>
+          </div>
+          <div
+            className='wrap_box box_wrapper'
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'>
+            <img src={Wrap} alt='' className='box_svg mobile_hidden' />
+            <img src={WrapMobile} alt='' className='box_svg mobile_only' />
+            <div className='box_content'>
               <p>
-                Importantly, battling and training your Cypher NFT occurs
-                predominantly on BSC. However, this DOES NOT require your Cypher
-                to exist on BSC itself.
-              </p>
-              <p>
-                In this way Versus links BSC micro transaction affordability
-                with the ERC-721 “gold standard” of NFTs.
+                This technology allows Versus citizens the freedom to expand
+                beyond the limits of any one chain.
               </p>
             </div>
           </div>

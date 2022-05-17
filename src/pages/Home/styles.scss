@@ -503,9 +503,10 @@
 
         .box_wrapper {
           @include flex-row();
-          min-height: 50vh;
+          min-height: 20vh;
           max-width: 840px;
           width: 100%;
+          margin-bottom: 25px;
 
           img {
             width: 100%;
@@ -1291,7 +1292,7 @@
           .image_bg {
             .content_wrap {
               .box_wrapper {
-                min-height: 60vh;
+                min-height: 15vh;
 
                 .box_content {
                   // max-width: 380px;
