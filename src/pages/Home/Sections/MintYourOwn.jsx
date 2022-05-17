@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { ReactComponent as Spot } from '../../../assets/svg/Home/MintYourOwn/Spot.svg';
+import discordImage from '../../../assets/svg/Home/MintYourOwn/Discord.png';
 
 const MintYourOwn = () => {
   return (
@@ -19,9 +19,11 @@ const MintYourOwn = () => {
             data-aos='fade-up'
             data-aos-offset='0'
             data-aos-duration='400'>
-            Get a whitelist spot.
+            Reserve your whitelist spot.
           </div>
-          <Spot
+          <img
+            src={discordImage}
+            alt='discord'
             className='spot_svg'
             data-aos='fade-up'
             data-aos-offset='0'
