@@ -1,5 +1,14 @@
 @import './../../variables.scss';
 
+html {
+  &.overflow_hidden {
+    .battle_wrap {
+      .top_contents {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
 .battle_history_overlay {
   position: fixed;
   width: 100vw;
@@ -44,6 +53,41 @@
   position: absolute;
   min-height: 100px;
   overflow: hidden;
+  transition: bottom 0.3s;
+
+  &.is_hidden {
+    bottom: -110px;
+
+    .hide_icon_battle svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  .hide_icon_battle {
+    @include flex-row();
+    justify-content: flex-end;
+    z-index: 5;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    svg {
+      transition: transform 0.3s;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      transform: rotate(-90deg);
+    }
+  }
 
   .wrap_image {
     width: 100%;
@@ -132,6 +176,7 @@
 
   .top_contents {
     padding-bottom: 160px;
+    transition: padding 0.4s;
 
     .card_main {
       max-height: 440px;

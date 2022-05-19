@@ -1759,6 +1759,29 @@
   }
 }
 
+@media screen and (min-width: $breakpoint-lg) {
+  html {
+    body {
+      .home .slider_section .slide_item .x2 {
+        .detail_box {
+          max-width: 480px;
+          top: 80px;
+
+          .insider {
+            .title {
+              font-size: 30px;
+            }
+
+            p {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $breakpoint-sm-special-x1) and (min-width: $breakpoint-xs) {
   html {
     body {

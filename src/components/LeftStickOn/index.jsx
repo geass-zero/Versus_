@@ -23,6 +23,7 @@ const LeftStickOn = ({
 }) => {
   const [selected, setSelected] = useState(defaultSelected);
   const [isHidden, setHidden] = useState(false);
+
   const onClickHandler = (newSelected) => {
     setSelected(newSelected);
     onClick && onClick(newSelected);
@@ -37,6 +38,12 @@ const LeftStickOn = ({
       document
         .getElementsByTagName('main')[0]
         .classList.remove('left_panel_hidden');
+
+    return () => {
+      document
+        .getElementsByTagName('main')[0]
+        .classList.remove('left_panel_hidden');
+    };
   }, [isHidden]);
 
   return (
