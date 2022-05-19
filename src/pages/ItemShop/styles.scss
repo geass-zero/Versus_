@@ -170,7 +170,7 @@
         max-height: 50%;
         margin-bottom: 15px;
         margin-top: 10px;
-        padding-left: 30px;
+        // padding-left: 30px;
 
         .scroll_box {
           @include flex-row();
@@ -183,6 +183,8 @@
             height: 140px;
             border-radius: 30px;
             max-width: 180px;
+            margin-left: 5px;
+            margin-right: 5px;
 
             .value_wrap {
               font-size: 18px;

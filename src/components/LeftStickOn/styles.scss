@@ -23,7 +23,7 @@
 
   &:before {
     @include pseudo-abs();
-    max-height: min(580px, calc(100vh - #{$mainnav-height} - 40px));
+    max-height: min(580px, calc(100vh - #{$mainnav-height} - 80px));
     background: rgba(234, 232, 223, 0.9);
     border-radius: 0px 40px 40px 0px;
     top: calc(50% + #{$mainnav-height}/ 2);
@@ -52,7 +52,7 @@
     z-index: 9;
     position: absolute;
     left: 10px;
-    top: calc(50% - min(580px, calc(100vh - #{$mainnav-height} - 40px)) / 2);
+    top: calc(50% - min(580px, calc(100vh - #{$mainnav-height} - 80px)) / 2);
     cursor: pointer;
     transition: transform 0.1s;
 
@@ -86,7 +86,7 @@
     }
 
     .left_stick_on_box {
-      max-height: min(580px, calc(100vh - #{$mainnav-height} - 40px));
+      max-height: min(580px, calc(100vh - #{$mainnav-height} - 80px));
       width: 155px;
       padding: 25px 0px;
       width: 155px;

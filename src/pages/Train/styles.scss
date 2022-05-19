@@ -374,12 +374,22 @@
     display: none;
   }
 
+  .left_panel_hidden {
+    .left_panel_auto_adjuster {
+      & > .content_wrap {
+        padding: 0;
+      }
+    }
+  }
+
   .train_wrap {
     &:after {
       min-height: calc(100vh - #{$mainnav-height-mob});
     }
     .content_wrap {
       max-width: 310px;
+      transition: padding 0.3s;
+
       .x2 {
         &:last-child {
           min-height: auto;

@@ -594,6 +594,10 @@
       // min-height: calc(100vh - #{$mainnav-height-mob});
     }
 
+    .box_svg_mobile {
+      height: calc(100% + 100px);
+    }
+
     .flex_box {
       .x2 {
         @include flex-row();

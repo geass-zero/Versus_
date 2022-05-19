@@ -2,13 +2,13 @@ import { useEffect, useState, useContext } from 'react';
 import MintPopUp from './PopUp';
 import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
-import { ReactComponent as MintBox } from '../../assets/svg/Mint/MintBox.svg';
+import MintBox from '../../assets/svg/Mint/MintBox.png';
+import MintBoxMobile from '../../assets/svg/Mint/MintBoxMobile.png';
 import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg';
 import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
 import { ReactComponent as Minting } from '../../assets/svg/Mint/Minting.svg';
 import { ReactComponent as Minus } from '../../assets/svg/Mint/minus.svg';
 import { ReactComponent as Plus } from '../../assets/svg/Mint/plus.svg';
-import { ReactComponent as MintBoxMobile } from '../../assets/svg/Mint/MintBoxMobile.svg';
 
 import VersusContext from '../../store/Context';
 import {
@@ -101,8 +101,18 @@ const Mint = () => {
                   data-aos='zoom-in'
                   data-aos-offset='0'
                   data-aos-duration='300'>
-                  <MintBox className='box_svg mobile_hidden' />
-                  <MintBoxMobile className='mobile_only box_svg_mobile' />
+                  <img
+                    src={MintBox}
+                    alt='bg'
+                    className='box_svg mobile_hidden'
+                  />
+                  <img
+                    src={MintBoxMobile}
+                    alt='bg'
+                    className='box_svg_mobile mobile_only'
+                  />
+                  {/* <MintBox  />
+                  <MintBoxMobile className='mobile_only box_svg_mobile' /> */}
                   <div className='minted'>
                     <div className='circle'></div>
                     <div className='text'>
