@@ -90,12 +90,14 @@ const TrackOurProgress = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'
+              data-aos-delay='100'
             />
             <OurTeamMobile
               className='mobile_only'
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'
+              data-aos-delay='100'
             />
             <div
               className='scroll_box scroll_bar'
@@ -114,12 +116,14 @@ const TrackOurProgress = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'
+              data-aos-delay='100'
             />
             <MetTeamMobile
               className='mobile_only'
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'
+              data-aos-delay='100'
             />
             <div
               className='scroll_box scroll_bar'
@@ -138,12 +142,14 @@ const TrackOurProgress = () => {
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'
+              data-aos-delay='100'
             />
             <ConceptArtistsMobile
               className='mobile_only'
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='400'
+              data-aos-delay='100'
             />
             <div
               className='scroll_box scroll_bar'
