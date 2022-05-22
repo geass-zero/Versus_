@@ -234,7 +234,7 @@ const Battle = () => {
                           data-aos='fade-up'
                           data-aos-offset='0'
                           data-aos-duration='400'>
-                          #120: Calfire
+                          #0: -------
                         </div>
                         <div className='flex_box mobile_visible_wraper'>
                           <div className='card_main_wrap mobile_only'>
@@ -251,11 +251,11 @@ const Battle = () => {
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='450'>
-                            <div className='item'>ATK:100</div>
-                            <div className='item'>DEF:100</div>
-                            <div className='item'>SPD:100</div>
-                            <div className='item'>SP-ATK:100</div>
-                            <div className='item'>SP-DEF:100</div>
+                            <div className='item'>ATK:0</div>
+                            <div className='item'>DEF:0</div>
+                            <div className='item'>SPD:0</div>
+                            <div className='item'>SP-ATK:0</div>
+                            <div className='item'>SP-DEF:0</div>
                           </div>
                         </div>
                       </div>
@@ -306,7 +306,7 @@ const Battle = () => {
                           data-aos-duration='600'>
                           <button className='k_button transparent svg_wrap'>
                             <KButton />
-                            <span>271K</span>
+                            <span>0</span>
                           </button>
                           <button
                             className='history_button transparent svg_wrap'

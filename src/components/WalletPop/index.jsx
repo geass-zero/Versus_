@@ -97,11 +97,11 @@ const WalletPop = ({ onClose }) => {
               <div className='right_boxer'>
                 <select name='cyphers' id='cyphers'>
                   <option value='My Cyphers'>My Cyphers</option>
-                  <option value='My Cyphers'>My Cyphers</option>
-                  <option value='My Cyphers'>My Cyphers</option>
+                  <option value='My Cyphers'>All Cyphers</option>
+                  <option value='My Cyphers'>My Items</option>
                 </select>
                 <div className='list_wrapper'>
-                  {[...Array(9).keys()].map((item, index) => (
+                  {/* {[...Array(9).keys()].map((item, index) => (
                     <div className='card_wrap' key={index}>
                       <CypherCard
                         image={Bull}
@@ -110,7 +110,7 @@ const WalletPop = ({ onClose }) => {
                         onSelect={(item) => setSelectedCypher(item)}
                       />
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ const WalletPop = ({ onClose }) => {
                 data-aos-delay='600'
                 data-aos-duration='500'
               />
-              <div className='top_section'>
+              {/* <div className='top_section'>
                 <img
                   src={Shibachu}
                   alt='Character'
@@ -150,26 +150,26 @@ const WalletPop = ({ onClose }) => {
                     <div className='item'>SP-DEF: 100</div>
                   </div>
                 </div>
-              </div>
-              <div className='buttons_wrap'>
-                <button className='transparent svg_wrap release_button'>
+              </div> */}
+              {/* <div className='buttons_wrap'> */}
+                {/* <button className='transparent svg_wrap release_button'> */}
                   {/* <img src={ReleaseButton} alt='button' /> */}
-                  <ReleaseButton className='mobile_hidden' />
-                  <ReleaseButtonMobile className='mobile_only' />
+                  {/* <ReleaseButton className='mobile_hidden' /> */}
+                  {/* <ReleaseButtonMobile className='mobile_only' /> */}
                   {/* <span>Release Cypher</span>
                   <div className='small'>(You will lose the Cypher)</div> */}
-                </button>
-                <button className='transparent svg_wrap reroll_stat'>
-                  <RollButton
+                {/* </button> */}
+                {/* <button className='transparent svg_wrap reroll_stat'> */}
+                  {/* <RollButton
                     ref={rollButtonElement}
                     className='mobile_hidden'
-                  />
-                  <RollButtonMobile className='mobile_only' />
+                  /> */}
+                  {/* <RollButtonMobile className='mobile_only' /> */}
                   {/* <img src={RollButton} alt='button' />
                   <span>Re-Roll Stats</span>
                   <div className='small'>(For current level)</div> */}
-                </button>
-              </div>
+                {/* </button> */}
+              {/* </div> */}
             </div>
           </div>
         </div>

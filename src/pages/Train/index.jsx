@@ -303,11 +303,11 @@ const Train = () => {
                       data-aos='fade-up'
                       data-aos-offset='0'
                       data-aos-duration='400'>
-                      <div>#120: Calfire</div>
+                      <div>#0: -------</div>
                       <div className='svg_wrap bento_box'>
                         <Bento />
                         <span>Energy remaining</span>
-                        <span className='number'>4</span>
+                        <span className='number'>0</span>
                       </div>
                     </div>
                     <div
@@ -339,13 +339,13 @@ const Train = () => {
                       data-aos-duration='650'>
                       <InsideBox className='mobile_hidden' />
                       <InsideBoxMobile className='mobile_only' />
-                      <div className='title'>Level 23</div>
+                      <div className='title'>Level 0</div>
                       <div className='data'>
-                        <div className='item'>ATK:100</div>
-                        <div className='item'>DEF:100</div>
-                        <div className='item'>SPD:100</div>
-                        <div className='item'>SP-ATK:100</div>
-                        <div className='item'>SP-DEF:100</div>
+                        <div className='item'>ATK:0</div>
+                        <div className='item'>DEF:0</div>
+                        <div className='item'>SPD:0</div>
+                        <div className='item'>SP-ATK:0</div>
+                        <div className='item'>SP-DEF:0</div>
                       </div>
                     </div>
                   </div>
@@ -393,7 +393,7 @@ const Train = () => {
                             data-aos='fade-up'
                             data-aos-offset='0'
                             data-aos-duration='800'>
-                            $39,423
+                            $--,---
                           </div>
                           <button
                             className='transparent svg_wrap'

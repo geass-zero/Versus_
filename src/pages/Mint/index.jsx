@@ -32,7 +32,10 @@ const Mint = () => {
   const [isMinting, setIsMinting] = useState(false);
 
   const updateValue = (isAdd) => {
-    if (isAdd) setValue(value + 1);
+    if (isAdd) {
+      if (value == 6) return;
+      setValue(value + 1);
+    }
     else if (value > 0) setValue(value - 1);
     // setValue(1);
   };

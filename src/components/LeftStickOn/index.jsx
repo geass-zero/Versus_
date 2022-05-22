@@ -22,7 +22,7 @@ const LeftStickOn = ({
   onClick,
 }) => {
   const [selected, setSelected] = useState(defaultSelected);
-  const [isHidden, setHidden] = useState(false);
+  const [isHidden, setHidden] = useState(true);
 
   const onClickHandler = (newSelected) => {
     setSelected(newSelected);
@@ -59,7 +59,7 @@ const LeftStickOn = ({
               className={`item ${item.id === selected.id ? 'active' : ''}`}
               onClick={() => onClickHandler(item)}>
               <div className='character_circle'>
-                <img src={item.image} alt='character' />
+                {/* <img src={item.image} alt='character' /> */}
               </div>
             </div>
           ))}

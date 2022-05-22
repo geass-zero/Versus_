@@ -11,7 +11,7 @@ import Moon from '../../assets/images/characters/moon.gif';
 import { ReactComponent as HideArrow } from '../../assets/svg/HideArrow.svg';
 
 const RecentBattles = () => {
-  const [isHidden, setHidden] = useState(false);
+  const [isHidden, setHidden] = useState(true);
 
   useEffect(() => {
     if (isHidden)
@@ -40,10 +40,10 @@ const RecentBattles = () => {
         <div className='padder'>
           <h1>Recent Global Battles</h1>
           <div className='cards_wrapper'>
-            <VSCard image1={Bull} image2={Moon} isFirstUserWinner={true} />
+            {/* <VSCard image1={Bull} image2={Moon} isFirstUserWinner={true} />
             <VSCard image1={Bull} image2={Snake} isFirstUserWinner={false} />
             <VSCard image1={Bull} image2={Moon} isFirstUserWinner={true} />
-            <VSCard image1={Bat} image2={Moon} isFirstUserWinner={false} />
+            <VSCard image1={Bat} image2={Moon} isFirstUserWinner={false} /> */}
           </div>
         </div>
         <img

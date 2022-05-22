@@ -62,9 +62,7 @@ const AboutVersus = () => {
               <img src={WrapMobile} className='box_svg mobile_only' />
               {/* <WrapMobile className='box_svg mobile_only' /> */}
               <div className='box_content'>
-                Versus is a world that exists in a parallel dimension, apart
-                from Earth. Versus is vast and wonderful with unique biomes,
-                cultures, and technologies.
+                Versus is a universe that exists in a parallel dimension.
               </div>
             </div>
             <div
@@ -77,9 +75,9 @@ const AboutVersus = () => {
               <img src={Wrap2Mobile} className='box_svg mobile_only' />
               {/* <Wrap2Mobile className='box_svg mobile_only' /> */}
               <div className='box_content'>
-                Like our reality, the forward-thinking scientists of Versus
-                developed blockchain technology. However, unlike our reality,
-                the blockchain spawned something…new.
+                Like our reality, the forward-thinking scientists of Versus 
+                developed blockchain technology. However, unlike our reality, 
+                the blockchain spawned something…new. Cyphers.
               </div>
             </div>
           </div>
