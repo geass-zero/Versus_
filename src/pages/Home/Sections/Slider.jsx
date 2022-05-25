@@ -1,6 +1,6 @@
 import ReactHlsPlayer from 'react-hls-player';
 
-import { ReactComponent as Mint } from '../../../assets/svg/Home/Slider/Mint.svg';
+import Mint from '../../../assets/svg/Home/Slider/Mint.png';
 
 let mintDesc =
   "Each Cypher can be brought to life through a process called minting. Act fast though, they're limited.";
@@ -86,7 +86,7 @@ const SlideItem = ({ title, description, videoSrc }) => {
           <div className='x2'></div>
           <div className='x2'>
             <div className='detail_box'>
-              <Mint className='box_svg' />
+              <img src={Mint} alt='Mint' className='box_svg' />
               <div className='insider'>
                 <div
                   className='title'
