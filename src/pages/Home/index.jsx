@@ -47,9 +47,9 @@ const Home = () => {
           <Suspense fallback={''}>
             <>
               <Main />
-              <AboutVersus />
               <Inspiration />
-              <Metaverse />
+              <AboutVersus />
+              {/* <Metaverse /> */}
               {/* <NFTs /> */}
               <AboutCyphers />
               <BlockChain />
