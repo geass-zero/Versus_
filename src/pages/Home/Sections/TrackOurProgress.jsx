@@ -61,23 +61,19 @@ const TrackOurProgress = () => {
               data-aos-duration='300'>
               {selectedTimeline === 1 && (
                 <span>
-                  Versus launch and browser based cypher training and battles in
-                  a cross chain environment creates a new paradigm of NFT
-                  interaction in the metaverse space
+                  Versus launch and browser based cypher training and battles 
+                  in a cross chain environment creates a new paradigm of NFT interaction in the metaverse space.
                 </span>
               )}
               {selectedTimeline === 2 && (
                 <span>
-                  Versus launch and browser based cypher training and battles in
-                  a cross chain environment creates a new paradigm of NFT
-                  interaction in the metaverse space 2
+                  The Versus Metaverse expands into a fully realized 3D ecosystem enabling expanded 
+                  interactions between players, and cyphers in the world of Versus
                 </span>
               )}
               {selectedTimeline === 3 && (
                 <span>
-                  Versus launch and browser based cypher training and battles in
-                  a cross chain environment creates a new paradigm of NFT
-                  interaction in the metaverse space 3
+                  Expansion of the Versus Metaverse with player governance and open source world generation
                 </span>
               )}
             </div>

@@ -16,7 +16,7 @@ const Slider = () => {
     {
       title: 'MINT',
       description:
-        "Each Cypher can be brought to life through a process called minting. Act fast though, they're limited.",
+        "Versus scientists have developed a new technology known as a W.A.L.L.E.T. that allows Cyphers to be materialized into the world of Versus through a process called minting.",
       video:
         'https://player.vimeo.com/external/665992462.m3u8?s=fc6c8b495529166a3be408a5d9cd5e8e015a676f',
     },
@@ -30,7 +30,7 @@ const Slider = () => {
     {
       title: 'BATTLE',
       description:
-        'Add your Cyphers to the battle pool to battle other Cyphers and win rewards. Make sure to train first!',
+        'Enter your Cyphers into the Battle Pool! Test your might against other trainers and earn $VERSUS rewards for every triumph.',
       video:
         'https://player.vimeo.com/external/665993451.m3u8?s=26a000d0874a3646623b0b8423923345e0cb0c52',
     },

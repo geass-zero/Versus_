@@ -418,7 +418,7 @@ const Train = () => {
                               data-aos='zoom-in'
                               data-aos-offset='0'
                               data-aos-duration='200'>
-                              $39,423
+                              $--,---
                             </div>
                           </div>
                           <div className='prediction'>
@@ -434,7 +434,7 @@ const Train = () => {
                               data-aos='zoom-in'
                               data-aos-offset='0'
                               data-aos-duration='200'>
-                              $39,420
+                              $--,---
                             </div>
                           </div>
                         </>

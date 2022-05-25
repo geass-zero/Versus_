@@ -48,11 +48,11 @@ const Home = () => {
             <>
               <Main />
               <AboutVersus />
+              <Metaverse />
               {/* <NFTs /> */}
               <AboutCyphers />
               <BlockChain />
               <Slider />
-              <Metaverse />
               <TrackOurProgress />
               <MintYourOwn />
             </>
