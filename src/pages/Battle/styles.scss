@@ -55,6 +55,10 @@ html {
   overflow: hidden;
   transition: bottom 0.3s;
 
+  & > div {
+    min-height: 100%;
+  }
+
   &.is_hidden {
     bottom: -110px;
 

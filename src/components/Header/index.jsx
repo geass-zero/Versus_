@@ -58,12 +58,13 @@ const Header = () => {
               className={`${location.pathname === '/shop' ? 'active' : ''}`}>
               Item Shop
             </Link>
-            <Link
-              to='/docs'
+            <a
+              href='https://versus-metaverse.gitbook.io/versus-metaverse-documentation'
+              target='_blank'
               onClick={() => setIsOpen(false)}
-              className={`${location.pathname === '/docs' ? 'active' : ''}`}>
+              rel='noreferrer'>
               Docs
-            </Link>
+            </a>
           </div>
           {/* <div  onClick={() => connectToWallet()} className='connect_button'>
                     w

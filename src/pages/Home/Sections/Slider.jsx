@@ -1,5 +1,3 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import ReactHlsPlayer from 'react-hls-player';
 
 import { ReactComponent as Mint } from '../../../assets/svg/Home/Slider/Mint.svg';
@@ -16,7 +14,7 @@ const Slider = () => {
     {
       title: 'MINT',
       description:
-        "Versus scientists have developed a new technology known as a W.A.L.L.E.T. that allows Cyphers to be materialized into the world of Versus through a process called minting.",
+        'Versus scientists have developed a new technology known as a W.A.L.L.E.T. that allows Cyphers to be materialized into the world of Versus through a process called minting.',
       video:
         'https://player.vimeo.com/external/665992462.m3u8?s=fc6c8b495529166a3be408a5d9cd5e8e015a676f',
     },

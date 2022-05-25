@@ -21,6 +21,7 @@ const AboutCyphers = React.lazy(() => import('./Sections/AboutCyphers'));
 const AboutVersus = React.lazy(() => import('./Sections/AboutVersus'));
 const NFTs = React.lazy(() => import('./Sections/NFTs'));
 const Slider = React.lazy(() => import('./Sections/Slider'));
+const Inspiration = React.lazy(() => import('./Sections/Inspiration'));
 const TrackOurProgress = React.lazy(() =>
   import('./Sections/TrackOurProgress')
 );
@@ -48,6 +49,7 @@ const Home = () => {
             <>
               <Main />
               <AboutVersus />
+              <Inspiration />
               <Metaverse />
               {/* <NFTs /> */}
               <AboutCyphers />
