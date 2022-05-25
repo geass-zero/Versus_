@@ -9,7 +9,6 @@ import './styles.scss';
 
 import VersusContext from '../../store/Context';
 
-import LoaderImage from '../../assets/images/Pattern.png';
 // import AboutVersus from './Sections/AboutVersus';
 // import AboutCyphers from './Sections/AboutCyphers';
 // import Metaverse from './Sections/Metaverse';
