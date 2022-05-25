@@ -1,0 +1,58 @@
+@import './../../variables.scss';
+
+.map_pop_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  padding-top: $mainnav-height + 5px;
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.4s 1;
+  }
+
+  .content_wrap {
+    position: relative;
+    margin-bottom: 0;
+    height: calc(100vh - 110px);
+    min-height: 100%;
+    max-width: 1400px;
+    padding: 0;
+    @include flex-column();
+    padding-top: 0px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      border-radius: 30px;
+      height: calc(100vh - 140px);
+    }
+
+    .close_icon {
+      position: absolute;
+      right: -10px;
+      top: -0px;
+      z-index: 99;
+      height: 90px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-xs) {
+  .map_pop_wrap {
+    .content_wrap {
+      img {
+        width: calc(100% - 10px);
+      }
+    }
+  }
+}

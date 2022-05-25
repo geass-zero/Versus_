@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Wallet from './wallet';
 import './styles.scss';
 import logo from '../../assets/images/VersusLogo.png';
 import { ReactComponent as WalletIcon } from '../../assets/svg/Wallet.svg';
+import { ReactComponent as MapIcon } from '../../assets/svg/MapIcon.svg';
 import WalletPop from './../WalletPop';
+import MapPop from './../MapPop';
 import { connectWallet } from '../../utils/UserData.js';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isWalletOpen, setWalletOpen] = useState(false);
+  const [isMapOpen, setMapOpen] = useState(false);
   const [currentAccount, setCurrentAccount] = useState('');
   const location = useLocation();
 
@@ -22,9 +25,18 @@ const Header = () => {
     // }
   }
 
+  useEffect(() => {
+    if (isMapOpen || isWalletOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isWalletOpen, isMapOpen]);
+
   return (
     <>
       {isWalletOpen && <WalletPop onClose={() => setWalletOpen(false)} />}
+      {isMapOpen && <MapPop onClose={() => setMapOpen(false)} />}
       <header data-aos='fade-down' data-aos-offset='0' data-aos-duration='200'>
         <div
           className={`new_header_style content_wrap ${isOpen ? 'active' : ''}`}>
@@ -69,18 +81,31 @@ const Header = () => {
           {/* <div  onClick={() => connectToWallet()} className='connect_button'>
                     w
                 </div> */}
-          <div
-            onClick={() => {
-              setWalletOpen(!isWalletOpen);
-              connectToWallet();
-            }}
-            className='connect_button'>
+          <div className='connect_button'>
+            <button
+              className='map_icon'
+              onClick={() => {
+                setMapOpen(!isMapOpen);
+                setWalletOpen(false);
+              }}>
+              <MapIcon />
+            </button>
             {currentAccount != '' ? (
-              <button>
+              <button
+                onClick={() => {
+                  setMapOpen(false);
+                  setWalletOpen(!isWalletOpen);
+                  connectToWallet();
+                }}>
                 ...{currentAccount.substring(currentAccount.length - 5)}
               </button>
             ) : (
-              <button>
+              <button
+                onClick={() => {
+                  setMapOpen(false);
+                  setWalletOpen(!isWalletOpen);
+                  connectToWallet();
+                }}>
                 <WalletIcon />
                 <div className='circle'></div>
                 <span>W.A.L.L.E.T.</span>

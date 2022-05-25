@@ -44,6 +44,21 @@ header {
         background-color: transparent;
         position: relative;
 
+        &.map_icon {
+          margin-right: 40px;
+          @include flex-row();
+          color: #333;
+          min-width: auto;
+
+          svg {
+            position: relative;
+            left: auto;
+            height: 30px;
+            right: auto;
+            bottom: auto;
+          }
+        }
+
         .circle {
           width: 32px;
           height: 32px;
@@ -254,6 +269,10 @@ header {
 
       button {
         display: none;
+
+        &.map_icon {
+          margin-right: 0 !important;
+        }
       }
     }
   }
