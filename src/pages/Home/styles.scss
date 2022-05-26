@@ -1382,7 +1382,7 @@
         object-position: 1%;
         transform: translate(0px, -12%);
         max-width: 100vw;
-        height: calc(100vh + 14%);
+        height: calc(100vh + 16%);
       }
 
       .logo_wrap {
@@ -1405,6 +1405,7 @@
     .main_section {
       padding-top: 80px;
       // overflow: hidden;
+      background-attachment: initial !important;
       min-height: max(100vh, 810px) !important;
       //padding-bottom: 90px;
 
@@ -1688,7 +1689,7 @@
     }
 
     .track_our_progress {
-      margin-top: 10px;
+      margin-top: 0px;
       padding-top: 30px;
       padding-bottom: 30px;
       position: relative;
