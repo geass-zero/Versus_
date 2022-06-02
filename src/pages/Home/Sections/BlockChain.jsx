@@ -50,6 +50,23 @@ const BlockChain = () => {
               </p>
             </div>
           </div>
+
+          <div className='icons_wrap'>
+            <div
+              className='icon_wrap'
+              data-aos='zoom-in'
+              data-aos-offset='0'
+              data-aos-duration='600'>
+              <img src={bat} alt='bat' />
+            </div>
+            <div
+              className='icon_wrap'
+              data-aos='zoom-in'
+              data-aos-offset='0'
+              data-aos-duration='600'>
+              <img src={bat} alt='bat' />
+            </div>
+          </div>
           {/* <div className='about_board'></div> */}
           {/* <div
                     className='text'

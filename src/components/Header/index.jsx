@@ -78,9 +78,6 @@ const Header = () => {
               Docs
             </a>
           </div>
-          {/* <div  onClick={() => connectToWallet()} className='connect_button'>
-                    w
-                </div> */}
           <div className='connect_button'>
             <button
               className='map_icon'
@@ -90,7 +87,7 @@ const Header = () => {
               }}>
               <MapIcon />
             </button>
-            {currentAccount != '' ? (
+            {/* {currentAccount != '' ? (
               <button
                 onClick={() => {
                   setMapOpen(false);
@@ -110,7 +107,7 @@ const Header = () => {
                 <div className='circle'></div>
                 <span>W.A.L.L.E.T.</span>
               </button>
-            )}
+            )} */}
           </div>
           <div
             id='nav-icon3'

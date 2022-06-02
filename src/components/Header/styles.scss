@@ -242,6 +242,10 @@ header {
           position: absolute;
           left: calc(50% + 15px);
           transform: translate(-50%);
+
+          &.map_icon {
+            left: 50%;
+          }
         }
       }
 

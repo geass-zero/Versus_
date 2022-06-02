@@ -32,6 +32,7 @@ const Train = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPredicted, setIsPredicted] = useState(false);
   const [resultButtonVisible, resultsButtonVisible] = useState(false);
+  const [energyRemaining, setEnergyRemaining] = useState(0);
 
   const [currentMarketPrice, setCurrentMarketPrice] = useState(0);
   let testData = [];
@@ -306,8 +307,20 @@ const Train = () => {
                       <div>#0: -------</div>
                       <div className='svg_wrap bento_box'>
                         <Bento />
-                        <span>Energy remaining</span>
-                        <span className='number'>0</span>
+                        {energyRemaining === 0 ? (
+                          <span
+                            className='bento'
+                            onClick={() =>
+                              setEnergyRemaining(energyRemaining + 1)
+                            }>
+                            Use Bento <br /> Box
+                          </span>
+                        ) : (
+                          <span>Energy remaining</span>
+                        )}
+                        {energyRemaining !== 0 && (
+                          <span className='number'>{energyRemaining}</span>
+                        )}
                       </div>
                     </div>
                     <div

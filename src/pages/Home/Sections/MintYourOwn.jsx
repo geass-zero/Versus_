@@ -21,14 +21,34 @@ const MintYourOwn = () => {
             data-aos-duration='400'>
             Reserve your whitelist spot.
           </div>
-          <img
-            src={discordImage}
-            alt='discord'
-            className='spot_svg'
-            data-aos='fade-up'
-            data-aos-offset='0'
-            data-aos-duration='450'
-          />
+          <div className='spot_svg_wrap'>
+            <a
+              href='https://discord.gg/QacH8SJGaw'
+              target='_blank'
+              rel='noreferrer'>
+              <img
+                src={discordImage}
+                alt='discord'
+                className='spot_svg'
+                data-aos='fade-up'
+                data-aos-offset='0'
+                data-aos-duration='450'
+              />
+            </a>
+            <a
+              href='https://twitter.com/VersusMetaverse'
+              target='_blank'
+              rel='noreferrer'>
+              <img
+                src={discordImage}
+                alt='discord'
+                className='spot_svg'
+                data-aos='fade-up'
+                data-aos-offset='0'
+                data-aos-duration='450'
+              />
+            </a>
+          </div>
         </div>
         <footer>© 2022 Versus Metaverse. All rights reserved.</footer>
       </div>
