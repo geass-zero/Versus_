@@ -44,13 +44,17 @@ const ItemShop = () => {
           data-aos-duration='600'>
           <div className='top_section'>
             <div className='image_box'></div>
-            <div className='title'>Item Name</div>
+            <div className='title' title='Item Name'>
+              Item Name
+            </div>
           </div>
           <div className='description_wrap scroll_bar'>
             <div className='title'>Item Description</div>
             <p>
-              Allows a trainer to re-roll the stats for their cypher, at its
-              current level.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              illo eum voluptatibus voluptates aliquid dolorem doloremque
+              inventore et praesentium laborum totam cupiditate magni, dolores
+              perspiciatis iste quibusdam laboriosam quasi dignissimos!
             </p>
           </div>
         </div>
@@ -66,7 +70,7 @@ const Card = ({ data, onClick, isSelected, id }) => {
       onClick={() => {
         onClick && onClick(id);
       }}>
-      <div className='value_wrap'>
+      <div className='value_wrap' title={data}>
         <img src={Price} alt='price' />
         <div className='price'>{data}</div>
       </div>
