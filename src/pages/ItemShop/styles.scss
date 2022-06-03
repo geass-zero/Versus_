@@ -91,6 +91,12 @@
               max-height: 40px;
               margin-right: 10px;
             }
+
+            .price {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
           }
         }
       }
@@ -147,6 +153,10 @@
 
         .title {
           font-size: 22px;
+        }
+
+        p {
+          text-align: justify;
         }
       }
     }

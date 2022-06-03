@@ -31,12 +31,13 @@ const Mint = () => {
   const [mintedCyphers, setMintedCyphers] = useState([]);
   const [isMinting, setIsMinting] = useState(false);
 
+  const isMintSoon = false;
+
   const updateValue = (isAdd) => {
     if (isAdd) {
       if (value == 6) return;
       setValue(value + 1);
-    }
-    else if (value > 0) setValue(value - 1);
+    } else if (value > 0) setValue(value - 1);
     // setValue(1);
   };
 
@@ -116,72 +117,85 @@ const Mint = () => {
                   />
                   {/* <MintBox  />
                   <MintBoxMobile className='mobile_only box_svg_mobile' /> */}
-                  <div className='minted'>
-                    <div className='circle'></div>
-                    <div className='text'>
-                      0/5000<span>(Minting Soon)</span>
-                    </div>
-                  </div>
-                  <div
-                    className='title'
-                    data-aos='fade-up'
-                    data-aos-offset='0'
-                    data-aos-duration='400'>
-                    Each cypher costs *.*** to materialize.
-                  </div>
-                  <div
-                    className='value_box'
-                    data-aos='fade-up'
-                    data-aos-offset='0'
-                    data-aos-duration='500'>
-                    <MintValue />
-                    <span>{(0.0 * value).toFixed(3)}</span>
-                  </div>
-                  <div
-                    className='button_values'
-                    data-aos='fade-up'
-                    data-aos-offset='0'
-                    data-aos-duration='600'>
-                    <button
-                      className='transparent svg_wrap'
-                      onClick={() => updateValue(false)}>
-                      <Minus />
-                    </button>
+                  {isMintSoon ? (
+                    <>
+                      <div className='minted'>
+                        <div className='circle'></div>
+                        <div className='text'>
+                          <div className='minting_soon_text'>Minting Soon</div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className='minted'>
+                        <div className='circle'></div>
+                        <div className='text'>
+                          0/5000<span>(Minting Soon)</span>
+                        </div>
+                      </div>
+                      <div
+                        className='title'
+                        data-aos='fade-up'
+                        data-aos-offset='0'
+                        data-aos-duration='400'>
+                        Each cypher costs *.*** to materialize.
+                      </div>
+                      <div
+                        className='value_box'
+                        data-aos='fade-up'
+                        data-aos-offset='0'
+                        data-aos-duration='500'>
+                        <MintValue />
+                        <span>{(0.0 * value).toFixed(3)}</span>
+                      </div>
+                      <div
+                        className='button_values'
+                        data-aos='fade-up'
+                        data-aos-offset='0'
+                        data-aos-duration='600'>
+                        <button
+                          className='transparent svg_wrap'
+                          onClick={() => updateValue(false)}>
+                          <Minus />
+                        </button>
 
-                    <div className='value'>{value}</div>
-                    <button
-                      className='transparent svg_wrap'
-                      onClick={() => updateValue(true)}>
-                      <Plus />
-                    </button>
-                  </div>
-                  <div
-                    data-aos='fade-up'
-                    data-aos-offset='0'
-                    data-aos-duration='700'>
-                    {!isMinting ? (
-                      <button
-                        className='transparent svg_wrap mint_button_wrap'
-                        onClick={() => {
-                          setIsMinting(true);
-                          mint();
-                        }}>
-                        <span>Mint</span>
-                        <Button className='mint_button' />
-                      </button>
-                    ) : (
-                      <button
-                        className='transparent svg_wrap minting_button_wrap'
-                        onClick={() => setPopUp(true)}>
-                        <span>
-                          Minting,
-                          <br />
-                          please wait...
-                        </span>
-                        <Minting className='mint_button' />
-                      </button>
-                    )}
-                  </div>
+                        <div className='value'>{value}</div>
+                        <button
+                          className='transparent svg_wrap'
+                          onClick={() => updateValue(true)}>
+                          <Plus />
+                        </button>
+                      </div>
+                      <div
+                        data-aos='fade-up'
+                        data-aos-offset='0'
+                        data-aos-duration='700'>
+                        {!isMinting ? (
+                          <button
+                            className='transparent svg_wrap mint_button_wrap'
+                            onClick={() => {
+                              setIsMinting(true);
+                              mint();
+                            }}>
+                            <span>Mint</span>
+                            <Button className='mint_button' />
+                          </button>
+                        ) : (
+                          <button
+                            className='transparent svg_wrap minting_button_wrap'
+                            onClick={() => setPopUp(true)}>
+                            <span>
+                              Minting,
+                              <br />
+                              please wait...
+                            </span>
+                            <Minting className='mint_button' />
+                          </button>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
