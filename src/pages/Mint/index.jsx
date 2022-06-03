@@ -4,6 +4,7 @@ import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
 import MintBox from '../../assets/svg/Mint/MintBox.png';
 import MintBoxMobile from '../../assets/svg/Mint/MintBoxMobile.png';
+import bat from '../../assets/images/characters/bat.gif';
 import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg';
 import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
 import { ReactComponent as Minting } from '../../assets/svg/Mint/Minting.svg';
@@ -31,7 +32,7 @@ const Mint = () => {
   const [mintedCyphers, setMintedCyphers] = useState([]);
   const [isMinting, setIsMinting] = useState(false);
 
-  const isMintSoon = false;
+  const isMintSoon = true;
 
   const updateValue = (isAdd) => {
     if (isAdd) {
@@ -100,103 +101,129 @@ const Mint = () => {
                   data-aos-duration='600'></div>
               </div>
               <div className='x2'>
-                <div
-                  className='box_wrap no_padding'
-                  data-aos='zoom-in'
-                  data-aos-offset='0'
-                  data-aos-duration='300'>
-                  <img
-                    src={MintBox}
-                    alt='bg'
-                    className='box_svg mobile_hidden'
-                  />
-                  <img
-                    src={MintBoxMobile}
-                    alt='bg'
-                    className='box_svg_mobile mobile_only'
-                  />
-                  {/* <MintBox  />
+                {isMintSoon ? (
+                  <div
+                    className='box_wrap no_padding minting_soon_main_wrap'
+                    data-aos='zoom-in'
+                    data-aos-offset='0'
+                    data-aos-duration='300'>
+                    <div className='minted'>
+                      <div className='circle'></div>
+                      <div className='text'>
+                        <div className='minting_soon_text'>Minting Soon</div>
+                      </div>
+                    </div>
+                    <div className='minting_soon_wrap'>
+                      <img src={MintBox} alt='bg' className='box_svg' />
+                      <p>
+                        Join the Discord and follow us on Twitter to stay
+                        updated on mint info, as well as how to join the
+                        whitelist!
+                      </p>
+                      <div className='icons_wrap'>
+                        <div
+                          className='icon_wrap'
+                          data-aos='zoom-in'
+                          data-aos-offset='0'
+                          data-aos-duration='600'>
+                          <img src={bat} alt='bat' />
+                        </div>
+                        <div
+                          className='icon_wrap'
+                          data-aos='zoom-in'
+                          data-aos-offset='0'
+                          data-aos-duration='600'>
+                          <img src={bat} alt='bat' />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className='box_wrap no_padding'
+                    data-aos='zoom-in'
+                    data-aos-offset='0'
+                    data-aos-duration='300'>
+                    <img
+                      src={MintBox}
+                      alt='bg'
+                      className='box_svg mobile_hidden'
+                    />
+                    <img
+                      src={MintBoxMobile}
+                      alt='bg'
+                      className='box_svg_mobile mobile_only'
+                    />
+                    {/* <MintBox  />
                   <MintBoxMobile className='mobile_only box_svg_mobile' /> */}
-                  {isMintSoon ? (
-                    <>
-                      <div className='minted'>
-                        <div className='circle'></div>
-                        <div className='text'>
-                          <div className='minting_soon_text'>Minting Soon</div>
-                        </div>
+                    <div className='minted'>
+                      <div className='circle'></div>
+                      <div className='text'>
+                        0/5000<span>(Minting Soon)</span>
                       </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className='minted'>
-                        <div className='circle'></div>
-                        <div className='text'>
-                          0/5000<span>(Minting Soon)</span>
-                        </div>
-                      </div>
-                      <div
-                        className='title'
-                        data-aos='fade-up'
-                        data-aos-offset='0'
-                        data-aos-duration='400'>
-                        Each cypher costs *.*** to materialize.
-                      </div>
-                      <div
-                        className='value_box'
-                        data-aos='fade-up'
-                        data-aos-offset='0'
-                        data-aos-duration='500'>
-                        <MintValue />
-                        <span>{(0.0 * value).toFixed(3)}</span>
-                      </div>
-                      <div
-                        className='button_values'
-                        data-aos='fade-up'
-                        data-aos-offset='0'
-                        data-aos-duration='600'>
-                        <button
-                          className='transparent svg_wrap'
-                          onClick={() => updateValue(false)}>
-                          <Minus />
-                        </button>
+                    </div>
+                    <div
+                      className='title'
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='400'>
+                      Each cypher costs *.*** to materialize.
+                    </div>
+                    <div
+                      className='value_box'
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='500'>
+                      <MintValue />
+                      <span>{(0.0 * value).toFixed(3)}</span>
+                    </div>
+                    <div
+                      className='button_values'
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='600'>
+                      <button
+                        className='transparent svg_wrap'
+                        onClick={() => updateValue(false)}>
+                        <Minus />
+                      </button>
 
-                        <div className='value'>{value}</div>
+                      <div className='value'>{value}</div>
+                      <button
+                        className='transparent svg_wrap'
+                        onClick={() => updateValue(true)}>
+                        <Plus />
+                      </button>
+                    </div>
+                    <div
+                      data-aos='fade-up'
+                      data-aos-offset='0'
+                      data-aos-duration='700'>
+                      {!isMinting ? (
                         <button
-                          className='transparent svg_wrap'
-                          onClick={() => updateValue(true)}>
-                          <Plus />
+                          className='transparent svg_wrap mint_button_wrap'
+                          onClick={() => {
+                            setIsMinting(true);
+                            mint();
+                          }}>
+                          <span>Mint</span>
+                          <Button className='mint_button' />
                         </button>
-                      </div>
-                      <div
-                        data-aos='fade-up'
-                        data-aos-offset='0'
-                        data-aos-duration='700'>
-                        {!isMinting ? (
-                          <button
-                            className='transparent svg_wrap mint_button_wrap'
-                            onClick={() => {
-                              setIsMinting(true);
-                              mint();
-                            }}>
-                            <span>Mint</span>
-                            <Button className='mint_button' />
-                          </button>
-                        ) : (
-                          <button
-                            className='transparent svg_wrap minting_button_wrap'
-                            onClick={() => setPopUp(true)}>
-                            <span>
-                              Minting,
-                              <br />
-                              please wait...
-                            </span>
-                            <Minting className='mint_button' />
-                          </button>
-                        )}
-                      </div>
-                    </>
-                  )}
-                </div>
+                      ) : (
+                        <button
+                          className='transparent svg_wrap minting_button_wrap'
+                          onClick={() => setPopUp(true)}>
+                          <span>
+                            Minting,
+                            <br />
+                            please wait...
+                          </span>
+                          <Minting className='mint_button' />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
