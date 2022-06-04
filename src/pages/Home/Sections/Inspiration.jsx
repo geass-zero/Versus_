@@ -6,7 +6,7 @@ const Inspiration = () => {
   const MAX_VIDEO_HEIGHT = 900;
   const videoElement = useRef(null);
   const video_src =
-    'https://player.vimeo.com/external/713499457.m3u8?s=3c3dfda01fc1f4364a04886e582243de9134bfff';
+    'https://player.vimeo.com/external/714255826.m3u8?s=7cdb42370125250e510820c32c1d346eeff00893';
 
   useEffect(() => {
     updateVideoSize();

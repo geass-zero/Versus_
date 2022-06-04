@@ -17,7 +17,7 @@ import User1 from '../../assets/images/characters/moon.gif';
 import User2 from '../../assets/images/characters/Bull.gif';
 import CardImage from '../../assets/images/cardImage.png';
 
-import LoaderImage from '../../assets/images/battlebg.jpg';
+import LoaderImage from '../../assets/images/battlebg.png';
 import Shibachu from '../../assets/images/Calfire.gif';
 
 // import { ReactComponent as BattleBox } from '../../assets/svg/Battle/Box.svg';

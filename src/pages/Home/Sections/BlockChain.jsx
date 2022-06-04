@@ -1,4 +1,5 @@
-import bat from '../../../assets/images/characters/bat.gif';
+import ETH from '../../../assets/images/ETH.png';
+import BSC from '../../../assets/images/BSC.png'
 import Bull from '../../../assets/images/characters/Bull.gif';
 import moon from '../../../assets/images/characters/moon.gif';
 import snake from '../../../assets/images/characters/snake.gif';
@@ -57,14 +58,14 @@ const BlockChain = () => {
               data-aos='zoom-in'
               data-aos-offset='0'
               data-aos-duration='600'>
-              <img src={bat} alt='bat' />
+              <img src={ETH} alt='bat' />
             </div>
             <div
               className='icon_wrap'
               data-aos='zoom-in'
               data-aos-offset='0'
               data-aos-duration='600'>
-              <img src={bat} alt='bat' />
+              <img src={BSC} alt='bat' />
             </div>
           </div>
           {/* <div className='about_board'></div> */}

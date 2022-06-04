@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import discordImage from '../../../assets/svg/Home/MintYourOwn/Discord.png';
+import twitterImage from '../../../assets/images/twitter.png';
 
 const MintYourOwn = () => {
   return (
@@ -40,7 +41,7 @@ const MintYourOwn = () => {
               target='_blank'
               rel='noreferrer'>
               <img
-                src={discordImage}
+                src={twitterImage}
                 alt='discord'
                 className='spot_svg'
                 data-aos='fade-up'

@@ -4,7 +4,8 @@ import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
 import MintBox from '../../assets/svg/Mint/MintBox.png';
 import MintBoxMobile from '../../assets/svg/Mint/MintBoxMobile.png';
-import bat from '../../assets/images/characters/bat.gif';
+import discordImage from '../../assets/svg/Home/MintYourOwn/Discord.png';
+import twitterImage from '../../assets/images/twitter.png';
 import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg';
 import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
 import { ReactComponent as Minting } from '../../assets/svg/Mint/Minting.svg';
@@ -122,10 +123,10 @@ const Mint = () => {
                       </p>
                       <div className='icons_wrap'>
                         <div className='icon_wrap'>
-                          <img src={bat} alt='bat' />
+                          <img src={discordImage} alt='bat' />
                         </div>
                         <div className='icon_wrap'>
-                          <img src={bat} alt='bat' />
+                          <img src={twitterImage} alt='bat' />
                         </div>
                       </div>
                     </div>
