@@ -5,9 +5,30 @@ import { ReactComponent as ConsumablesMobile } from '../../assets/svg/ItemShop/C
 import Price from '../../assets/svg/ItemShop/Price.png';
 
 const ItemShop = () => {
-  const [selectedCard, setSelectedCard] = useState(null);
-
-  const shopItemsArray = [...Array(3).keys()];
+  const shopItemsArray = [
+    {
+      id: 1,
+      name: 'Item Name 1',
+      price: 1500,
+      description:
+        'Lorem Ipsum is simply dummy text of the printieen the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    },
+    {
+      id: 2,
+      name: 'Item Name 2',
+      price: 1600,
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    },
+    {
+      id: 3,
+      name: 'Item Name 3',
+      price: 1500,
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum s popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    },
+  ];
+  const [selectedCard, setSelectedCard] = useState(shopItemsArray[0]);
 
   return (
     <section className='item_shop_wrap'>
@@ -29,10 +50,9 @@ const ItemShop = () => {
             {shopItemsArray.map((item, index) => (
               <Card
                 key={index}
-                id={index}
-                data={item * 100 + 1000}
+                data={item}
                 onClick={(data) => setSelectedCard(data)}
-                isSelected={selectedCard === index}
+                isSelected={selectedCard && item && selectedCard.id === item.id}
               />
             ))}
           </div>
@@ -45,17 +65,12 @@ const ItemShop = () => {
           <div className='top_section'>
             <div className='image_box'></div>
             <div className='title' title='Item Name'>
-              Item Name
+              {selectedCard && selectedCard.name}
             </div>
           </div>
           <div className='description_wrap scroll_bar'>
             <div className='title'>Item Description</div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-              illo eum voluptatibus voluptates aliquid dolorem doloremque
-              inventore et praesentium laborum totam cupiditate magni, dolores
-              perspiciatis iste quibusdam laboriosam quasi dignissimos!
-            </p>
+            <p>{selectedCard && selectedCard.description}</p>
           </div>
         </div>
       </div>
@@ -63,16 +78,20 @@ const ItemShop = () => {
   );
 };
 
-const Card = ({ data, onClick, isSelected, id }) => {
+const Card = ({ data, onClick, isSelected }) => {
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   return (
     <div
       className={`item_card ${isSelected ? 'active' : ''}`}
       onClick={() => {
-        onClick && onClick(id);
+        onClick && onClick(data);
       }}>
       <div className='value_wrap' title={data}>
         <img src={Price} alt='price' />
-        <div className='price'>{data}</div>
+        <div className='price'>{data && numberWithCommas(data.price)}</div>
       </div>
     </div>
   );
