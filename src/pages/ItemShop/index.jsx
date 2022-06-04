@@ -63,12 +63,27 @@ const ItemShop = () => {
           data-aos-offset='0'
           data-aos-duration='600'>
           <div className='top_section'>
-            <div className='image_box'></div>
-            <div className='title' title='Item Name'>
+            <div
+              className='image_box'
+              data-aos='zoom-in'
+              data-aos-offset='0'
+              data-aos-duration='450'></div>
+            <div
+              className='title'
+              title={selectedCard && selectedCard.name}
+              key={selectedCard && selectedCard.id}
+              data-aos='fade-left'
+              data-aos-offset='0'
+              data-aos-duration='450'>
               {selectedCard && selectedCard.name}
             </div>
           </div>
-          <div className='description_wrap scroll_bar'>
+          <div
+            className='description_wrap scroll_bar'
+            key={selectedCard && selectedCard.id}
+            data-aos='fade-up'
+            data-aos-offset='0'
+            data-aos-duration='400'>
             <div className='title'>Item Description</div>
             <p>{selectedCard && selectedCard.description}</p>
           </div>
