@@ -123,10 +123,20 @@ const Mint = () => {
                       </p>
                       <div className='icons_wrap'>
                         <div className='icon_wrap'>
-                          <img src={discordImage} alt='bat' />
+                          <a
+                            href='https://discord.com/invite/QacH8SJGaw'
+                            target={'_blank'}
+                            rel='noreferrer'>
+                            <img src={discordImage} alt='bat' />
+                          </a>
                         </div>
                         <div className='icon_wrap'>
-                          <img src={twitterImage} alt='bat' />
+                          <a
+                            href='https://twitter.com/VersusMetaverse'
+                            target={'_blank'}
+                            rel='noreferrer'>
+                            <img src={twitterImage} alt='bat' />
+                          </a>
                         </div>
                       </div>
                     </div>
