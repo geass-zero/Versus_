@@ -121,18 +121,10 @@ const Mint = () => {
                         whitelist!
                       </p>
                       <div className='icons_wrap'>
-                        <div
-                          className='icon_wrap'
-                          data-aos='zoom-in'
-                          data-aos-offset='0'
-                          data-aos-duration='600'>
+                        <div className='icon_wrap'>
                           <img src={bat} alt='bat' />
                         </div>
-                        <div
-                          className='icon_wrap'
-                          data-aos='zoom-in'
-                          data-aos-offset='0'
-                          data-aos-duration='600'>
+                        <div className='icon_wrap'>
                           <img src={bat} alt='bat' />
                         </div>
                       </div>
