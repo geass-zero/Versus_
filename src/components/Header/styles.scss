@@ -281,3 +281,21 @@ header {
     }
   }
 }
+
+@media screen and (max-width: $breakpoint-md) {
+  header {
+    .content_wrap {
+      .logo_wrap {
+        min-width: 170px;
+      }
+
+      .link_wraps {
+        a {
+          margin-left: 15px;
+          margin-right: 15px;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

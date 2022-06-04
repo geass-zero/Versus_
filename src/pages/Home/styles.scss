@@ -759,6 +759,7 @@
     min-height: 100vh;
     min-width: 100%;
     margin-top: -35px;
+    background-attachment: fixed;
 
     .header_title {
       height: 120px;
@@ -816,6 +817,10 @@
 
           &.active {
             transform: scale(1.1);
+
+            &:before {
+              border-color: #b659a1;
+            }
           }
           &:hover {
             transform: scale(1.1);
@@ -824,11 +829,12 @@
           &:before {
             @include pseudo-abs();
             background: #f588dd;
-            border: 7px solid #b659a1;
+            border: 7px solid #f674d9;
             box-sizing: border-box;
             border-radius: 20px;
             transform: rotate(45deg);
             z-index: -1;
+            transition: border 0.3s;
           }
         }
       }
@@ -1003,6 +1009,10 @@
 
       .spot_svg_wrap {
         @include flex-row;
+
+        button {
+          min-width: auto;
+        }
 
         .spot_svg {
           width: 150px;
