@@ -21,6 +21,7 @@ const AboutVersus = React.lazy(() => import('./Sections/AboutVersus'));
 const NFTs = React.lazy(() => import('./Sections/NFTs'));
 const Slider = React.lazy(() => import('./Sections/Slider'));
 const Inspiration = React.lazy(() => import('./Sections/Inspiration'));
+const OutTeam = React.lazy(() => import('./Sections/OutTeam'));
 const TrackOurProgress = React.lazy(() =>
   import('./Sections/TrackOurProgress')
 );
@@ -55,6 +56,7 @@ const Home = () => {
               <BlockChain />
               <Slider />
               <TrackOurProgress />
+              <OutTeam />
               <MintYourOwn />
             </>
           </Suspense>

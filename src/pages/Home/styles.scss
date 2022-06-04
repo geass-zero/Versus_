@@ -747,7 +747,8 @@
     }
   }
 
-  .track_our_progress {
+  .track_our_progress,
+  .our_team_wrap {
     padding: 100px 0;
     padding-bottom: 60px;
     position: relative;
@@ -816,13 +817,13 @@
           transform: scale(1);
 
           &.active {
-            transform: scale(1.1);
+            transform: scale(1.45);
 
             &:before {
               border-color: #b659a1;
             }
           }
-          &:hover {
+          &:hover:not(.active) {
             transform: scale(1.1);
           }
 
@@ -965,6 +966,10 @@
         }
       }
     }
+  }
+
+  .our_team_wrap {
+    background-image: url('../../assets/images/ourteambg.jpg');
   }
 
   .mint_your_own {
@@ -1365,7 +1370,8 @@
           }
         }
 
-        .track_our_progress {
+        .track_our_progress,
+        .our_team_wrap {
         }
       }
     }
@@ -1703,7 +1709,8 @@
       }
     }
 
-    .track_our_progress {
+    .track_our_progress,
+    .our_team_wrap {
       margin-top: 0px;
       padding-top: 30px;
       padding-bottom: 30px;

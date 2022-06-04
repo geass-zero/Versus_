@@ -56,120 +56,33 @@ const TrackOurProgress = () => {
           {selectedTimeline !== 0 && (
             <div
               className='timeline_content'
+              key={selectedTimeline}
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-duration='300'>
               {selectedTimeline === 1 && (
                 <span>
-                  Versus launch and browser based cypher training and battles 
-                  in a cross chain environment creates a new paradigm of NFT interaction in the metaverse space.
+                  Versus launch and browser based cypher training and battles in
+                  a cross chain environment creates a new paradigm of NFT
+                  interaction in the metaverse space.
                 </span>
               )}
               {selectedTimeline === 2 && (
                 <span>
-                  The Versus Metaverse expands into a fully realized 3D ecosystem enabling expanded 
-                  interactions between players, and cyphers in the world of Versus
+                  The Versus Metaverse expands into a fully realized 3D
+                  ecosystem enabling expanded interactions between players, and
+                  cyphers in the world of Versus
                 </span>
               )}
               {selectedTimeline === 3 && (
                 <span>
-                  Expansion of the Versus Metaverse with player governance and open source world generation
+                  Expansion of the Versus Metaverse with player governance and
+                  open source world generation
                 </span>
               )}
             </div>
           )}
         </div>
-        <div className='content_wrap cypher_researchers_wrap'>
-          <div className='cypher_researchers_wrap_section'>
-            <OurTeam
-              className='mobile_hidden'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='400'
-              data-aos-delay='100'
-            />
-            <OurTeamMobile
-              className='mobile_only'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='400'
-              data-aos-delay='100'
-            />
-            <div
-              className='scroll_box scroll_bar'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='500'>
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
-            </div>
-          </div>
-          <div className='cypher_researchers_wrap_section'>
-            <MetTeam
-              className='mobile_hidden'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='400'
-              data-aos-delay='100'
-            />
-            <MetTeamMobile
-              className='mobile_only'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='400'
-              data-aos-delay='100'
-            />
-            <div
-              className='scroll_box scroll_bar'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='500'>
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
-            </div>
-          </div>
-          <div className='cypher_researchers_wrap_section'>
-            <ConceptArtists
-              className='mobile_hidden'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='400'
-              data-aos-delay='100'
-            />
-            <ConceptArtistsMobile
-              className='mobile_only'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='400'
-              data-aos-delay='100'
-            />
-            <div
-              className='scroll_box scroll_bar'
-              data-aos='fade-up'
-              data-aos-offset='0'
-              data-aos-duration='500'>
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
-              <MemberCard />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const MemberCard = ({ name = 'Team member #1', role = 'Designer' }) => {
-  return (
-    <div className='member_card'>
-      <div className='info'>
-        <div className='name'>{name}</div>
-        <div className='role'>{role}</div>
       </div>
     </div>
   );
