@@ -8,24 +8,24 @@ const ItemShop = () => {
   const shopItemsArray = [
     {
       id: 1,
-      name: 'Item Name 1',
+      name: 'Stamina Bento Box',
       price: 1500,
       description:
-        'Lorem Ipsum is simply dummy text of the printieen the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        "Reset your Cypher's training capacity for the day. Not required for training but serves to speed up the leveling process if desired (unlimited daily use; consumable).",
     },
     {
       id: 2,
-      name: 'Item Name 2',
+      name: 'Genesis Stone',
       price: 1600,
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        "Allows a trainer to re-reroll their Cypher's stat gain for each level. Be careful however as this item will reset any new XP gained after the most recent level up. Genesis stones are not required to level but serve to allow player's to craft their ideal Cypher team. (unlimited daily use; consumable).",
     },
     {
       id: 3,
-      name: 'Item Name 3',
+      name: 'Boxing Gloves',
       price: 1500,
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum s popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        "Allows a trainer to reset their Cypher's Battle Pool entries for the day. Boxing Gloves are not required to enter the battle pool but merely allow further participation. Please note: Once the maximum number of battles has been reached for the day, no matter remaining entries, no more battles will take place for that day.",
     },
   ];
   const [selectedCard, setSelectedCard] = useState(shopItemsArray[0]);
