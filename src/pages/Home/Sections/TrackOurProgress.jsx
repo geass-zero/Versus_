@@ -40,17 +40,17 @@ const TrackOurProgress = () => {
             <div
               className={`dot ${selectedTimeline === 1 ? 'active' : ''}`}
               onClick={() => setTimeline(1)}>
-              1
+              <div>Phase</div>1
             </div>
             <div
               className={`dot ${selectedTimeline === 2 ? 'active' : ''}`}
               onClick={() => setTimeline(2)}>
-              2
+              <div>Phase</div>2
             </div>
             <div
               className={`dot ${selectedTimeline === 3 ? 'active' : ''}`}
               onClick={() => setTimeline(3)}>
-              3
+              <div>Phase</div>3
             </div>
           </div>
           {selectedTimeline !== 0 && (

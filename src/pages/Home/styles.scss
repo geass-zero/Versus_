@@ -518,8 +518,6 @@
     z-index: 3;
     position: relative;
 
-
-
     .image_bg {
       background-image: url('../../assets/images/ancient_hall.jpg');
       background-repeat: no-repeat;
@@ -534,13 +532,14 @@
 
         img {
           background-color: #130f3e;
-          border-radius: 50%
+          border-radius: 50%;
         }
       }
 
       .content_wrap {
         @include flex-column();
         padding-top: 50px;
+        margin-bottom: 0;
 
         .header_title {
           height: 120px;
@@ -822,7 +821,7 @@
           width: 80px;
           height: 80px;
           position: relative;
-          @include flex-row();
+          @include flex-column();
           font-size: 30px;
           color: #fff;
           transition: all 0.3s;
@@ -849,6 +848,10 @@
             transform: rotate(45deg);
             z-index: -1;
             transition: border 0.3s;
+          }
+
+          div {
+            font-size: 0.4em;
           }
         }
       }
@@ -1029,6 +1032,7 @@
         line-height: 22px;
         text-align: center;
         color: #ffffff;
+        text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
       }
 
       .spot_svg_wrap {
@@ -1044,6 +1048,7 @@
           object-fit: contain;
           margin: 0 10px;
           margin-top: 45px;
+          filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.4));
         }
       }
     }
@@ -1055,6 +1060,7 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 10px;
+      text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
       text-align: center;
     }
   }
