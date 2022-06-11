@@ -4,7 +4,7 @@ import Wallet from './wallet';
 import './styles.scss';
 import logo from '../../assets/images/VersusLogo.png';
 import { ReactComponent as WalletIcon } from '../../assets/svg/Wallet.svg';
-import { ReactComponent as MapIcon } from '../../assets/svg/MapIcon.svg';
+import MapIcon from '../../assets/images/icon_map.png';
 import WalletPop from './../WalletPop';
 import MapPop from './../MapPop';
 import { connectWallet } from '../../utils/UserData.js';
@@ -85,7 +85,7 @@ const Header = () => {
                 setMapOpen(!isMapOpen);
                 setWalletOpen(false);
               }}>
-              <MapIcon />
+              <img id='icon_id' src={MapIcon} alt='map' />
             </button>
             {/* {currentAccount != '' ? (
               <button

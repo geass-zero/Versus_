@@ -4,8 +4,9 @@ import './styles.scss';
 import LoaderImage from '../../assets/images/Card.png';
 import MintBox from '../../assets/svg/Mint/MintBox.png';
 import MintBoxMobile from '../../assets/svg/Mint/MintBoxMobile.png';
-import discordImage from '../../assets/svg/Home/MintYourOwn/Discord.png';
+import discordImage from '../../assets/images/discord.png';
 import twitterImage from '../../assets/images/twitter.png';
+import cardsImage from '../../assets/images/icon_team.png';
 import { ReactComponent as MintValue } from '../../assets/svg/Mint/MintValue.svg';
 import { ReactComponent as Button } from '../../assets/svg/Mint/Button.svg';
 import { ReactComponent as Minting } from '../../assets/svg/Mint/Minting.svg';
@@ -109,7 +110,9 @@ const Mint = () => {
                     data-aos-offset='0'
                     data-aos-duration='300'>
                     <div className='minted'>
-                      <div className='circle'></div>
+                      <div className='circle'>
+                        <img src={cardsImage} alt='versus_metaverse_cards' />
+                      </div>
                       <div className='text'>
                         <div className='minting_soon_text'>Minting Soon</div>
                       </div>

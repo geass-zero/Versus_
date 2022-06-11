@@ -23,6 +23,22 @@ const BlockChain = () => {
             <TopMobile className='mobile_only' />
             <span>What blockchain does versus live on?</span>
           </div>
+          <div className='icons_wrap'>
+            <div
+              className='icon_wrap'
+              data-aos='zoom-in'
+              data-aos-offset='0'
+              data-aos-duration='600'>
+              <img src={ETH} alt='bat' />
+            </div>
+            <div
+              className='icon_wrap'
+              data-aos='zoom-in'
+              data-aos-offset='0'
+              data-aos-duration='600'>
+              <img src={BSC} alt='bat' />
+            </div>
+          </div>
           <div
             className='wrap_box box_wrapper'
             data-aos='fade-up'
@@ -52,22 +68,6 @@ const BlockChain = () => {
             </div>
           </div>
 
-          <div className='icons_wrap'>
-            <div
-              className='icon_wrap'
-              data-aos='zoom-in'
-              data-aos-offset='0'
-              data-aos-duration='600'>
-              <img src={ETH} alt='bat' />
-            </div>
-            <div
-              className='icon_wrap'
-              data-aos='zoom-in'
-              data-aos-offset='0'
-              data-aos-duration='600'>
-              <img src={BSC} alt='bat' />
-            </div>
-          </div>
           {/* <div className='about_board'></div> */}
           {/* <div
                     className='text'

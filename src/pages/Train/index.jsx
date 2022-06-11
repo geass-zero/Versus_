@@ -11,8 +11,8 @@ import { ReactComponent as InsideBoxMobile } from '../../assets/svg/Train/Inside
 import { ReactComponent as Down } from '../../assets/svg/Train/Down.svg';
 import { ReactComponent as Up } from '../../assets/svg/Train/Up.svg';
 import { ReactComponent as Checkbutton } from '../../assets/svg/Train/Checkbutton.svg';
-import { ReactComponent as Bento } from '../../assets/svg/Train/Bento.svg';
 import Shibachu from '../../assets/images/Calfire.gif';
+import bento from '../../assets/images/items/icon_bento.png';
 
 import LoaderImage from '../../assets/images/trainbg.jpg';
 import { connectWallet, getUserTokenIDs } from '../../utils/UserData';
@@ -306,7 +306,7 @@ const Train = () => {
                       data-aos-duration='400'>
                       <div>#0: -------</div>
                       <div className='svg_wrap bento_box'>
-                        <Bento />
+                        <img src={bento} alt='versus_metaverse_bento_box' />
                         {energyRemaining === 0 ? (
                           <span
                             className='bento'

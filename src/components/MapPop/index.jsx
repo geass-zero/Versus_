@@ -1,6 +1,6 @@
 import './styles.scss';
 import { ReactComponent as CloseIcon } from '../../assets/svg/Wallet/Close.svg';
-import MapImage from '../../assets/images/Map.jpg';
+import MapImage from '../../assets/images/Map.png';
 
 const MapPop = ({ onClose }) => {
   return (

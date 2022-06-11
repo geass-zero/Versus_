@@ -16,7 +16,7 @@ const Slider = () => {
       description:
         'Versus scientists have developed a new technology known as a W.A.L.L.E.T. that allows Cyphers to be materialized into the world of Versus through a process called minting.',
       video:
-        'https://player.vimeo.com/external/665992462.m3u8?s=fc6c8b495529166a3be408a5d9cd5e8e015a676f',
+        'https://player.vimeo.com/external/665993451.m3u8?s=26a000d0874a3646623b0b8423923345e0cb0c52',
     },
     {
       title: 'TRAIN',
@@ -30,10 +30,9 @@ const Slider = () => {
       description:
         'Enter your Cyphers into the Battle Pool! Test your might against other trainers and earn $VERSUS rewards for every triumph.',
       video:
-        'https://player.vimeo.com/external/665993451.m3u8?s=26a000d0874a3646623b0b8423923345e0cb0c52',
+        'https://player.vimeo.com/external/665992462.m3u8?s=fc6c8b495529166a3be408a5d9cd5e8e015a676f',
     },
   ];
-
   return (
     <div className='slider_section'>
       {slideDetails.map((item, index) => (

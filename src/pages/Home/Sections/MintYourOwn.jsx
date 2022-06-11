@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import discordImage from '../../../assets/svg/Home/MintYourOwn/Discord.png';
+import discordImage from '../../../assets/images/discord.png';
 import twitterImage from '../../../assets/images/twitter.png';
 
 const MintYourOwn = () => {
@@ -13,7 +13,7 @@ const MintYourOwn = () => {
             data-aos='fade-up'
             data-aos-offset='0'
             data-aos-duration='350'>
-            YOU CAN HELP CHANGE THE WORLD OF VERSUS!
+            COME BUILD IN THE WORLD OF VERSUS!
           </div>
           <div
             className='spot'

@@ -93,7 +93,7 @@
             .icon_wrap {
               width: 65px;
               height: 65px;
-              background-color: #afdbd0;
+              background-color: transparent;
             }
           }
         }
@@ -129,6 +129,10 @@
             margin-right: 15px;
             position: absolute;
             left: 15px;
+
+            img {
+              height: 100%;
+            }
           }
 
           .text {

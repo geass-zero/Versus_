@@ -30,6 +30,7 @@ import { ReactComponent as HistoryButton } from '../../assets/svg/Battle/History
 import { ReactComponent as KButton } from '../../assets/svg/Battle/KButton.svg';
 import { ReactComponent as RemainingBox } from '../../assets/svg/Battle/RemainingBox.svg';
 import { ReactComponent as GreyButton } from '../../assets/svg/Battle/GreyButton.svg';
+import TokenPouch from '../../assets/images/items/icon_token_pouch.png';
 
 import { connectWallet, getUserTokenIDs } from '../../utils/UserData';
 import {
@@ -306,6 +307,7 @@ const Battle = () => {
                           data-aos-duration='600'>
                           <button className='k_button transparent svg_wrap'>
                             <KButton />
+                            {/* <img src={TokenPouch} alt='versus_metaverse_token_pouch'/> */}
                             <span>0</span>
                           </button>
                           <button

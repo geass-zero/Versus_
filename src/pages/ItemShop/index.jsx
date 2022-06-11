@@ -2,7 +2,9 @@ import { useState } from 'react';
 import './styles.scss';
 import { ReactComponent as Consumables } from '../../assets/svg/ItemShop/Consumables.svg';
 import { ReactComponent as ConsumablesMobile } from '../../assets/svg/ItemShop/ConsumablesMobile.svg';
-import Price from '../../assets/svg/ItemShop/Price.png';
+import Price from '../../assets/images/items/icon_token_pouch.png';
+import Bento from '../../assets/images/items/icon_bento.png';
+import Crystal from '../../assets/images/items/icon_genesis_crystal.png';
 
 const ItemShop = () => {
   const shopItemsArray = [
@@ -10,6 +12,7 @@ const ItemShop = () => {
       id: 1,
       name: 'Stamina Bento Box',
       price: 1500,
+      image: Bento,
       description:
         "Reset your Cypher's training capacity for the day. Not required for training but serves to speed up the leveling process if desired (unlimited daily use; consumable).",
     },
@@ -17,6 +20,7 @@ const ItemShop = () => {
       id: 2,
       name: 'Genesis Stone',
       price: 1600,
+      image: Crystal,
       description:
         "Allows a trainer to re-reroll their Cypher's stat gain for each level. Be careful however as this item will reset any new XP gained after the most recent level up. Genesis stones are not required to level but serve to allow player's to craft their ideal Cypher team. (unlimited daily use; consumable).",
     },
@@ -67,7 +71,9 @@ const ItemShop = () => {
               className='image_box'
               data-aos='zoom-in'
               data-aos-offset='0'
-              data-aos-duration='450'></div>
+              data-aos-duration='450'>
+                <img src={selectedCard.image} alt='versus_metaverse_item' /> 
+              </div>
             <div
               className='title'
               title={selectedCard && selectedCard.name}
@@ -104,6 +110,7 @@ const Card = ({ data, onClick, isSelected }) => {
       onClick={() => {
         onClick && onClick(data);
       }}>
+      <img src={data.image} alt='versus_metaverse_item' /> 
       <div className='value_wrap' title={data}>
         <img src={Price} alt='price' />
         <div className='price'>{data && numberWithCommas(data.price)}</div>
