@@ -37,7 +37,7 @@ const TrackOurProgress = () => {
   const [selectedTimeline, setTimeline] = useState(1);
 
   return (
-    <div className='our_team_wrap'>
+    <div className='our_team_wrap no_parallax_ios'>
       <div className='image_bg'>
         <div className='content_wrap cypher_researchers_wrap'>
           <div className='cypher_researchers_wrap_section'>

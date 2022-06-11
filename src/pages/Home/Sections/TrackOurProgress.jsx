@@ -20,7 +20,7 @@ const TrackOurProgress = () => {
   const [selectedTimeline, setTimeline] = useState(1);
 
   return (
-    <div className='track_our_progress'>
+    <div className='track_our_progress no_parallax_ios'>
       <div
         className='header_title bottom'
         data-aos='fade-up'

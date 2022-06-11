@@ -10,7 +10,7 @@ import { ReactComponent as MainSmallButton } from '../../../assets/svg/Home/Main
 
 const Main = () => {
   return (
-    <div className='main_section'>
+    <div className='main_section no_parallax_ios'>
       <div className='content_wrap'>
         <div className='flex_box'>
           <div className='x1 image_wrap'>

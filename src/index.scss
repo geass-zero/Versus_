@@ -374,3 +374,9 @@ iframe {
     height: 50px !important;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  .no_parallax_ios {
+    background-attachment: initial !important;
+  }
+}
