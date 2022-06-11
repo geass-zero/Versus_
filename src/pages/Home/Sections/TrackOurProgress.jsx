@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ReactComponent as Bottom } from '../../../assets/svg/Home/Metaverse/Bottom.svg';
 import { ReactComponent as BottomMobile } from '../../../assets/svg/Home/Metaverse/BottomMobile.svg';
 import Graphic from '../../../assets/images/Graphics/graphic.png';
@@ -19,8 +19,35 @@ import { ReactComponent as Wrapsmall } from '../../../assets/svg/Home/MintYourOw
 const TrackOurProgress = () => {
   const [selectedTimeline, setTimeline] = useState(1);
 
+  const element = useRef(null);
+
+  const parallaxEffect = () => {
+    var parallax = element.current,
+      speed = -2.5;
+
+    debugger;
+
+    // var elBackgrounPos =
+    //   'calc(100% - ' +
+    //   (window.pageYOffset - element.current.offsetTop * speed) +
+    //   'px)';
+
+    var elBackgrounPos = window.pageYOffset - element.current.offsetTop;
+    elBackgrounPos =
+      (elBackgrounPos * element.current.clientHeight * 0.05) / 100;
+    parallax.style.backgroundPositionY = elBackgrounPos + '%';
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallaxEffect);
+
+    return () => {
+      window.removeEventListener('scroll', parallaxEffect);
+    };
+  }, []);
+
   return (
-    <div className='track_our_progress no_parallax_ios'>
+    <div className='track_our_progress no_parallax_ios' ref={element}>
       <div
         className='header_title bottom'
         data-aos='fade-up'
