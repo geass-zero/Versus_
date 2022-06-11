@@ -7,10 +7,31 @@ import MainBGImage from '../../../assets/svg/Home/Main/MainBG.png';
 import { ReactComponent as MainBG } from '../../../assets/svg/Home/Main/MainBG.svg';
 import { ReactComponent as MainBigButton } from '../../../assets/svg/Home/Main/MainBigButton.svg';
 import { ReactComponent as MainSmallButton } from '../../../assets/svg/Home/Main/MainSmallButton.svg';
+import { useEffect, useRef } from 'react';
 
 const Main = () => {
+  const element = useRef(null);
+
+  const parallaxEffect = () => {
+    var parallax = element.current,
+      speed = -2.5;
+
+    var windowYOffset = window.pageYOffset,
+      elBackgrounPos = 'calc(100% - ' + (windowYOffset * speed) / 155 + 'px)';
+
+    parallax.style.backgroundPositionY = elBackgrounPos;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallaxEffect);
+
+    return () => {
+      window.removeEventListener('scroll', parallaxEffect);
+    };
+  }, []);
+
   return (
-    <div className='main_section no_parallax_ios'>
+    <div className='main_section no_parallax_ios' ref={element}>
       <div className='content_wrap'>
         <div className='flex_box'>
           <div className='x1 image_wrap'>
