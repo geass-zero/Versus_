@@ -14,12 +14,28 @@ html {
   transition: padding 0.3s;
 }
 
+.scrollbar-track {
+  background-color: transparent !important;
+}
+
+.scrollbar-track-y {
+  width: 12px !important;
+}
+
+.scrollbar-thumb {
+  width: 12px !important;
+  background-color: black !important;
+  border-radius: 0 !important;
+}
+
 body {
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  height: 100vh;
+  overflow: hidden;
 
   * {
     box-sizing: border-box;

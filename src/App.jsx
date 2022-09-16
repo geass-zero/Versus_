@@ -11,6 +11,7 @@ import VersusContext, { Provider } from './store/Context';
 import Loader from './components/Loader';
 import loaderVideo from './assets/videos/loader.mp4';
 
+import Scroll from './components/Header/SmoothScroll';
 // const Home = lazy(() => import('./pages/Home'));
 // const Battle = lazy(() => import('./pages/Battle'));
 // const Mint = lazy(() => import('./pages/Mint'));
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <HashRouter basename='/'>
+      <Scroll />
       <Header />
       <main>
         <Routes>
